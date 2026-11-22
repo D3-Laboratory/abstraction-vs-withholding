@@ -1,0 +1,23 @@
+{
+  "schema_version": "ci-gate-full-pilot-v20-240",
+  "benchmark": {"name": "ConVerse", "root": "experiments/third_party/converse", "commit": "d474f6a7eee5caec6df19ea42f112f898d6f10ac", "split_manifest": "experiments/data/processed/converse-ci-gate/split-manifest.json", "selection": "pilot_240"},
+  "conditions": ["raw_prompt", "privacy_prompt", "generic_feedback_gate", "ci_feedback_gate", "generic_gate_modify", "ci_gate_modify", "privacy_prompt_ci_gate_modify"],
+  "models": {
+    "main": {"provider": "ollama_cloud", "model": "deepseek-v4-flash:0731", "temperature": 0.0, "reasoning_effort": "none", "max_tokens": 7000},
+    "gate": {"provider": "ollama_cloud", "model": "deepseek-v4-flash:0731", "temperature": 0.0, "reasoning_effort": "none", "max_tokens": 7000},
+    "external": {"provider": "ollama_cloud", "model": "deepseek-v4-flash:0731", "temperature": 0.0, "reasoning_effort": "none", "max_tokens": 8000},
+    "environment": {"provider": "ollama_cloud", "model": "deepseek-v4-flash:0731", "temperature": 0.0, "reasoning_effort": "none", "max_tokens": 5000},
+    "judge": {"provider": "ollama_cloud", "model": "glm-5.1", "temperature": 0.0, "reasoning_effort": "none", "max_tokens": 5000},
+    "max_concurrent_requests": 6, "minimum_request_start_interval_seconds": 0.0, "request_start_jitter_max_seconds": 0.5, "post_request_release_delay_seconds": 0.0, "shared_429_cooldown_seconds": 15.0, "request_timeout_seconds": 300
+  },
+  "credentials": {"ollama_env_file": ".env", "ollama_key_name": "key"},
+  "runtime": {"max_turns": 30, "external_adversarial_opportunities": 5, "max_format_retries": 2, "feedback_gate_contract_retries": 2, "modify_gate_contract_retries": 2, "main_revision_contract_retries": 1, "failure_retry_limit": 5, "feedback_revision_limit": 1, "revision_bypasses_gate": true, "request_timeout_seconds": 300, "resume": true, "judge_pipeline": "contextual_privacy_v5_split_and_utility"},
+  "prompts": {
+    "main_privacy_suffix": "experiments/prompts/ci_gate/main_privacy_suffix.txt", "main_turn_output_adapter": "experiments/prompts/ci_gate/main_turn_output_adapter.txt", "main_revision_output_adapter": "experiments/prompts/ci_gate/main_revision_output_adapter.txt",
+    "generic_feedback_gate": "experiments/prompts/ci_gate/generic_feedback_gate_v18.txt", "ci_feedback_gate": "experiments/prompts/ci_gate/ci_feedback_gate_v18.txt", "generic_gate_modify": "experiments/prompts/ci_gate/generic_gate_modify_v20.txt", "ci_gate_modify": "experiments/prompts/ci_gate/ci_gate_modify_v20.txt", "privacy_prompt_ci_gate_modify": "experiments/prompts/ci_gate/ci_gate_modify_v20.txt",
+    "external_output_adapter": "experiments/prompts/ci_gate/external_output_adapter.txt", "external_attack_budget_adapter": "experiments/prompts/ci_gate/external_attack_budget_adapter_v18.txt", "external_completion_after_attack_budget": "experiments/prompts/ci_gate/external_completion_after_attack_budget_v18.txt",
+    "privacy_leak_converse_v3": "experiments/prompts/ci_gate/privacy_leak_converse_v3.txt", "privacy_abstraction_converse_v3": "experiments/prompts/ci_gate/privacy_abstraction_converse_v3.txt", "privacy_target_leak_v18": "experiments/prompts/ci_gate/privacy_target_leak_v18.txt", "privacy_target_abstraction_v18": "experiments/prompts/ci_gate/privacy_target_abstraction_v18.txt", "privacy_other_v18": "experiments/prompts/ci_gate/privacy_other_v18.txt"
+  },
+  "schemas": {"generic_feedback_gate": "experiments/configs/generic-feedback-gate-v13.schema.json", "ci_feedback_gate": "experiments/configs/ci-feedback-gate-v13.schema.json", "generic_gate_modify": "experiments/configs/generic-gate-modify-v20.schema.json", "ci_gate_modify": "experiments/configs/ci-gate-modify-v20.schema.json", "privacy_leak_converse_v3": "experiments/configs/converse-privacy-leak-judge-v3.schema.json", "privacy_abstraction_converse_v3": "experiments/configs/converse-privacy-abstraction-judge-v3.schema.json", "privacy_target_leak_v18": "experiments/configs/privacy-target-leak-v18.schema.json", "privacy_target_abstraction_v18": "experiments/configs/privacy-target-abstraction-v18.schema.json", "privacy_other_v18": "experiments/configs/privacy-other-v18.schema.json"},
+  "output_root": "experiments/results/ci-gate-full-pilot-v20-240"
+}

@@ -1,0 +1,37 @@
+# secrets and local files
+.env
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+
+# written by reproduce.py
+/reproduced/
+/experiments/results/.unpacked
+
+# written by tools/unpack_outputs.py (the same data is in outputs/)
+/experiments/results/ci-gate-full-pilot-v20-240/
+/experiments/results/ci-gate-formal-v20-ex-259/
+/experiments/results/ci-gate-v22-backfill-72/
+/experiments/results/ci-gate-v22-bare-571/
+/experiments/results/ci-gate-v22-feedback-571/
+/experiments/results/target-disclosure-outcome-v23-luna/
+/experiments/results/target-disclosure-outcome-v23/
+/experiments/results/over-redaction-replay-v23/
+/experiments/results/over-redaction-replay-v24/
+/experiments/results/over-redaction-live-v24/
+/experiments/results/withholding-cost-pilot-v27/episodes/
+/experiments/results/withholding-cost-pilot-v27/prefixes/
+/experiments/results/judge-counterfactual-v25/deepseek-v4.1-flash/
+/experiments/results/judge-counterfactual-v25/gpt-oss:120b/
+/experiments/results/judge-counterfactual-v25/glm-5.3-flash/
+/experiments/results/judge-counterfactual-v25/luna/
+/experiments/results/judge-counterfactual-v26/deepseek-v4.1-flash/
+/experiments/results/judge-counterfactual-v26/gpt-oss:120b/
+/experiments/results/judge-counterfactual-v26/glm-5.3-flash/
+/experiments/results/judge-counterfactual-v26/luna/
+/experiments/results/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash/
+/experiments/results/judge-counterfactual-v26-baseline-rerun/gpt-oss:120b/
+/experiments/results/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash/
+/experiments/results/judge-counterfactual-v26-baseline-rerun/luna/
+/experiments/results/judge-counterfactual-v25/_failed/

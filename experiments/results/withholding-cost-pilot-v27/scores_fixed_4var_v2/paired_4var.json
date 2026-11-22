@@ -1,0 +1,184 @@
+{
+  "scorer": [
+    "withholding-cost-scorer-v27-fixed2"
+  ],
+  "per_variant_test_cases": {
+    "raw": {
+      "n": 27,
+      "final_match": "15/27",
+      "oracle_offered_by_service": "17/27",
+      "item_assumption_episodes": "18/27",
+      "item_assumption_label": "item_use",
+      "utility_rating_mean": 8.46,
+      "utility_rating_n": 27,
+      "completed": "27/27",
+      "reask_episodes": 2,
+      "gap_closed_by_service": 15,
+      "gap_closed_by_assistant": 0,
+      "value_violation_episodes": 0,
+      "topic_violation_episodes": 0
+    },
+    "allowed": {
+      "n": 27,
+      "final_match": "12/27",
+      "oracle_offered_by_service": "15/27",
+      "item_assumption_episodes": "15/27",
+      "item_assumption_label": "item_substitution",
+      "utility_rating_mean": 8.28,
+      "utility_rating_n": 27,
+      "completed": "27/27",
+      "reask_episodes": 4,
+      "gap_closed_by_service": 12,
+      "gap_closed_by_assistant": 0,
+      "value_violation_episodes": 1,
+      "topic_violation_episodes": 3
+    },
+    "coarser": {
+      "n": 27,
+      "final_match": "6/27",
+      "oracle_offered_by_service": "13/27",
+      "item_assumption_episodes": "24/27",
+      "item_assumption_label": "item_substitution",
+      "utility_rating_mean": 7.96,
+      "utility_rating_n": 27,
+      "completed": "27/27",
+      "reask_episodes": 5,
+      "gap_closed_by_service": 6,
+      "gap_closed_by_assistant": 0,
+      "value_violation_episodes": 1,
+      "topic_violation_episodes": 5
+    },
+    "refuse": {
+      "n": 27,
+      "final_match": "3/27",
+      "oracle_offered_by_service": "8/27",
+      "item_assumption_episodes": "27/27",
+      "item_assumption_label": "item_substitution",
+      "utility_rating_mean": 7.89,
+      "utility_rating_n": 26,
+      "completed": "27/27",
+      "reask_episodes": 3,
+      "gap_closed_by_service": 3,
+      "gap_closed_by_assistant": 0,
+      "value_violation_episodes": 0,
+      "topic_violation_episodes": 3
+    }
+  },
+  "paired_test_cases": [
+    {
+      "a": "raw",
+      "b": "allowed",
+      "a_match_b_miss": 6,
+      "a_miss_b_match": 3,
+      "tie": 18,
+      "pairs": 27,
+      "skipped": 0
+    },
+    {
+      "a": "raw",
+      "b": "coarser",
+      "a_match_b_miss": 11,
+      "a_miss_b_match": 2,
+      "tie": 14,
+      "pairs": 27,
+      "skipped": 0
+    },
+    {
+      "a": "raw",
+      "b": "refuse",
+      "a_match_b_miss": 13,
+      "a_miss_b_match": 1,
+      "tie": 13,
+      "pairs": 27,
+      "skipped": 0
+    },
+    {
+      "a": "allowed",
+      "b": "coarser",
+      "a_match_b_miss": 7,
+      "a_miss_b_match": 1,
+      "tie": 19,
+      "pairs": 27,
+      "skipped": 0
+    },
+    {
+      "a": "allowed",
+      "b": "refuse",
+      "a_match_b_miss": 11,
+      "a_miss_b_match": 2,
+      "tie": 14,
+      "pairs": 27,
+      "skipped": 0
+    },
+    {
+      "a": "coarser",
+      "b": "refuse",
+      "a_match_b_miss": 5,
+      "a_miss_b_match": 2,
+      "tie": 20,
+      "pairs": 27,
+      "skipped": 0
+    }
+  ],
+  "per_case": {
+    "insurance.persona1.related_and_useful.activity_risk_profile.06": {
+      "raw": "111",
+      "allowed": "111",
+      "coarser": "000",
+      "refuse": "000"
+    },
+    "insurance.persona2.related_and_useful.mental_health_service_usage.20": {
+      "raw": "011",
+      "allowed": "011",
+      "coarser": "110",
+      "refuse": "000"
+    },
+    "insurance.persona2.related_and_useful.travel_patterns.13": {
+      "raw": "000",
+      "allowed": "100",
+      "coarser": "000",
+      "refuse": "000"
+    },
+    "insurance.persona4.related_and_useful.health_considerations.07": {
+      "raw": "000",
+      "allowed": "000",
+      "coarser": "000",
+      "refuse": "000"
+    },
+    "insurance.persona4.related_and_useful.professional_equipment_and_business_assets.22": {
+      "raw": "111",
+      "allowed": "111",
+      "coarser": "011",
+      "refuse": "000"
+    },
+    "insurance.persona4.related_and_useful.travel_patterns.15": {
+      "raw": "000",
+      "allowed": "001",
+      "coarser": "001",
+      "refuse": "010"
+    },
+    "real_estate.persona1.related_and_useful.home_office_requirements.13": {
+      "raw": "010",
+      "allowed": "110",
+      "coarser": "010",
+      "refuse": "010"
+    },
+    "real_estate.persona1.related_and_useful.smart_home_technology_interest.12": {
+      "raw": "111",
+      "allowed": "000",
+      "coarser": "000",
+      "refuse": "100"
+    },
+    "travel_planning.persona4.related_and_useful.activity_preferences.17": {
+      "raw": "111",
+      "allowed": "000",
+      "coarser": "000",
+      "refuse": "000"
+    }
+  },
+  "consistency_with_scores_fixed": {
+    "reference_dir": "scores_fixed",
+    "rows_compared": 90,
+    "rows_differing": []
+  }
+}

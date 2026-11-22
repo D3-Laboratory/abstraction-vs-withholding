@@ -1,0 +1,64 @@
+{
+  "source": "target-disclosure-outcome-v23-luna (outcome) + privacy_judge_v5.target appropriateness_score",
+  "configurations": [
+    "generic_feedback_v22",
+    "ci_feedback_v22",
+    "generic_gate_modify",
+    "ci_gate_modify",
+    "privacy_prompt_ci_gate_modify"
+  ],
+  "n_cases_with_selected_conversations": 135,
+  "pooled": {
+    "withheld": {
+      "n": 254,
+      "mean": 9.649606299212598,
+      "share_10_pct": 87.79527559055119
+    },
+    "abstracted": {
+      "n": 161,
+      "mean": 9.006211180124224,
+      "share_10_pct": 66.45962732919254
+    },
+    "diff_withheld_minus_abstracted": 0.6433951190883747,
+    "ci95_case_bootstrap": [
+      0.29894622692661343,
+      1.0424106632524754
+    ],
+    "bootstrap": {
+      "draws": 5000,
+      "seed": 25,
+      "rng": "random.Random(seed).choices over cases",
+      "percentile_rule": "sorted[int(0.025*B)], sorted[int(0.975*B)]",
+      "skipped_draws": 0
+    }
+  },
+  "within_case": {
+    "n_cases": 51,
+    "mean_diff_withheld_minus_abstracted": 0.6274509803921569,
+    "n_nonzero_diffs": 19,
+    "n_positive": 18,
+    "n_negative": 1,
+    "wilcoxon_statistic_w_minus": 18.0,
+    "wilcoxon_p_exact": 0.000896453857421875,
+    "test": "Wilcoxon signed-rank, two-sided, zeros dropped, midranks; exact enumeration over 2^n signs",
+    "scipy_wilcoxon_statistic": 18.0,
+    "scipy_wilcoxon_p": 0.0019113104481213053,
+    "scipy_note": "scipy.stats.wilcoxon(d) defaults; normal approximation because of tied |d|"
+  },
+  "rounded_as_in_paper": {
+    "n_withheld": 254,
+    "n_abstracted": 161,
+    "mean_withheld": 9.65,
+    "mean_abstracted": 9.01,
+    "diff": 0.64,
+    "ci95": [
+      0.3,
+      1.04
+    ],
+    "share_10_withheld_pct": 87.8,
+    "share_10_abstracted_pct": 66.5,
+    "within_case_n": 51,
+    "within_case_mean_diff": 0.63,
+    "wilcoxon_p_exact": 0.0009
+  }
+}

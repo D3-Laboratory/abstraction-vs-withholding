@@ -1,0 +1,14 @@
+Holm's correction over the tests on the main runs (GPT-5.6 Luna outcomes)
+test                                               raw p   Holm (8)   Holm (5)
+T1 withheld McNemar                             8.55e-14   6.84e-13   4.28e-13
+T2 abstracted McNemar                           3.13e-04   1.56e-03   6.25e-04
+T3 judge score within-case Wilcoxon             8.96e-04   3.59e-03   8.96e-04
+T4 completion Fisher                            1.06e-01   3.18e-01         --
+T5 coverage Mann-Whitney                        1.42e-01   3.18e-01         --
+T6 rating Mann-Whitney                          2.33e-01   3.18e-01         --
+T7 identifiers Fisher, contextual rewrite       1.37e-05   8.21e-05   4.10e-05
+T8 identifiers Fisher, strongest defense        4.74e-08   3.31e-07   1.89e-07
+
+eight-test family (v1-v4): significance at .05 unchanged by Holm: True
+five-test family (tests still reported in v5): significance at .05 unchanged by Holm: True
+details: {"T1 withheld McNemar": {"to_withheld": 53, "away_from_withheld": 2}, "T2 abstracted McNemar": {"to_abstracted": 29, "away_from_abstracted": 7}, "T3 judge score within-case Wilcoxon": {"n_cases": 51, "mean_diff": 0.6274509803921569}, "T4 completion Fisher": {"withheld": [245, 254], "abstracted": [149, 161]}, "T5 coverage Mann-Whitney": {"n_withheld": 254, "n_abstracted": 161, "mean_withheld": 0.9608736407949007, "mean_abstracted": 0.9229813664596273}, "T6 rating Mann-Whitney": {"n_withheld": 254, "n_abstracted": 161, "mean_withheld": 7.838267716535431, "mean_abstracted": 7.683540372670809}, "T7 identifiers Fisher, contextual rewrite": {"identifiers_withheld": [19, 30], "other_withheld": [33, 152]}, "T8 identifiers Fisher, strongest defense": {"identifiers_withheld": [24, 30], "other_withheld": [40, 152]}}

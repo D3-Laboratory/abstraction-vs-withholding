@@ -1,0 +1,4126 @@
+{
+ "meta": {
+  "boot": 2000,
+  "seed": 20261115,
+  "assumption": "Calibration matrices were estimated on original-run conversations; applying them to replay and multi-turn outputs assumes P(human|judge) transfers. Unverified: no human labels exist for these outputs."
+ },
+ "exp143": {
+  "n_items": 143,
+  "calibration_weighted": {
+   "Luna": {
+    "LEAKED": [
+     0.98,
+     0.013,
+     0.006
+    ],
+    "CONVEYED": [
+     0.499,
+     0.425,
+     0.075
+    ],
+    "WITHHELD": [
+     0.03,
+     0.041,
+     0.929
+    ]
+   },
+   "GLM": {
+    "LEAKED": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "CONVEYED": [
+     0.629,
+     0.301,
+     0.07
+    ],
+    "WITHHELD": [
+     0.0,
+     0.005,
+     0.995
+    ]
+   }
+  },
+  "items_per_judge_label": {
+   "Luna": {
+    "WITHHELD": 48,
+    "CONVEYED": 46,
+    "LEAKED": 49
+   },
+   "GLM": {
+    "CONVEYED": 61,
+    "WITHHELD": 39,
+    "LEAKED": 43
+   }
+  },
+  "v23_luna": {
+   "title": "Replay, DeepSeek V4 redactor, GPT-Luna judge (Table IV block 1)",
+   "judge": "Luna",
+   "n": 181,
+   "arms": {
+    "Original runs": {
+     "observed": {
+      "LEAKED": {
+       "rate": 50.3,
+       "ci": [
+        43.1,
+        57.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.5,
+       "ci": [
+        15.5,
+        27.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.2,
+       "ci": [
+        21.5,
+        34.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 60.9,
+       "ci": [
+        53.8,
+        68.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.0,
+       "ci": [
+        6.7,
+        16.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.1,
+       "ci": [
+        22.0,
+        34.3
+       ]
+      }
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 51.9,
+       "ci": [
+        44.2,
+        59.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.0,
+       "ci": [
+        15.5,
+        27.1
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.1,
+       "ci": [
+        21.0,
+        33.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.2,
+       "ci": [
+        55.0,
+        69.2
+       ]
+      },
+      "CONVEYED": {
+       "rate": 10.7,
+       "ci": [
+        6.6,
+        15.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.1,
+       "ci": [
+        21.2,
+        33.2
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 58.0,
+       "ci": [
+        50.8,
+        65.2
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.5,
+       "ci": [
+        15.5,
+        27.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 20.4,
+       "ci": [
+        14.9,
+        26.5
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 68.2,
+       "ci": [
+        61.2,
+        74.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 10.8,
+       "ci": [
+        6.7,
+        15.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 21.0,
+       "ci": [
+        15.7,
+        26.7
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Original instruction - Original runs": {
+     "observed": {
+      "LEAKED": {
+       "diff": 1.7,
+       "ci": [
+        -3.9,
+        6.6
+       ],
+       "share_positive": 0.685
+      },
+      "CONVEYED": {
+       "diff": -0.6,
+       "ci": [
+        -6.6,
+        5.5
+       ],
+       "share_positive": 0.399
+      },
+      "WITHHELD": {
+       "diff": -1.1,
+       "ci": [
+        -5.5,
+        3.9
+       ],
+       "share_positive": 0.296
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 1.3,
+       "ci": [
+        -2.5,
+        5.1
+       ],
+       "share_positive": 0.747
+      },
+      "CONVEYED": {
+       "diff": -0.3,
+       "ci": [
+        -2.8,
+        2.4
+       ],
+       "share_positive": 0.417
+      },
+      "WITHHELD": {
+       "diff": -1.1,
+       "ci": [
+        -5.0,
+        3.1
+       ],
+       "share_positive": 0.312
+      }
+     }
+    },
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 6.1,
+       "ci": [
+        0.6,
+        12.2
+       ],
+       "share_positive": 0.982
+      },
+      "CONVEYED": {
+       "diff": 0.6,
+       "ci": [
+        -5.5,
+        6.6
+       ],
+       "share_positive": 0.53
+      },
+      "WITHHELD": {
+       "diff": -6.6,
+       "ci": [
+        -11.0,
+        -1.7
+       ],
+       "share_positive": 0.002
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.0,
+       "ci": [
+        2.2,
+        10.1
+       ],
+       "share_positive": 0.998
+      },
+      "CONVEYED": {
+       "diff": 0.0,
+       "ci": [
+        -2.6,
+        2.5
+       ],
+       "share_positive": 0.503
+      },
+      "WITHHELD": {
+       "diff": -6.1,
+       "ci": [
+        -10.1,
+        -1.9
+       ],
+       "share_positive": 0.003
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original runs": {
+     "observed": {
+      "diff": -6.6,
+      "ci": [
+       -16.6,
+       3.3
+      ],
+      "share_positive": 0.086
+     },
+     "corrected": {
+      "diff": -17.1,
+      "ci": [
+       -25.2,
+       -8.8
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "diff": -6.1,
+      "ci": [
+       -16.6,
+       3.9
+      ],
+      "share_positive": 0.104
+     },
+     "corrected": {
+      "diff": -16.3,
+      "ci": [
+       -24.5,
+       -8.3
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 1.1,
+      "ci": [
+       -8.8,
+       10.5
+      ],
+      "share_positive": 0.564
+     },
+     "corrected": {
+      "diff": -10.2,
+      "ci": [
+       -17.6,
+       -2.7
+      ],
+      "share_positive": 0.004
+     }
+    }
+   }
+  },
+  "v24_glm": {
+   "title": "Replay, DeepSeek V4.1 redactor, GLM judge (Table IV block 2)",
+   "judge": "GLM",
+   "n": 180,
+   "arms": {
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 35.6,
+       "ci": [
+        28.9,
+        42.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 35.6,
+       "ci": [
+        28.3,
+        42.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.9,
+       "ci": [
+        22.2,
+        35.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 57.9,
+       "ci": [
+        51.1,
+        65.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 10.9,
+       "ci": [
+        6.6,
+        15.5
+       ]
+      },
+      "WITHHELD": {
+       "rate": 31.2,
+       "ci": [
+        24.8,
+        37.5
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 38.9,
+       "ci": [
+        32.2,
+        46.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 36.7,
+       "ci": [
+        29.4,
+        43.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 24.4,
+       "ci": [
+        18.3,
+        30.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.0,
+       "ci": [
+        55.4,
+        69.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.2,
+       "ci": [
+        7.0,
+        16.0
+       ]
+      },
+      "WITHHELD": {
+       "rate": 26.9,
+       "ci": [
+        20.7,
+        33.0
+       ]
+      }
+     }
+    },
+    "Original, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "rate": 36.7,
+       "ci": [
+        29.4,
+        43.9
+       ]
+      },
+      "CONVEYED": {
+       "rate": 32.2,
+       "ci": [
+        25.6,
+        39.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 31.1,
+       "ci": [
+        25.0,
+        37.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 56.9,
+       "ci": [
+        50.0,
+        63.9
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.9,
+       "ci": [
+        6.0,
+        14.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 33.2,
+       "ci": [
+        26.9,
+        39.9
+       ]
+      }
+     }
+    },
+    "Generalize first, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "rate": 44.4,
+       "ci": [
+        37.2,
+        51.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 30.6,
+       "ci": [
+        23.9,
+        37.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.0,
+       "ci": [
+        18.9,
+        31.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 63.7,
+       "ci": [
+        57.0,
+        70.4
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.3,
+       "ci": [
+        5.8,
+        13.5
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.0,
+       "ci": [
+        21.0,
+        33.2
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 3.3,
+       "ci": [
+        -1.7,
+        8.3
+       ],
+       "share_positive": 0.89
+      },
+      "CONVEYED": {
+       "diff": 1.1,
+       "ci": [
+        -5.0,
+        7.8
+       ],
+       "share_positive": 0.609
+      },
+      "WITHHELD": {
+       "diff": -4.4,
+       "ci": [
+        -8.9,
+        0.0
+       ],
+       "share_positive": 0.017
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 4.0,
+       "ci": [
+        0.6,
+        7.7
+       ],
+       "share_positive": 0.991
+      },
+      "CONVEYED": {
+       "diff": 0.3,
+       "ci": [
+        -1.6,
+        2.3
+       ],
+       "share_positive": 0.609
+      },
+      "WITHHELD": {
+       "diff": -4.3,
+       "ci": [
+        -8.8,
+        -0.2
+       ],
+       "share_positive": 0.018
+      }
+     }
+    },
+    "Generalize first, thinking on - Original, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "diff": 7.8,
+       "ci": [
+        2.8,
+        12.8
+       ],
+       "share_positive": 0.999
+      },
+      "CONVEYED": {
+       "diff": -1.7,
+       "ci": [
+        -7.8,
+        3.9
+       ],
+       "share_positive": 0.247
+      },
+      "WITHHELD": {
+       "diff": -6.1,
+       "ci": [
+        -11.7,
+        -1.1
+       ],
+       "share_positive": 0.009
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.7,
+       "ci": [
+        2.3,
+        11.4
+       ],
+       "share_positive": 1.0
+      },
+      "CONVEYED": {
+       "diff": -0.5,
+       "ci": [
+        -2.4,
+        1.1
+       ],
+       "share_positive": 0.246
+      },
+      "WITHHELD": {
+       "diff": -6.2,
+       "ci": [
+        -11.4,
+        -1.3
+       ],
+       "share_positive": 0.009
+      }
+     }
+    },
+    "Original, thinking on - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 1.1,
+       "ci": [
+        -4.4,
+        6.7
+       ],
+       "share_positive": 0.609
+      },
+      "CONVEYED": {
+       "diff": -3.3,
+       "ci": [
+        -9.4,
+        2.2
+       ],
+       "share_positive": 0.103
+      },
+      "WITHHELD": {
+       "diff": 2.2,
+       "ci": [
+        -2.8,
+        7.2
+       ],
+       "share_positive": 0.778
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": -1.0,
+       "ci": [
+        -5.6,
+        3.6
+       ],
+       "share_positive": 0.332
+      },
+      "CONVEYED": {
+       "diff": -1.0,
+       "ci": [
+        -2.8,
+        0.6
+       ],
+       "share_positive": 0.118
+      },
+      "WITHHELD": {
+       "diff": 2.0,
+       "ci": [
+        -2.9,
+        7.0
+       ],
+       "share_positive": 0.79
+      }
+     }
+    },
+    "Generalize first, thinking on - Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "diff": 5.6,
+       "ci": [
+        0.0,
+        11.7
+       ],
+       "share_positive": 0.966
+      },
+      "CONVEYED": {
+       "diff": -6.1,
+       "ci": [
+        -12.8,
+        0.6
+       ],
+       "share_positive": 0.03
+      },
+      "WITHHELD": {
+       "diff": 0.6,
+       "ci": [
+        -4.4,
+        5.6
+       ],
+       "share_positive": 0.554
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 1.7,
+       "ci": [
+        -2.5,
+        6.0
+       ],
+       "share_positive": 0.77
+      },
+      "CONVEYED": {
+       "diff": -1.8,
+       "ci": [
+        -4.2,
+        0.2
+       ],
+       "share_positive": 0.031
+      },
+      "WITHHELD": {
+       "diff": 0.1,
+       "ci": [
+        -4.6,
+        5.1
+       ],
+       "share_positive": 0.537
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original instruction": {
+     "observed": {
+      "diff": 6.7,
+      "ci": [
+       -5.6,
+       18.3
+      ],
+      "share_positive": 0.854
+     },
+     "corrected": {
+      "diff": -20.3,
+      "ci": [
+       -29.1,
+       -12.0
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 12.2,
+      "ci": [
+       1.1,
+       23.3
+      ],
+      "share_positive": 0.981
+     },
+     "corrected": {
+      "diff": -15.7,
+      "ci": [
+       -23.7,
+       -7.5
+      ],
+      "share_positive": 0.001
+     }
+    },
+    "Original, thinking on": {
+     "observed": {
+      "diff": 1.1,
+      "ci": [
+       -10.6,
+       12.8
+      ],
+      "share_positive": 0.554
+     },
+     "corrected": {
+      "diff": -23.3,
+      "ci": [
+       -31.8,
+       -14.9
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first, thinking on": {
+     "observed": {
+      "diff": 5.6,
+      "ci": [
+       -6.1,
+       16.1
+      ],
+      "share_positive": 0.84
+     },
+     "corrected": {
+      "diff": -17.7,
+      "ci": [
+       -25.7,
+       -10.0
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  },
+  "live_glm": {
+   "title": "Multi-turn, DeepSeek V4.1 redactor, GLM judge (Table IV block 3)",
+   "judge": "GLM",
+   "n": 182,
+   "arms": {
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 28.0,
+       "ci": [
+        21.4,
+        34.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 28.0,
+       "ci": [
+        21.4,
+        34.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 44.0,
+       "ci": [
+        36.3,
+        51.1
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 45.7,
+       "ci": [
+        39.0,
+        53.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 8.7,
+       "ci": [
+        5.2,
+        12.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 45.7,
+       "ci": [
+        38.4,
+        52.4
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 31.3,
+       "ci": [
+        25.3,
+        37.9
+       ]
+      },
+      "CONVEYED": {
+       "rate": 31.9,
+       "ci": [
+        25.3,
+        39.0
+       ]
+      },
+      "WITHHELD": {
+       "rate": 36.8,
+       "ci": [
+        29.7,
+        44.0
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 51.4,
+       "ci": [
+        44.6,
+        58.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.8,
+       "ci": [
+        6.0,
+        14.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 38.8,
+       "ci": [
+        32.0,
+        45.8
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 3.3,
+       "ci": [
+        -3.8,
+        11.0
+       ],
+       "share_positive": 0.774
+      },
+      "CONVEYED": {
+       "diff": 3.8,
+       "ci": [
+        -4.9,
+        12.6
+       ],
+       "share_positive": 0.794
+      },
+      "WITHHELD": {
+       "diff": -7.1,
+       "ci": [
+        -14.8,
+        1.1
+       ],
+       "share_positive": 0.035
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 5.7,
+       "ci": [
+        -0.9,
+        12.1
+       ],
+       "share_positive": 0.958
+      },
+      "CONVEYED": {
+       "diff": 1.1,
+       "ci": [
+        -1.5,
+        4.0
+       ],
+       "share_positive": 0.794
+      },
+      "WITHHELD": {
+       "diff": -6.8,
+       "ci": [
+        -14.2,
+        0.8
+       ],
+       "share_positive": 0.04
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original instruction": {
+     "observed": {
+      "diff": -15.9,
+      "ci": [
+       -27.5,
+       -3.8
+      ],
+      "share_positive": 0.004
+     },
+     "corrected": {
+      "diff": -37.0,
+      "ci": [
+       -45.5,
+       -28.4
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": -4.9,
+      "ci": [
+       -17.0,
+       7.7
+      ],
+      "share_positive": 0.202
+     },
+     "corrected": {
+      "diff": -29.0,
+      "ci": [
+       -38.1,
+       -20.0
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  },
+  "v23_glm_check": {
+   "title": "Replay, DeepSeek V4 redactor, GLM judge (not in Table IV; cross-judge check)",
+   "judge": "GLM",
+   "n": 177,
+   "arms": {
+    "Original runs": {
+     "observed": {
+      "LEAKED": {
+       "rate": 40.7,
+       "ci": [
+        33.3,
+        48.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 33.9,
+       "ci": [
+        27.1,
+        40.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.4,
+       "ci": [
+        19.2,
+        31.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.0,
+       "ci": [
+        55.0,
+        69.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 10.3,
+       "ci": [
+        6.3,
+        14.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.6,
+       "ci": [
+        21.5,
+        34.0
+       ]
+      }
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 46.3,
+       "ci": [
+        39.0,
+        53.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 31.1,
+       "ci": [
+        23.7,
+        37.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 22.6,
+       "ci": [
+        16.4,
+        28.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 65.9,
+       "ci": [
+        59.4,
+        72.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.5,
+       "ci": [
+        5.7,
+        13.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 24.6,
+       "ci": [
+        18.8,
+        30.6
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 53.1,
+       "ci": [
+        45.2,
+        60.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 28.8,
+       "ci": [
+        22.0,
+        36.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 18.1,
+       "ci": [
+        12.4,
+        23.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 71.2,
+       "ci": [
+        64.9,
+        77.4
+       ]
+      },
+      "CONVEYED": {
+       "rate": 8.8,
+       "ci": [
+        5.2,
+        12.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 20.0,
+       "ci": [
+        14.5,
+        25.5
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Original instruction - Original runs": {
+     "observed": {
+      "LEAKED": {
+       "diff": 5.6,
+       "ci": [
+        0.6,
+        10.7
+       ],
+       "share_positive": 0.98
+      },
+      "CONVEYED": {
+       "diff": -2.8,
+       "ci": [
+        -8.5,
+        2.8
+       ],
+       "share_positive": 0.143
+      },
+      "WITHHELD": {
+       "diff": -2.8,
+       "ci": [
+        -6.8,
+        0.6
+       ],
+       "share_positive": 0.043
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 3.9,
+       "ci": [
+        0.8,
+        7.5
+       ],
+       "share_positive": 0.995
+      },
+      "CONVEYED": {
+       "diff": -0.9,
+       "ci": [
+        -2.7,
+        0.9
+       ],
+       "share_positive": 0.142
+      },
+      "WITHHELD": {
+       "diff": -3.0,
+       "ci": [
+        -6.7,
+        0.3
+       ],
+       "share_positive": 0.04
+      }
+     }
+    },
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 6.8,
+       "ci": [
+        1.1,
+        12.4
+       ],
+       "share_positive": 0.987
+      },
+      "CONVEYED": {
+       "diff": -2.3,
+       "ci": [
+        -8.5,
+        4.5
+       ],
+       "share_positive": 0.203
+      },
+      "WITHHELD": {
+       "diff": -4.5,
+       "ci": [
+        -9.0,
+        -0.6
+       ],
+       "share_positive": 0.011
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 5.4,
+       "ci": [
+        1.5,
+        9.2
+       ],
+       "share_positive": 0.998
+      },
+      "CONVEYED": {
+       "diff": -0.7,
+       "ci": [
+        -2.7,
+        1.3
+       ],
+       "share_positive": 0.202
+      },
+      "WITHHELD": {
+       "diff": -4.7,
+       "ci": [
+        -8.9,
+        -0.6
+       ],
+       "share_positive": 0.009
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original runs": {
+     "observed": {
+      "diff": 8.5,
+      "ci": [
+       -2.3,
+       20.3
+      ],
+      "share_positive": 0.921
+     },
+     "corrected": {
+      "diff": -17.3,
+      "ci": [
+       -25.6,
+       -9.0
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "diff": 8.5,
+      "ci": [
+       -2.3,
+       19.2
+      ],
+      "share_positive": 0.932
+     },
+     "corrected": {
+      "diff": -15.2,
+      "ci": [
+       -23.0,
+       -7.4
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 10.7,
+      "ci": [
+       0.6,
+       20.9
+      ],
+      "share_positive": 0.978
+     },
+     "corrected": {
+      "diff": -11.2,
+      "ci": [
+       -18.4,
+       -3.9
+      ],
+      "share_positive": 0.001
+     }
+    }
+   }
+  }
+ },
+ "orig121": {
+  "n_items": 121,
+  "calibration_weighted": {
+   "Luna": {
+    "LEAKED": [
+     0.991,
+     0.0,
+     0.009
+    ],
+    "CONVEYED": [
+     0.69,
+     0.256,
+     0.054
+    ],
+    "WITHHELD": [
+     0.02,
+     0.05,
+     0.931
+    ]
+   },
+   "GLM": {
+    "LEAKED": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "CONVEYED": [
+     0.745,
+     0.184,
+     0.071
+    ],
+    "WITHHELD": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   }
+  },
+  "items_per_judge_label": {
+   "Luna": {
+    "WITHHELD": 43,
+    "CONVEYED": 33,
+    "LEAKED": 45
+   },
+   "GLM": {
+    "WITHHELD": 34,
+    "CONVEYED": 44,
+    "LEAKED": 43
+   }
+  },
+  "v23_luna": {
+   "title": "Replay, DeepSeek V4 redactor, GPT-Luna judge (Table IV block 1)",
+   "judge": "Luna",
+   "n": 181,
+   "arms": {
+    "Original runs": {
+     "observed": {
+      "LEAKED": {
+       "rate": 50.3,
+       "ci": [
+        43.1,
+        57.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.5,
+       "ci": [
+        15.5,
+        27.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.2,
+       "ci": [
+        21.5,
+        34.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 65.2,
+       "ci": [
+        58.1,
+        72.4
+       ]
+      },
+      "CONVEYED": {
+       "rate": 6.9,
+       "ci": [
+        2.9,
+        11.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.9,
+       "ci": [
+        21.6,
+        34.2
+       ]
+      }
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 51.9,
+       "ci": [
+        44.8,
+        59.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.0,
+       "ci": [
+        15.5,
+        27.1
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.1,
+       "ci": [
+        20.4,
+        33.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 66.5,
+       "ci": [
+        59.3,
+        73.3
+       ]
+      },
+      "CONVEYED": {
+       "rate": 6.7,
+       "ci": [
+        2.9,
+        11.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 26.8,
+       "ci": [
+        21.0,
+        33.0
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 58.0,
+       "ci": [
+        50.8,
+        65.2
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.5,
+       "ci": [
+        16.0,
+        27.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 20.4,
+       "ci": [
+        14.9,
+        26.5
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 72.7,
+       "ci": [
+        65.6,
+        79.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 6.5,
+       "ci": [
+        2.6,
+        11.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 20.7,
+       "ci": [
+        15.3,
+        26.2
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Original instruction - Original runs": {
+     "observed": {
+      "LEAKED": {
+       "diff": 1.7,
+       "ci": [
+        -3.3,
+        6.6
+       ],
+       "share_positive": 0.674
+      },
+      "CONVEYED": {
+       "diff": -0.6,
+       "ci": [
+        -6.6,
+        5.5
+       ],
+       "share_positive": 0.413
+      },
+      "WITHHELD": {
+       "diff": -1.1,
+       "ci": [
+        -5.5,
+        3.9
+       ],
+       "share_positive": 0.284
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 1.2,
+       "ci": [
+        -2.7,
+        5.0
+       ],
+       "share_positive": 0.728
+      },
+      "CONVEYED": {
+       "diff": -0.2,
+       "ci": [
+        -1.9,
+        1.6
+       ],
+       "share_positive": 0.404
+      },
+      "WITHHELD": {
+       "diff": -1.0,
+       "ci": [
+        -5.2,
+        3.2
+       ],
+       "share_positive": 0.31
+      }
+     }
+    },
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 6.1,
+       "ci": [
+        0.6,
+        11.6
+       ],
+       "share_positive": 0.979
+      },
+      "CONVEYED": {
+       "diff": 0.6,
+       "ci": [
+        -5.5,
+        6.6
+       ],
+       "share_positive": 0.528
+      },
+      "WITHHELD": {
+       "diff": -6.6,
+       "ci": [
+        -11.6,
+        -1.7
+       ],
+       "share_positive": 0.002
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.3,
+       "ci": [
+        2.0,
+        10.4
+       ],
+       "share_positive": 0.999
+      },
+      "CONVEYED": {
+       "diff": -0.2,
+       "ci": [
+        -1.8,
+        1.5
+       ],
+       "share_positive": 0.354
+      },
+      "WITHHELD": {
+       "diff": -6.1,
+       "ci": [
+        -10.5,
+        -1.8
+       ],
+       "share_positive": 0.002
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original runs": {
+     "observed": {
+      "diff": -6.6,
+      "ci": [
+       -17.1,
+       3.3
+      ],
+      "share_positive": 0.088
+     },
+     "corrected": {
+      "diff": -20.9,
+      "ci": [
+       -28.8,
+       -12.8
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "diff": -6.1,
+      "ci": [
+       -16.0,
+       3.9
+      ],
+      "share_positive": 0.106
+     },
+     "corrected": {
+      "diff": -20.1,
+      "ci": [
+       -27.6,
+       -12.0
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 1.1,
+      "ci": [
+       -8.3,
+       11.0
+      ],
+      "share_positive": 0.581
+     },
+     "corrected": {
+      "diff": -14.2,
+      "ci": [
+       -21.2,
+       -6.9
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  },
+  "v24_glm": {
+   "title": "Replay, DeepSeek V4.1 redactor, GLM judge (Table IV block 2)",
+   "judge": "GLM",
+   "n": 180,
+   "arms": {
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 35.6,
+       "ci": [
+        28.9,
+        42.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 35.6,
+       "ci": [
+        28.3,
+        42.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.9,
+       "ci": [
+        22.2,
+        35.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.1,
+       "ci": [
+        54.9,
+        69.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 6.5,
+       "ci": [
+        3.0,
+        11.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 31.4,
+       "ci": [
+        24.7,
+        37.9
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 38.9,
+       "ci": [
+        31.7,
+        46.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 36.7,
+       "ci": [
+        30.0,
+        43.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 24.4,
+       "ci": [
+        18.3,
+        30.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 66.2,
+       "ci": [
+        59.1,
+        73.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 6.8,
+       "ci": [
+        3.1,
+        11.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.0,
+       "ci": [
+        21.0,
+        33.4
+       ]
+      }
+     }
+    },
+    "Original, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "rate": 36.7,
+       "ci": [
+        29.4,
+        43.9
+       ]
+      },
+      "CONVEYED": {
+       "rate": 32.2,
+       "ci": [
+        25.0,
+        39.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 31.1,
+       "ci": [
+        24.4,
+        37.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 60.7,
+       "ci": [
+        53.6,
+        67.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 5.9,
+       "ci": [
+        2.7,
+        10.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 33.4,
+       "ci": [
+        26.8,
+        40.1
+       ]
+      }
+     }
+    },
+    "Generalize first, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "rate": 44.4,
+       "ci": [
+        37.2,
+        51.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 30.6,
+       "ci": [
+        23.9,
+        37.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.0,
+       "ci": [
+        18.3,
+        31.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 67.2,
+       "ci": [
+        60.2,
+        73.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 5.6,
+       "ci": [
+        2.5,
+        9.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.2,
+       "ci": [
+        20.9,
+        33.6
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 3.3,
+       "ci": [
+        -1.7,
+        7.8
+       ],
+       "share_positive": 0.891
+      },
+      "CONVEYED": {
+       "diff": 1.1,
+       "ci": [
+        -5.0,
+        7.2
+       ],
+       "share_positive": 0.614
+      },
+      "WITHHELD": {
+       "diff": -4.4,
+       "ci": [
+        -9.4,
+        0.0
+       ],
+       "share_positive": 0.017
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 4.2,
+       "ci": [
+        0.5,
+        8.1
+       ],
+       "share_positive": 0.987
+      },
+      "CONVEYED": {
+       "diff": 0.2,
+       "ci": [
+        -1.0,
+        1.4
+       ],
+       "share_positive": 0.614
+      },
+      "WITHHELD": {
+       "diff": -4.4,
+       "ci": [
+        -8.8,
+        -0.2
+       ],
+       "share_positive": 0.019
+      }
+     }
+    },
+    "Generalize first, thinking on - Original, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "diff": 7.8,
+       "ci": [
+        2.8,
+        12.8
+       ],
+       "share_positive": 0.999
+      },
+      "CONVEYED": {
+       "diff": -1.7,
+       "ci": [
+        -7.2,
+        3.9
+       ],
+       "share_positive": 0.235
+      },
+      "WITHHELD": {
+       "diff": -6.1,
+       "ci": [
+        -11.1,
+        -0.6
+       ],
+       "share_positive": 0.011
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.5,
+       "ci": [
+        1.8,
+        10.9
+       ],
+       "share_positive": 0.996
+      },
+      "CONVEYED": {
+       "diff": -0.3,
+       "ci": [
+        -1.5,
+        0.8
+       ],
+       "share_positive": 0.235
+      },
+      "WITHHELD": {
+       "diff": -6.2,
+       "ci": [
+        -11.2,
+        -1.0
+       ],
+       "share_positive": 0.011
+      }
+     }
+    },
+    "Original, thinking on - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 1.1,
+       "ci": [
+        -4.4,
+        6.7
+       ],
+       "share_positive": 0.614
+      },
+      "CONVEYED": {
+       "diff": -3.3,
+       "ci": [
+        -8.9,
+        2.2
+       ],
+       "share_positive": 0.116
+      },
+      "WITHHELD": {
+       "diff": 2.2,
+       "ci": [
+        -2.8,
+        7.2
+       ],
+       "share_positive": 0.772
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": -1.4,
+       "ci": [
+        -5.8,
+        3.2
+       ],
+       "share_positive": 0.283
+      },
+      "CONVEYED": {
+       "diff": -0.6,
+       "ci": [
+        -1.9,
+        0.4
+       ],
+       "share_positive": 0.116
+      },
+      "WITHHELD": {
+       "diff": 2.0,
+       "ci": [
+        -2.9,
+        6.9
+       ],
+       "share_positive": 0.781
+      }
+     }
+    },
+    "Generalize first, thinking on - Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "diff": 5.6,
+       "ci": [
+        -0.6,
+        11.7
+       ],
+       "share_positive": 0.955
+      },
+      "CONVEYED": {
+       "diff": -6.1,
+       "ci": [
+        -12.8,
+        1.1
+       ],
+       "share_positive": 0.035
+      },
+      "WITHHELD": {
+       "diff": 0.6,
+       "ci": [
+        -4.4,
+        5.6
+       ],
+       "share_positive": 0.534
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 1.0,
+       "ci": [
+        -3.7,
+        5.3
+       ],
+       "share_positive": 0.68
+      },
+      "CONVEYED": {
+       "diff": -1.1,
+       "ci": [
+        -2.8,
+        0.1
+       ],
+       "share_positive": 0.035
+      },
+      "WITHHELD": {
+       "diff": 0.1,
+       "ci": [
+        -4.7,
+        5.1
+       ],
+       "share_positive": 0.507
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original instruction": {
+     "observed": {
+      "diff": 6.7,
+      "ci": [
+       -5.0,
+       18.9
+      ],
+      "share_positive": 0.851
+     },
+     "corrected": {
+      "diff": -24.9,
+      "ci": [
+       -33.0,
+       -16.2
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 12.2,
+      "ci": [
+       1.7,
+       23.9
+      ],
+      "share_positive": 0.988
+     },
+     "corrected": {
+      "diff": -20.3,
+      "ci": [
+       -28.1,
+       -12.1
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Original, thinking on": {
+     "observed": {
+      "diff": 1.1,
+      "ci": [
+       -10.6,
+       12.8
+      ],
+      "share_positive": 0.567
+     },
+     "corrected": {
+      "diff": -27.5,
+      "ci": [
+       -35.6,
+       -19.0
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first, thinking on": {
+     "observed": {
+      "diff": 5.6,
+      "ci": [
+       -6.1,
+       16.7
+      ],
+      "share_positive": 0.832
+     },
+     "corrected": {
+      "diff": -21.5,
+      "ci": [
+       -29.4,
+       -13.5
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  },
+  "live_glm": {
+   "title": "Multi-turn, DeepSeek V4.1 redactor, GLM judge (Table IV block 3)",
+   "judge": "GLM",
+   "n": 182,
+   "arms": {
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 28.0,
+       "ci": [
+        21.4,
+        34.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 28.0,
+       "ci": [
+        21.4,
+        34.1
+       ]
+      },
+      "WITHHELD": {
+       "rate": 44.0,
+       "ci": [
+        37.4,
+        51.1
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 48.9,
+       "ci": [
+        41.9,
+        55.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 5.2,
+       "ci": [
+        2.1,
+        8.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 45.9,
+       "ci": [
+        39.3,
+        53.1
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 31.3,
+       "ci": [
+        24.7,
+        38.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 31.9,
+       "ci": [
+        25.3,
+        38.5
+       ]
+      },
+      "WITHHELD": {
+       "rate": 36.8,
+       "ci": [
+        30.2,
+        43.4
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 55.1,
+       "ci": [
+        48.1,
+        61.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 5.9,
+       "ci": [
+        2.4,
+        9.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 39.1,
+       "ci": [
+        32.4,
+        45.9
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 3.3,
+       "ci": [
+        -3.8,
+        11.0
+       ],
+       "share_positive": 0.788
+      },
+      "CONVEYED": {
+       "diff": 3.8,
+       "ci": [
+        -4.4,
+        12.6
+       ],
+       "share_positive": 0.792
+      },
+      "WITHHELD": {
+       "diff": -7.1,
+       "ci": [
+        -14.8,
+        0.0
+       ],
+       "share_positive": 0.021
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.2,
+       "ci": [
+        -0.2,
+        13.1
+       ],
+       "share_positive": 0.971
+      },
+      "CONVEYED": {
+       "diff": 0.7,
+       "ci": [
+        -0.9,
+        2.6
+       ],
+       "share_positive": 0.792
+      },
+      "WITHHELD": {
+       "diff": -6.9,
+       "ci": [
+        -14.4,
+        0.0
+       ],
+       "share_positive": 0.026
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original instruction": {
+     "observed": {
+      "diff": -15.9,
+      "ci": [
+       -28.0,
+       -4.9
+      ],
+      "share_positive": 0.004
+     },
+     "corrected": {
+      "diff": -40.8,
+      "ci": [
+       -49.4,
+       -32.7
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": -4.9,
+      "ci": [
+       -16.5,
+       6.6
+      ],
+      "share_positive": 0.195
+     },
+     "corrected": {
+      "diff": -33.2,
+      "ci": [
+       -41.6,
+       -24.6
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  },
+  "v23_glm_check": {
+   "title": "Replay, DeepSeek V4 redactor, GLM judge (not in Table IV; cross-judge check)",
+   "judge": "GLM",
+   "n": 177,
+   "arms": {
+    "Original runs": {
+     "observed": {
+      "LEAKED": {
+       "rate": 40.7,
+       "ci": [
+        33.9,
+        48.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 33.9,
+       "ci": [
+        26.6,
+        40.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.4,
+       "ci": [
+        19.2,
+        31.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 65.9,
+       "ci": [
+        59.1,
+        72.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 6.2,
+       "ci": [
+        2.5,
+        10.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.8,
+       "ci": [
+        21.5,
+        34.3
+       ]
+      }
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 46.3,
+       "ci": [
+        39.0,
+        53.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 31.1,
+       "ci": [
+        24.3,
+        38.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 22.6,
+       "ci": [
+        16.9,
+        28.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 69.5,
+       "ci": [
+        63.1,
+        75.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 5.7,
+       "ci": [
+        2.3,
+        9.5
+       ]
+      },
+      "WITHHELD": {
+       "rate": 24.8,
+       "ci": [
+        19.1,
+        30.9
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 53.1,
+       "ci": [
+        45.8,
+        60.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 28.8,
+       "ci": [
+        22.0,
+        35.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 18.1,
+       "ci": [
+        12.4,
+        23.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 74.6,
+       "ci": [
+        68.5,
+        80.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 5.3,
+       "ci": [
+        2.2,
+        8.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 20.1,
+       "ci": [
+        14.5,
+        25.8
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Original instruction - Original runs": {
+     "observed": {
+      "LEAKED": {
+       "diff": 5.6,
+       "ci": [
+        0.6,
+        10.7
+       ],
+       "share_positive": 0.984
+      },
+      "CONVEYED": {
+       "diff": -2.8,
+       "ci": [
+        -8.5,
+        2.8
+       ],
+       "share_positive": 0.143
+      },
+      "WITHHELD": {
+       "diff": -2.8,
+       "ci": [
+        -6.2,
+        0.6
+       ],
+       "share_positive": 0.044
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 3.5,
+       "ci": [
+        0.3,
+        6.8
+       ],
+       "share_positive": 0.984
+      },
+      "CONVEYED": {
+       "diff": -0.5,
+       "ci": [
+        -1.8,
+        0.5
+       ],
+       "share_positive": 0.143
+      },
+      "WITHHELD": {
+       "diff": -3.0,
+       "ci": [
+        -6.6,
+        0.5
+       ],
+       "share_positive": 0.042
+      }
+     }
+    },
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 6.8,
+       "ci": [
+        1.7,
+        12.4
+       ],
+       "share_positive": 0.99
+      },
+      "CONVEYED": {
+       "diff": -2.3,
+       "ci": [
+        -8.5,
+        4.0
+       ],
+       "share_positive": 0.206
+      },
+      "WITHHELD": {
+       "diff": -4.5,
+       "ci": [
+        -9.0,
+        -0.6
+       ],
+       "share_positive": 0.013
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 5.1,
+       "ci": [
+        1.3,
+        9.0
+       ],
+       "share_positive": 0.995
+      },
+      "CONVEYED": {
+       "diff": -0.4,
+       "ci": [
+        -1.8,
+        0.7
+       ],
+       "share_positive": 0.206
+      },
+      "WITHHELD": {
+       "diff": -4.7,
+       "ci": [
+        -9.0,
+        -0.6
+       ],
+       "share_positive": 0.012
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original runs": {
+     "observed": {
+      "diff": 8.5,
+      "ci": [
+       -2.8,
+       19.8
+      ],
+      "share_positive": 0.926
+     },
+     "corrected": {
+      "diff": -21.6,
+      "ci": [
+       -29.6,
+       -13.3
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "diff": 8.5,
+      "ci": [
+       -2.3,
+       18.6
+      ],
+      "share_positive": 0.935
+     },
+     "corrected": {
+      "diff": -19.1,
+      "ci": [
+       -26.5,
+       -11.6
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 10.7,
+      "ci": [
+       0.6,
+       20.9
+      ],
+      "share_positive": 0.979
+     },
+     "corrected": {
+      "diff": -14.8,
+      "ci": [
+       -21.8,
+       -7.8
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  }
+ },
+ "exp143_rewrite_only": {
+  "n_items": 49,
+  "calibration_weighted": {
+   "Luna": {
+    "LEAKED": [
+     0.966,
+     0.034,
+     0.0
+    ],
+    "CONVEYED": [
+     0.626,
+     0.356,
+     0.019
+    ],
+    "WITHHELD": [
+     0.023,
+     0.068,
+     0.91
+    ]
+   },
+   "GLM": {
+    "LEAKED": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "CONVEYED": [
+     0.647,
+     0.311,
+     0.042
+    ],
+    "WITHHELD": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   }
+  },
+  "items_per_judge_label": {
+   "Luna": {
+    "WITHHELD": 16,
+    "CONVEYED": 16,
+    "LEAKED": 17
+   },
+   "GLM": {
+    "CONVEYED": 23,
+    "WITHHELD": 11,
+    "LEAKED": 15
+   }
+  },
+  "v23_luna": {
+   "title": "Replay, DeepSeek V4 redactor, GPT-Luna judge (Table IV block 1)",
+   "judge": "Luna",
+   "n": 181,
+   "arms": {
+    "Original runs": {
+     "observed": {
+      "LEAKED": {
+       "rate": 50.3,
+       "ci": [
+        43.1,
+        58.0
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.5,
+       "ci": [
+        16.0,
+        27.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.2,
+       "ci": [
+        22.1,
+        34.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.7,
+       "ci": [
+        53.6,
+        71.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.3,
+       "ci": [
+        4.8,
+        18.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 26.0,
+       "ci": [
+        20.1,
+        31.9
+       ]
+      }
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 51.9,
+       "ci": [
+        44.8,
+        59.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.0,
+       "ci": [
+        15.5,
+        27.1
+       ]
+      },
+      "WITHHELD": {
+       "rate": 27.1,
+       "ci": [
+        20.4,
+        33.1
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 63.9,
+       "ci": [
+        55.0,
+        72.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.1,
+       "ci": [
+        4.7,
+        18.1
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.0,
+       "ci": [
+        18.7,
+        31.0
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 58.0,
+       "ci": [
+        50.8,
+        65.2
+       ]
+      },
+      "CONVEYED": {
+       "rate": 21.5,
+       "ci": [
+        16.0,
+        27.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 20.4,
+       "ci": [
+        14.9,
+        26.0
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 70.0,
+       "ci": [
+        61.1,
+        78.4
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.0,
+       "ci": [
+        4.6,
+        18.7
+       ]
+      },
+      "WITHHELD": {
+       "rate": 19.0,
+       "ci": [
+        13.7,
+        24.3
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Original instruction - Original runs": {
+     "observed": {
+      "LEAKED": {
+       "diff": 1.7,
+       "ci": [
+        -3.3,
+        6.6
+       ],
+       "share_positive": 0.704
+      },
+      "CONVEYED": {
+       "diff": -0.6,
+       "ci": [
+        -6.6,
+        5.5
+       ],
+       "share_positive": 0.374
+      },
+      "WITHHELD": {
+       "diff": -1.1,
+       "ci": [
+        -6.1,
+        3.9
+       ],
+       "share_positive": 0.286
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 1.2,
+       "ci": [
+        -2.6,
+        4.9
+       ],
+       "share_positive": 0.737
+      },
+      "CONVEYED": {
+       "diff": -0.2,
+       "ci": [
+        -2.6,
+        1.8
+       ],
+       "share_positive": 0.386
+      },
+      "WITHHELD": {
+       "diff": -1.0,
+       "ci": [
+        -5.3,
+        3.3
+       ],
+       "share_positive": 0.304
+      }
+     }
+    },
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 6.1,
+       "ci": [
+        0.6,
+        11.0
+       ],
+       "share_positive": 0.979
+      },
+      "CONVEYED": {
+       "diff": 0.6,
+       "ci": [
+        -5.0,
+        6.6
+       ],
+       "share_positive": 0.551
+      },
+      "WITHHELD": {
+       "diff": -6.6,
+       "ci": [
+        -11.6,
+        -2.2
+       ],
+       "share_positive": 0.001
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.1,
+       "ci": [
+        2.1,
+        10.0
+       ],
+       "share_positive": 0.999
+      },
+      "CONVEYED": {
+       "diff": -0.0,
+       "ci": [
+        -2.1,
+        2.2
+       ],
+       "share_positive": 0.471
+      },
+      "WITHHELD": {
+       "diff": -6.0,
+       "ci": [
+        -10.3,
+        -2.0
+       ],
+       "share_positive": 0.001
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original runs": {
+     "observed": {
+      "diff": -6.6,
+      "ci": [
+       -16.0,
+       3.3
+      ],
+      "share_positive": 0.092
+     },
+     "corrected": {
+      "diff": -14.7,
+      "ci": [
+       -23.7,
+       -5.3
+      ],
+      "share_positive": 0.002
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "diff": -6.1,
+      "ci": [
+       -15.5,
+       4.4
+      ],
+      "share_positive": 0.102
+     },
+     "corrected": {
+      "diff": -13.9,
+      "ci": [
+       -22.9,
+       -4.8
+      ],
+      "share_positive": 0.004
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 1.1,
+      "ci": [
+       -7.7,
+       10.5
+      ],
+      "share_positive": 0.574
+     },
+     "corrected": {
+      "diff": -8.0,
+      "ci": [
+       -16.1,
+       1.2
+      ],
+      "share_positive": 0.043
+     }
+    }
+   }
+  },
+  "v24_glm": {
+   "title": "Replay, DeepSeek V4.1 redactor, GLM judge (Table IV block 2)",
+   "judge": "GLM",
+   "n": 180,
+   "arms": {
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 35.6,
+       "ci": [
+        28.9,
+        42.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 35.6,
+       "ci": [
+        28.3,
+        42.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 28.9,
+       "ci": [
+        22.2,
+        35.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 58.6,
+       "ci": [
+        50.1,
+        67.3
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.1,
+       "ci": [
+        4.7,
+        18.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 30.4,
+       "ci": [
+        23.5,
+        37.2
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 38.9,
+       "ci": [
+        31.7,
+        45.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 36.7,
+       "ci": [
+        30.0,
+        43.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 24.4,
+       "ci": [
+        18.3,
+        31.1
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.6,
+       "ci": [
+        53.9,
+        71.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 11.4,
+       "ci": [
+        4.9,
+        19.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 26.0,
+       "ci": [
+        19.8,
+        32.6
+       ]
+      }
+     }
+    },
+    "Original, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "rate": 36.7,
+       "ci": [
+        30.0,
+        43.3
+       ]
+      },
+      "CONVEYED": {
+       "rate": 32.2,
+       "ci": [
+        25.6,
+        39.4
+       ]
+      },
+      "WITHHELD": {
+       "rate": 31.1,
+       "ci": [
+        24.4,
+        37.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 57.5,
+       "ci": [
+        49.4,
+        65.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 10.0,
+       "ci": [
+        4.2,
+        16.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 32.5,
+       "ci": [
+        25.8,
+        39.4
+       ]
+      }
+     }
+    },
+    "Generalize first, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "rate": 44.4,
+       "ci": [
+        36.7,
+        51.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 30.6,
+       "ci": [
+        23.9,
+        37.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.0,
+       "ci": [
+        18.9,
+        31.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 64.2,
+       "ci": [
+        56.5,
+        71.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.5,
+       "ci": [
+        4.0,
+        16.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 26.3,
+       "ci": [
+        20.0,
+        32.8
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 3.3,
+       "ci": [
+        -1.7,
+        7.8
+       ],
+       "share_positive": 0.885
+      },
+      "CONVEYED": {
+       "diff": 1.1,
+       "ci": [
+        -5.0,
+        7.2
+       ],
+       "share_positive": 0.593
+      },
+      "WITHHELD": {
+       "diff": -4.4,
+       "ci": [
+        -8.9,
+        0.0
+       ],
+       "share_positive": 0.018
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 4.1,
+       "ci": [
+        0.4,
+        7.6
+       ],
+       "share_positive": 0.987
+      },
+      "CONVEYED": {
+       "diff": 0.3,
+       "ci": [
+        -1.6,
+        2.4
+       ],
+       "share_positive": 0.593
+      },
+      "WITHHELD": {
+       "diff": -4.4,
+       "ci": [
+        -8.7,
+        -0.1
+       ],
+       "share_positive": 0.018
+      }
+     }
+    },
+    "Generalize first, thinking on - Original, thinking on": {
+     "observed": {
+      "LEAKED": {
+       "diff": 7.8,
+       "ci": [
+        3.3,
+        12.8
+       ],
+       "share_positive": 1.0
+      },
+      "CONVEYED": {
+       "diff": -1.7,
+       "ci": [
+        -7.2,
+        4.4
+       ],
+       "share_positive": 0.237
+      },
+      "WITHHELD": {
+       "diff": -6.1,
+       "ci": [
+        -11.7,
+        -1.1
+       ],
+       "share_positive": 0.009
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 6.7,
+       "ci": [
+        2.3,
+        11.5
+       ],
+       "share_positive": 0.999
+      },
+      "CONVEYED": {
+       "diff": -0.5,
+       "ci": [
+        -2.6,
+        1.3
+       ],
+       "share_positive": 0.237
+      },
+      "WITHHELD": {
+       "diff": -6.2,
+       "ci": [
+        -11.6,
+        -1.1
+       ],
+       "share_positive": 0.009
+      }
+     }
+    },
+    "Original, thinking on - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 1.1,
+       "ci": [
+        -4.4,
+        6.7
+       ],
+       "share_positive": 0.602
+      },
+      "CONVEYED": {
+       "diff": -3.3,
+       "ci": [
+        -8.9,
+        2.2
+       ],
+       "share_positive": 0.114
+      },
+      "WITHHELD": {
+       "diff": 2.2,
+       "ci": [
+        -2.8,
+        7.8
+       ],
+       "share_positive": 0.767
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": -1.0,
+       "ci": [
+        -6.1,
+        3.5
+       ],
+       "share_positive": 0.321
+      },
+      "CONVEYED": {
+       "diff": -1.0,
+       "ci": [
+        -3.3,
+        0.8
+       ],
+       "share_positive": 0.114
+      },
+      "WITHHELD": {
+       "diff": 2.1,
+       "ci": [
+        -2.9,
+        7.3
+       ],
+       "share_positive": 0.776
+      }
+     }
+    },
+    "Generalize first, thinking on - Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "diff": 5.6,
+       "ci": [
+        -0.6,
+        11.7
+       ],
+       "share_positive": 0.962
+      },
+      "CONVEYED": {
+       "diff": -6.1,
+       "ci": [
+        -12.8,
+        1.1
+       ],
+       "share_positive": 0.038
+      },
+      "WITHHELD": {
+       "diff": 0.6,
+       "ci": [
+        -4.4,
+        5.6
+       ],
+       "share_positive": 0.54
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 1.6,
+       "ci": [
+        -2.9,
+        6.2
+       ],
+       "share_positive": 0.758
+      },
+      "CONVEYED": {
+       "diff": -1.9,
+       "ci": [
+        -4.7,
+        0.3
+       ],
+       "share_positive": 0.038
+      },
+      "WITHHELD": {
+       "diff": 0.3,
+       "ci": [
+        -4.8,
+        5.2
+       ],
+       "share_positive": 0.535
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original instruction": {
+     "observed": {
+      "diff": 6.7,
+      "ci": [
+       -5.0,
+       18.3
+      ],
+      "share_positive": 0.855
+     },
+     "corrected": {
+      "diff": -19.3,
+      "ci": [
+       -29.5,
+       -8.2
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 12.2,
+      "ci": [
+       0.6,
+       23.9
+      ],
+      "share_positive": 0.982
+     },
+     "corrected": {
+      "diff": -14.6,
+      "ci": [
+       -25.1,
+       -3.7
+      ],
+      "share_positive": 0.005
+     }
+    },
+    "Original, thinking on": {
+     "observed": {
+      "diff": 1.1,
+      "ci": [
+       -10.0,
+       13.3
+      ],
+      "share_positive": 0.55
+     },
+     "corrected": {
+      "diff": -22.4,
+      "ci": [
+       -32.3,
+       -11.6
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first, thinking on": {
+     "observed": {
+      "diff": 5.6,
+      "ci": [
+       -5.6,
+       16.1
+      ],
+      "share_positive": 0.83
+     },
+     "corrected": {
+      "diff": -16.8,
+      "ci": [
+       -26.3,
+       -6.8
+      ],
+      "share_positive": 0.001
+     }
+    }
+   }
+  },
+  "live_glm": {
+   "title": "Multi-turn, DeepSeek V4.1 redactor, GLM judge (Table IV block 3)",
+   "judge": "GLM",
+   "n": 182,
+   "arms": {
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 28.0,
+       "ci": [
+        22.0,
+        34.6
+       ]
+      },
+      "CONVEYED": {
+       "rate": 28.0,
+       "ci": [
+        21.4,
+        34.6
+       ]
+      },
+      "WITHHELD": {
+       "rate": 44.0,
+       "ci": [
+        36.3,
+        51.1
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 46.2,
+       "ci": [
+        38.1,
+        54.3
+       ]
+      },
+      "CONVEYED": {
+       "rate": 8.7,
+       "ci": [
+        3.8,
+        14.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 45.1,
+       "ci": [
+        37.7,
+        52.2
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 31.3,
+       "ci": [
+        24.7,
+        37.9
+       ]
+      },
+      "CONVEYED": {
+       "rate": 31.9,
+       "ci": [
+        25.3,
+        38.5
+       ]
+      },
+      "WITHHELD": {
+       "rate": 36.8,
+       "ci": [
+        29.7,
+        44.0
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 51.9,
+       "ci": [
+        43.4,
+        60.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.9,
+       "ci": [
+        4.3,
+        16.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 38.1,
+       "ci": [
+        31.2,
+        45.1
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 3.3,
+       "ci": [
+        -4.4,
+        11.0
+       ],
+       "share_positive": 0.783
+      },
+      "CONVEYED": {
+       "diff": 3.8,
+       "ci": [
+        -4.9,
+        12.6
+       ],
+       "share_positive": 0.79
+      },
+      "WITHHELD": {
+       "diff": -7.1,
+       "ci": [
+        -15.4,
+        1.1
+       ],
+       "share_positive": 0.035
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 5.8,
+       "ci": [
+        -1.1,
+        12.9
+       ],
+       "share_positive": 0.951
+      },
+      "CONVEYED": {
+       "diff": 1.2,
+       "ci": [
+        -1.7,
+        4.2
+       ],
+       "share_positive": 0.79
+      },
+      "WITHHELD": {
+       "diff": -7.0,
+       "ci": [
+        -15.2,
+        1.0
+       ],
+       "share_positive": 0.04
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original instruction": {
+     "observed": {
+      "diff": -15.9,
+      "ci": [
+       -27.5,
+       -3.8
+      ],
+      "share_positive": 0.005
+     },
+     "corrected": {
+      "diff": -36.4,
+      "ci": [
+       -45.9,
+       -25.5
+      ],
+      "share_positive": 0.0
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": -4.9,
+      "ci": [
+       -16.5,
+       7.1
+      ],
+      "share_positive": 0.192
+     },
+     "corrected": {
+      "diff": -28.2,
+      "ci": [
+       -37.8,
+       -17.7
+      ],
+      "share_positive": 0.0
+     }
+    }
+   }
+  },
+  "v23_glm_check": {
+   "title": "Replay, DeepSeek V4 redactor, GLM judge (not in Table IV; cross-judge check)",
+   "judge": "GLM",
+   "n": 177,
+   "arms": {
+    "Original runs": {
+     "observed": {
+      "LEAKED": {
+       "rate": 40.7,
+       "ci": [
+        33.3,
+        47.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 33.9,
+       "ci": [
+        27.1,
+        41.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 25.4,
+       "ci": [
+        18.6,
+        31.6
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 62.6,
+       "ci": [
+        54.6,
+        70.8
+       ]
+      },
+      "CONVEYED": {
+       "rate": 10.5,
+       "ci": [
+        4.3,
+        17.3
+       ]
+      },
+      "WITHHELD": {
+       "rate": 26.8,
+       "ci": [
+        20.3,
+        33.4
+       ]
+      }
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "rate": 46.3,
+       "ci": [
+        39.0,
+        53.7
+       ]
+      },
+      "CONVEYED": {
+       "rate": 31.1,
+       "ci": [
+        24.3,
+        37.9
+       ]
+      },
+      "WITHHELD": {
+       "rate": 22.6,
+       "ci": [
+        16.9,
+        28.8
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 66.4,
+       "ci": [
+        59.1,
+        74.1
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.7,
+       "ci": [
+        4.0,
+        16.1
+       ]
+      },
+      "WITHHELD": {
+       "rate": 23.9,
+       "ci": [
+        18.1,
+        30.1
+       ]
+      }
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "LEAKED": {
+       "rate": 53.1,
+       "ci": [
+        45.8,
+        60.5
+       ]
+      },
+      "CONVEYED": {
+       "rate": 28.8,
+       "ci": [
+        22.0,
+        36.2
+       ]
+      },
+      "WITHHELD": {
+       "rate": 18.1,
+       "ci": [
+        12.4,
+        23.7
+       ]
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "rate": 71.8,
+       "ci": [
+        65.0,
+        79.2
+       ]
+      },
+      "CONVEYED": {
+       "rate": 9.0,
+       "ci": [
+        3.7,
+        14.8
+       ]
+      },
+      "WITHHELD": {
+       "rate": 19.3,
+       "ci": [
+        13.7,
+        25.1
+       ]
+      }
+     }
+    }
+   },
+   "contrasts": {
+    "Original instruction - Original runs": {
+     "observed": {
+      "LEAKED": {
+       "diff": 5.6,
+       "ci": [
+        0.6,
+        10.7
+       ],
+       "share_positive": 0.988
+      },
+      "CONVEYED": {
+       "diff": -2.8,
+       "ci": [
+        -8.5,
+        2.8
+       ],
+       "share_positive": 0.136
+      },
+      "WITHHELD": {
+       "diff": -2.8,
+       "ci": [
+        -6.8,
+        0.6
+       ],
+       "share_positive": 0.046
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 3.8,
+       "ci": [
+        0.6,
+        7.3
+       ],
+       "share_positive": 0.993
+      },
+      "CONVEYED": {
+       "diff": -0.9,
+       "ci": [
+        -2.9,
+        0.9
+       ],
+       "share_positive": 0.136
+      },
+      "WITHHELD": {
+       "diff": -2.9,
+       "ci": [
+        -6.7,
+        0.6
+       ],
+       "share_positive": 0.045
+      }
+     }
+    },
+    "Generalize first - Original instruction": {
+     "observed": {
+      "LEAKED": {
+       "diff": 6.8,
+       "ci": [
+        1.1,
+        12.4
+       ],
+       "share_positive": 0.992
+      },
+      "CONVEYED": {
+       "diff": -2.3,
+       "ci": [
+        -9.0,
+        4.0
+       ],
+       "share_positive": 0.208
+      },
+      "WITHHELD": {
+       "diff": -4.5,
+       "ci": [
+        -8.5,
+        0.0
+       ],
+       "share_positive": 0.015
+      }
+     },
+     "corrected": {
+      "LEAKED": {
+       "diff": 5.3,
+       "ci": [
+        1.5,
+        9.0
+       ],
+       "share_positive": 0.997
+      },
+      "CONVEYED": {
+       "diff": -0.7,
+       "ci": [
+        -3.1,
+        1.1
+       ],
+       "share_positive": 0.208
+      },
+      "WITHHELD": {
+       "diff": -4.6,
+       "ci": [
+        -8.6,
+        -0.3
+       ],
+       "share_positive": 0.015
+      }
+     }
+    }
+   },
+   "abstracted_minus_withheld": {
+    "Original runs": {
+     "observed": {
+      "diff": 8.5,
+      "ci": [
+       -2.8,
+       19.8
+      ],
+      "share_positive": 0.931
+     },
+     "corrected": {
+      "diff": -16.3,
+      "ci": [
+       -26.1,
+       -5.8
+      ],
+      "share_positive": 0.001
+     }
+    },
+    "Original instruction": {
+     "observed": {
+      "diff": 8.5,
+      "ci": [
+       -1.7,
+       19.2
+      ],
+      "share_positive": 0.936
+     },
+     "corrected": {
+      "diff": -14.2,
+      "ci": [
+       -23.4,
+       -4.6
+      ],
+      "share_positive": 0.004
+     }
+    },
+    "Generalize first": {
+     "observed": {
+      "diff": 10.7,
+      "ci": [
+       0.6,
+       20.9
+      ],
+      "share_positive": 0.978
+     },
+     "corrected": {
+      "diff": -10.3,
+      "ci": [
+       -18.9,
+       -1.7
+      ],
+      "share_positive": 0.011
+     }
+    }
+   }
+  }
+ }
+}

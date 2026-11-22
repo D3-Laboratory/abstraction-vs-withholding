@@ -1,0 +1,9 @@
+Use exactly one action:
+- PASS_THROUGH: every information flow fits and the candidate may be released unchanged. Return an empty `unnecessary_information` array.
+- REQUEST_REVISION: at least one information unit does not fit, so the AI assistant must rewrite the message. Return every such unit in `unnecessary_information`; the array must not be empty.
+
+Your decision and your inventory are all you return. You do not write the replacement message yourself; the AI assistant writes it from your inventory.
+
+Return one JSON object and no prose, using exactly one of these forms:
+{"unnecessary_information":[],"action":"PASS_THROUGH"}
+{"unnecessary_information":[{"unit":"brief field name","fix":"remove"}],"action":"REQUEST_REVISION"}

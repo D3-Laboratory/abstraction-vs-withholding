@@ -1,0 +1,8 @@
+Benchmark judge (ConVerse abstraction prompt) appropriateness score, withheld vs abstracted answers
+configurations: generic_feedback_v22, ci_feedback_v22, generic_gate_modify, ci_gate_modify, privacy_prompt_ci_gate_modify
+withheld   n=254  mean=9.6496  share of 10 = 87.8%
+abstracted n=161  mean=9.0062  share of 10 = 66.5%
+difference 0.6434  95% CI [0.2989, 1.0424]  (case bootstrap over 135 cases, 5000 draws, seed 25, 0 skipped)
+within-case: 51 cases withheld in one configuration and abstracted in another; mean d = 0.6275 (18 positive, 1 negative, 32 zero)
+Wilcoxon signed-rank (two-sided, zeros dropped): W- = 18.0, exact p = 0.000896 (scipy normal approximation: p = 0.001911)
+paper (IV-D): 9.65 vs 9.01, difference 0.64 (95% CI 0.30-1.04); 10s: 87.8% vs 66.5%; within 51 cases 0.63 points, exact p = 0.0009

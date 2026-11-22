@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["unnecessary_information", "action", "released_message"],
+  "properties": {
+    "unnecessary_information": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["unit", "fix"],
+        "properties": {
+          "unit": {"type": "string", "minLength": 1},
+          "fix": {"enum": ["remove", "generalize"]}
+        }
+      }
+    },
+    "action": {"enum": ["PASS_THROUGH", "TRANSFORM_AND_RELEASE"]},
+    "released_message": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"action": {"const": "PASS_THROUGH"}}, "required": ["action"]},
+      "then": {
+        "properties": {
+          "released_message": {"type": "null"},
+          "unnecessary_information": {"maxItems": 0}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"action": {"const": "TRANSFORM_AND_RELEASE"}}, "required": ["action"]},
+      "then": {
+        "properties": {
+          "released_message": {"type": "string", "minLength": 1},
+          "unnecessary_information": {"minItems": 1}
+        }
+      }
+    }
+  ]
+}

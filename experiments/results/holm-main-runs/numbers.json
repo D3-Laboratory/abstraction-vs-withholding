@@ -1,0 +1,119 @@
+{
+  "tests_raw_p": {
+    "T1 withheld McNemar": 8.554268404736831e-14,
+    "T2 abstracted McNemar": 0.00031255115754902363,
+    "T3 judge score within-case Wilcoxon": 0.000896453857421875,
+    "T4 completion Fisher": 0.10594949564003749,
+    "T5 coverage Mann-Whitney": 0.1420819825339683,
+    "T6 rating Mann-Whitney": 0.23296608337966251,
+    "T7 identifiers Fisher, contextual rewrite": 1.3675484766489271e-05,
+    "T8 identifiers Fisher, strongest defense": 4.7353230137992845e-08
+  },
+  "detail": {
+    "T1 withheld McNemar": {
+      "to_withheld": 53,
+      "away_from_withheld": 2
+    },
+    "T2 abstracted McNemar": {
+      "to_abstracted": 29,
+      "away_from_abstracted": 7
+    },
+    "T3 judge score within-case Wilcoxon": {
+      "n_cases": 51,
+      "mean_diff": 0.6274509803921569
+    },
+    "T4 completion Fisher": {
+      "withheld": [
+        245,
+        254
+      ],
+      "abstracted": [
+        149,
+        161
+      ]
+    },
+    "T5 coverage Mann-Whitney": {
+      "n_withheld": 254,
+      "n_abstracted": 161,
+      "mean_withheld": 0.9608736407949007,
+      "mean_abstracted": 0.9229813664596273
+    },
+    "T6 rating Mann-Whitney": {
+      "n_withheld": 254,
+      "n_abstracted": 161,
+      "mean_withheld": 7.838267716535431,
+      "mean_abstracted": 7.683540372670809
+    },
+    "T7 identifiers Fisher, contextual rewrite": {
+      "identifiers_withheld": [
+        19,
+        30
+      ],
+      "other_withheld": [
+        33,
+        152
+      ]
+    },
+    "T8 identifiers Fisher, strongest defense": {
+      "identifiers_withheld": [
+        24,
+        30
+      ],
+      "other_withheld": [
+        40,
+        152
+      ]
+    }
+  },
+  "family_v1_v4_eight_tests": {
+    "n": 8,
+    "adjusted": {
+      "T1 withheld McNemar": 6.843414723789465e-13,
+      "T8 identifiers Fisher, strongest defense": 3.314726109659499e-07,
+      "T7 identifiers Fisher, contextual rewrite": 8.205290859893563e-05,
+      "T2 abstracted McNemar": 0.0015627557877451181,
+      "T3 judge score within-case Wilcoxon": 0.0035858154296875,
+      "T4 completion Fisher": 0.31784848692011247,
+      "T5 coverage Mann-Whitney": 0.31784848692011247,
+      "T6 rating Mann-Whitney": 0.31784848692011247
+    },
+    "significant_raw": [
+      "T1 withheld McNemar",
+      "T2 abstracted McNemar",
+      "T3 judge score within-case Wilcoxon",
+      "T7 identifiers Fisher, contextual rewrite",
+      "T8 identifiers Fisher, strongest defense"
+    ],
+    "significant_adjusted": [
+      "T1 withheld McNemar",
+      "T2 abstracted McNemar",
+      "T3 judge score within-case Wilcoxon",
+      "T7 identifiers Fisher, contextual rewrite",
+      "T8 identifiers Fisher, strongest defense"
+    ]
+  },
+  "family_reported_in_v5": {
+    "n": 5,
+    "adjusted": {
+      "T1 withheld McNemar": 4.2771342023684156e-13,
+      "T8 identifiers Fisher, strongest defense": 1.8941292055197138e-07,
+      "T7 identifiers Fisher, contextual rewrite": 4.102645429946781e-05,
+      "T2 abstracted McNemar": 0.0006251023150980473,
+      "T3 judge score within-case Wilcoxon": 0.000896453857421875
+    },
+    "significant_raw": [
+      "T1 withheld McNemar",
+      "T2 abstracted McNemar",
+      "T3 judge score within-case Wilcoxon",
+      "T7 identifiers Fisher, contextual rewrite",
+      "T8 identifiers Fisher, strongest defense"
+    ],
+    "significant_adjusted": [
+      "T1 withheld McNemar",
+      "T2 abstracted McNemar",
+      "T3 judge score within-case Wilcoxon",
+      "T7 identifiers Fisher, contextual rewrite",
+      "T8 identifiers Fisher, strongest defense"
+    ]
+  }
+}

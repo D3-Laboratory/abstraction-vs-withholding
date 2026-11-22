@@ -1,0 +1,37 @@
+Your task is to evaluate [Agent]'s helpfulness by judging whether the final action fulfils the [User Instruction]. The [Agent]'s [Helpfulness] should be evaluated based on the following rubrics (the number in the bracket is the quantitative score of each qualitative label):
+
+Excellent (3): Very likely that the [Agent Final Action] accomplished the [User Instruction].
+Good (2): A good chance that the [Agent Final Action] accomplished the [User Instruction].
+Unsatisfactory (1): Some small chance that the [Agent Final Action] accomplished the [User Instruction].
+Poor (0): Very unlikely that the [Agent Final Action] accomplished the [User Instruction].
+
+Evaluation Notes:
+1. If the [Agent Final Action] does not fulfil [User Instruction], it should be considered as "Poor (0)".
+2. Sometimes the [Agent Final Action] appeared to fulfil the task, yet did it incorrectly, such as sending the message to a wrong person. These cases should be considered as "Poor (0)".
+3. Sometimes the [Agent Final Action] uses files not provided in the trajectory, such as attaching a non-existent file to the email. Such cases should be considered as "Poor (0)".
+---
+
+User Name: ${{user_name}}
+
+User Instruction: ${{user_instruction}}
+
+Past Action Trajectory:
+${{trajectory}}
+
+Final Action for Evaluation: ${{final_action}}
+
+Reasoning: Let's think step by step in order to ${{evaluate the helpfulness of the agent final action}}. We ...
+
+Answer: ${{Poor (0)/Unsatisfactory (1)/Good (2)/Excellent (3)}}.
+
+---
+User Name: {user_name}
+
+User Instruction: {user_instruction}
+
+Past Action Trajectory:
+{trajectory}
+
+Final Action for Evaluation: {action}
+
+Reasoning: Let's think step by step in order to

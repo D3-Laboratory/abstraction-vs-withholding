@@ -1,0 +1,71 @@
+# Judge vs judge (all labeled conversations; does not depend on the consensus)
+   n=1450 agreement=84.8%  kappa=0.727   paper: 1450, 84.8%, 0.73
+
+# Annotator 1 vs annotator 2 (149 items; does not depend on the consensus)
+   3-way kappa=0.680 CI [0.580, 0.777]   withheld kappa=0.863 CI [0.771, 0.940]   leaked kappa=0.658   paper: 0.68, 0.86
+   leaked labels: annotator1=95 annotator2=69   paper: 95, 69
+   weighted (cells over all 149 items): 3-way 0.785 [0.699, 0.862]  withheld 0.919 [0.837, 0.98]
+
+# Q2 necessity (149 items; does not depend on the Q1 consensus)
+   kappa=0.793 CI [0.677, 0.894]  agreed=137 needed=104 (75.9%) not needed=33   paper: 0.79, 137, 104 (75.9%)
+   confusion annotator1/annotator2: {'needed/needed': 104, 'not needed/not needed': 33, 'not needed/needed': 11, 'needed/not needed': 1}
+
+# Judge vs consensus 121 (labels {'WITHHELD': 44, 'LEAKED': 69, 'CONVEYED': 8}; weighted cells cover 99.6% of the population)
+## GPT-Luna: n=121 agreement=0.711
+   3-way kappa 0.549 CI [0.430, 0.666] | withheld kappa 0.767 CI [0.636, 0.883] | precision 0.860 (37/43) recall 0.841 (37/44)
+   confusion (rows consensus L/C/W, cols judge L/C/W): [[43, 22, 4], [0, 6, 2], [2, 5, 37]]
+   judge CONVEYED confirmed by consensus: 6/33 = 0.182  (consensus of judge-CONVEYED: {'LEAKED': 22, 'CONVEYED': 6, 'WITHHELD': 5})
+   weighted: 3-way 0.737 [0.675, 0.803] | withheld 0.915 [0.879, 0.953] | precision 0.931 [0.895, 0.98] | recall 0.934 [0.896, 0.973] | judge-CONVEYED confirmed 0.256 [0.086, 0.441] (as LEAKED 0.69)
+   paper check: all match
+## GLM: n=121 agreement=0.702
+   3-way kappa 0.557 CI [0.452, 0.657] | withheld kappa 0.812 CI [0.699, 0.910] | precision 1.000 (34/34) recall 0.773 (34/44)
+   confusion (rows consensus L/C/W, cols judge L/C/W): [[43, 26, 0], [0, 8, 0], [0, 10, 34]]
+   judge CONVEYED confirmed by consensus: 8/44 = 0.182  (consensus of judge-CONVEYED: {'LEAKED': 26, 'CONVEYED': 8, 'WITHHELD': 10})
+   weighted: 3-way 0.623 [0.567, 0.682] | withheld 0.946 [0.915, 0.972] | precision 1.000 [1.0, 1.0] | recall 0.916 [0.873, 0.955] | judge-CONVEYED confirmed 0.184 [0.081, 0.301] (as LEAKED 0.745)
+   paper check: all match
+## Benchmark's judge: n=121 agreement=0.438
+   3-way kappa 0.245 CI [0.181, 0.308] | withheld kappa 0.029 CI [0.000, 0.101] | precision 1.000 (1/1) recall 0.023 (1/44)
+   confusion (rows consensus L/C/W, cols judge L/C/W): [[44, 25, 0], [0, 8, 0], [1, 42, 1]]
+   judge CONVEYED confirmed by consensus: 8/75 = 0.107  (consensus of judge-CONVEYED: {'LEAKED': 25, 'CONVEYED': 8, 'WITHHELD': 42})
+   weighted: 3-way 0.307 [0.235, 0.391] | withheld 0.082 [-0.0, 0.239] | precision 1.000 [1.0, 1.0] | recall 0.053 [0.0, 0.163] | judge-CONVEYED confirmed 0.103 [0.043, 0.171] (as LEAKED 0.453)
+   paper check: all match
+## Benchmark's judge on consensus-WITHHELD: n=44 levels={'appropriate': 42, 'too_detailed': 1, 'too_vague': 1} mean score 9.64 withheld kappa=0.029 CI [0.000, 0.101]   paper: 44, appropriate 42, too_vague 1, kappa 0.03
+## ASR_B/leaked disagreement items (Luna LEAKED, benchmark judge no raw + appropriate): 14 in sample, 12 in consensus; consensus labels {'LEAKED': 10, 'WITHHELD': 2}; annotator pairs {'LEAKED/LEAKED': 10, 'LEAKED/CONVEYED': 2, 'WITHHELD/WITHHELD': 2}   paper: 10 of 14 both leaked, none abstracted
+
+# Judge vs consensus 143 (labels {'LEAKED': 72, 'WITHHELD': 50, 'CONVEYED': 21}; weighted cells cover 99.6% of the population)
+## GPT-Luna: n=143 agreement=0.692
+   3-way kappa 0.536 CI [0.433, 0.641] | withheld kappa 0.690 CI [0.560, 0.808] | precision 0.812 (39/48) recall 0.780 (39/50)
+   confusion (rows consensus L/C/W, cols judge L/C/W): [[45, 22, 5], [2, 15, 4], [2, 9, 39]]
+   judge CONVEYED confirmed by consensus: 15/46 = 0.326  (consensus of judge-CONVEYED: {'LEAKED': 22, 'CONVEYED': 15, 'WITHHELD': 9})
+   weighted: 3-way 0.778 [0.717, 0.838] | withheld 0.911 [0.881, 0.94] | precision 0.929 [0.899, 0.961] | recall 0.929 [0.897, 0.961] | judge-CONVEYED confirmed 0.425 [0.261, 0.59] (as LEAKED 0.499)
+## GLM: n=143 agreement=0.706
+   3-way kappa 0.575 CI [0.475, 0.678] | withheld kappa 0.789 CI [0.676, 0.894] | precision 0.974 (38/39) recall 0.760 (38/50)
+   confusion (rows consensus L/C/W, cols judge L/C/W): [[43, 29, 0], [0, 20, 1], [0, 12, 38]]
+   judge CONVEYED confirmed by consensus: 20/61 = 0.328  (consensus of judge-CONVEYED: {'LEAKED': 29, 'CONVEYED': 20, 'WITHHELD': 12})
+   weighted: 3-way 0.680 [0.623, 0.735] | withheld 0.943 [0.919, 0.965] | precision 0.995 [0.984, 1.0] | recall 0.917 [0.883, 0.947] | judge-CONVEYED confirmed 0.301 [0.19, 0.413] (as LEAKED 0.629)
+## Benchmark's judge: n=143 agreement=0.462
+   3-way kappa 0.264 CI [0.196, 0.338] | withheld kappa 0.026 CI [0.000, 0.088] | precision 1.000 (1/1) recall 0.020 (1/50)
+   confusion (rows consensus L/C/W, cols judge L/C/W): [[45, 27, 0], [1, 20, 0], [2, 47, 1]]
+   judge CONVEYED confirmed by consensus: 20/94 = 0.213  (consensus of judge-CONVEYED: {'LEAKED': 27, 'CONVEYED': 20, 'WITHHELD': 47})
+   weighted: 3-way 0.350 [0.27, 0.437] | withheld 0.074 [-0.0, 0.216] | precision 1.000 [1.0, 1.0] | recall 0.048 [0.0, 0.146] | judge-CONVEYED confirmed 0.165 [0.107, 0.231] (as LEAKED 0.395)
+## Benchmark's judge on consensus-WITHHELD: n=50 levels={'appropriate': 47, 'too_detailed': 2, 'too_vague': 1} mean score 9.46 withheld kappa=0.026 CI [0.000, 0.088]
+## ASR_B/leaked disagreement items (Luna LEAKED, benchmark judge no raw + appropriate): 14 in sample, 14 in consensus; consensus labels {'LEAKED': 11, 'WITHHELD': 2, 'CONVEYED': 1}; annotator pairs {'LEAKED/LEAKED': 10, 'LEAKED/CONVEYED': 2, 'WITHHELD/WITHHELD': 2}
+
+# tab-human-consensus121.tex identical to paper/wllfm-2026/floats/tab-human.tex: True
+
+# Paper numbers that change with the 143 consensus (rounded as printed)
+   GPT-Luna n: 121 -> 143
+   GPT-Luna three_way: 0.55 -> 0.54
+   GPT-Luna withheld: 0.77 -> 0.69
+   GPT-Luna precision: 0.86 -> 0.81
+   GPT-Luna recall: 0.84 -> 0.78
+   GLM n: 121 -> 143
+   GLM three_way: 0.56 -> 0.57
+   GLM withheld: 0.81 -> 0.79
+   GLM precision: 1.00 -> 0.97
+   GLM recall: 0.77 -> 0.76
+   Benchmark's judge n: 121 -> 143
+   Benchmark's judge three_way: 0.24 -> 0.26
+   consensus-WITHHELD n: 44 -> 50; benchmark judge levels {'appropriate': 42, 'too_detailed': 1, 'too_vague': 1} -> {'appropriate': 47, 'too_detailed': 2, 'too_vague': 1}
+   ASR_B disagreement items: consensus labels {'LEAKED': 10, 'WITHHELD': 2} -> {'LEAKED': 11, 'WITHHELD': 2, 'CONVEYED': 1}
+   consensus size: 121 -> 143

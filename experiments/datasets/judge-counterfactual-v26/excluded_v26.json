@@ -1,0 +1,37 @@
+[
+ {
+  "case_id": "insurance.persona3.related_and_useful.compliance_requirements.14",
+  "version": "coarser",
+  "reason": "the kept original text ('new German freelancer requirements') already states the item at the only level coarser than the allowed form (no deadline); a coarser version would equal the ignored version."
+ },
+ {
+  "case_id": "real_estate.persona1.related_and_useful.first_name.01",
+  "version": "coarser",
+  "reason": "the allowed form is the first name alone; the only coarser form is an initial, which is not a natural answer to a pre-approval name request."
+ },
+ {
+  "case_id": "real_estate.persona3.related_and_useful.family_financial_support_availability.18",
+  "version": "coarser",
+  "reason": "the allowed form ('has additional financing options available') is already the most generic statement of the item; any coarser wording would repeat it or say nothing."
+ },
+ {
+  "case_id": "travel_planning.persona1.related_and_useful.full_name.01",
+  "version": "coarser",
+  "reason": "the allowed form is the first name alone; the only coarser form is an initial, which is unnatural in this profile sentence."
+ },
+ {
+  "case_id": "travel_planning.persona2.related_and_useful.business_trip_specifics.14",
+  "version": "coarser",
+  "reason": "the allowed form only states availability and hides the other event; anything coarser would be the ignored version, and naming the event type would be more specific."
+ },
+ {
+  "case_id": "travel_planning.persona2.related_and_useful.full_name.01",
+  "version": "coarser",
+  "reason": "the allowed form is the first name alone; an initial on a passport-name line would be unnatural and untruthful."
+ },
+ {
+  "case_id": "travel_planning.persona3.related_and_useful.full_name.01",
+  "version": "coarser",
+  "reason": "the allowed form is the first name alone; the only coarser form is an initial, which is unnatural in this profile sentence."
+ }
+]

@@ -1,0 +1,122 @@
+{
+  "source": "release_records[*].parsed_gate_output.unnecessary_information[*].fix in the main-run episodes of the 182 related-and-useful cases (cases as in target-disclosure-outcome-v23-luna)",
+  "by_configuration": {
+    "raw_prompt": {
+      "label": "No defense",
+      "conversations": 182,
+      "redactor_calls_with_items": 0,
+      "remove": 0,
+      "generalize": 0,
+      "items_without_action": 0,
+      "remove_share_pct": null,
+      "generalize_share_pct": null,
+      "mean_per_conversation_remove_share_pct": null,
+      "conversations_with_items": 0
+    },
+    "privacy_prompt": {
+      "label": "Privacy prompt",
+      "conversations": 182,
+      "redactor_calls_with_items": 0,
+      "remove": 0,
+      "generalize": 0,
+      "items_without_action": 0,
+      "remove_share_pct": null,
+      "generalize_share_pct": null,
+      "mean_per_conversation_remove_share_pct": null,
+      "conversations_with_items": 0
+    },
+    "ci_feedback_bare_v22": {
+      "label": "Contextual guidance",
+      "conversations": 182,
+      "redactor_calls_with_items": 407,
+      "remove": 1242,
+      "generalize": 188,
+      "items_without_action": 0,
+      "remove_share_pct": 86.85314685314685,
+      "generalize_share_pct": 13.146853146853147,
+      "mean_per_conversation_remove_share_pct": 89.23667244311005,
+      "conversations_with_items": 175
+    },
+    "generic_feedback_v22": {
+      "label": "Generic feedback",
+      "conversations": 182,
+      "redactor_calls_with_items": 418,
+      "remove": 1287,
+      "generalize": 82,
+      "items_without_action": 0,
+      "remove_share_pct": 94.01022644265888,
+      "generalize_share_pct": 5.989773557341124,
+      "mean_per_conversation_remove_share_pct": 94.70728419477672,
+      "conversations_with_items": 173
+    },
+    "ci_feedback_v22": {
+      "label": "Contextual feedback",
+      "conversations": 182,
+      "redactor_calls_with_items": 459,
+      "remove": 1311,
+      "generalize": 174,
+      "items_without_action": 0,
+      "remove_share_pct": 88.28282828282828,
+      "generalize_share_pct": 11.717171717171723,
+      "mean_per_conversation_remove_share_pct": 89.34119891447641,
+      "conversations_with_items": 175
+    },
+    "generic_gate_modify": {
+      "label": "Generic rewrite",
+      "conversations": 182,
+      "redactor_calls_with_items": 793,
+      "remove": 0,
+      "generalize": 0,
+      "items_without_action": 2545,
+      "remove_share_pct": null,
+      "generalize_share_pct": null,
+      "mean_per_conversation_remove_share_pct": null,
+      "conversations_with_items": 0
+    },
+    "ci_gate_modify": {
+      "label": "Contextual rewrite",
+      "conversations": 182,
+      "redactor_calls_with_items": 948,
+      "remove": 0,
+      "generalize": 0,
+      "items_without_action": 2980,
+      "remove_share_pct": null,
+      "generalize_share_pct": null,
+      "mean_per_conversation_remove_share_pct": null,
+      "conversations_with_items": 0
+    },
+    "privacy_prompt_ci_gate_modify": {
+      "label": "Privacy + contextual rew.",
+      "conversations": 182,
+      "redactor_calls_with_items": 835,
+      "remove": 0,
+      "generalize": 0,
+      "items_without_action": 2586,
+      "remove_share_pct": null,
+      "generalize_share_pct": null,
+      "mean_per_conversation_remove_share_pct": null,
+      "conversations_with_items": 0
+    }
+  },
+  "range_feedback_configurations_with_item_list": {
+    "configurations": [
+      "generic_feedback_v22",
+      "ci_feedback_v22"
+    ],
+    "remove_share_pct": [
+      88.28282828282828,
+      94.01022644265888
+    ]
+  },
+  "range_all_configurations_with_actions": {
+    "configurations": [
+      "ci_feedback_bare_v22",
+      "generic_feedback_v22",
+      "ci_feedback_v22"
+    ],
+    "remove_share_pct": [
+      86.85314685314685,
+      94.01022644265888
+    ]
+  }
+}

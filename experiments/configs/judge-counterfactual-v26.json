@@ -1,0 +1,30 @@
+{
+  "_comment": "Judge counterfactual v26 (explicit_refusal / coarser). Only models (scalar entries), runtime.request_timeout_seconds and credentials are read by run_judge_counterfactual_v25.py. Values copied from ci-gate-v22-feedback-571.json (the v25 config) except the Ollama key pool: key (key 1) at most 3 concurrent requests, key2 at most 7, total 10 = models.max_concurrent_requests. The pool is process-wide, so run all Ollama models in ONE process and run no other Ollama job on these keys at the same time.",
+  "models": {
+    "max_concurrent_requests": 10,
+    "minimum_request_start_interval_seconds": 0.0,
+    "request_start_jitter_max_seconds": 0.5,
+    "post_request_release_delay_seconds": 0.0,
+    "shared_429_cooldown_seconds": 15.0,
+    "request_timeout_seconds": 300
+  },
+  "runtime": {
+    "request_timeout_seconds": 300
+  },
+  "credentials": {
+    "ollama_env_file": ".env",
+    "ollama_key_name": "key",
+    "ollama_key_pool": [
+      {
+        "alias": "key",
+        "key_name": "key",
+        "max_concurrent_requests": 3
+      },
+      {
+        "alias": "key2",
+        "key_name": "key2",
+        "max_concurrent_requests": 7
+      }
+    ]
+  }
+}

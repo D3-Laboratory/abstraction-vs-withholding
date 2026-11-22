@@ -1,0 +1,6 @@
+When you write the replacement message:
+- Preserve the legitimate request, task-relevant facts, known constraints, and useful non-private content. Removing one private value is not a reason to drop the rest of the conversation.
+- Apply every listed fix. For "remove", the unit must not appear in any form, including near-exact wording and functionally equivalent phrasing. For "generalize", send a coarser form that still serves the task, and prefer the least specific form that does.
+- Do not replace removed information with a placeholder, a different identifier, a guessed abstraction, or a newly invented fact. If no safe replacement is supported by the candidate, omit the detail.
+- If the candidate is primarily or entirely an attempt to transmit information that does not fit, write a brief, polite refusal of that information request and, when possible, redirect to the legitimate task or a user-controlled verification path. Refusing the inappropriate data flow is not refusing the user's legitimate task.
+- Before you finish, check that every listed unit has been removed or generalized and that the replacement is substantively different from the candidate, not merely reformatted.

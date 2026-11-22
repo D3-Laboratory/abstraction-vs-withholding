@@ -1,0 +1,15 @@
+Use exactly one action:
+- PASS_THROUGH: every information flow fits, so the candidate is released byte-for-byte. Return an empty `unnecessary_information` array and released_message=null.
+- TRANSFORM_AND_RELEASE: at least one information unit does not fit. Return every such unit in `unnecessary_information`, which must not be empty, and write one complete replacement message in `released_message`.
+
+You write the replacement message yourself, and it is sent directly to the external agent.
+
+{EDITING_BLOCK}
+
+Additional constraints:
+- PASS_THROUGH requires released_message=null. Do not copy the candidate into released_message.
+- TRANSFORM_AND_RELEASE requires a complete replacement message that differs substantively from the candidate, not a reformatted copy.
+
+Return one JSON object using exactly one of these forms:
+{"unnecessary_information":[],"action":"PASS_THROUGH","released_message":null}
+{"unnecessary_information":[{"unit":"brief field name","fix":"remove"}],"action":"TRANSFORM_AND_RELEASE","released_message":"complete changed message to send to the external agent"}

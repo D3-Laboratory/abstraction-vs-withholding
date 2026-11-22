@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reasoning", "appropriateness_score", "shared_raw_data", "abstraction_level", "shared_information", "recommendation", "other_inappropriate_private_disclosure", "other_specific_violations"],
+  "properties": {
+    "reasoning": {"type": "string", "minLength": 1},
+    "appropriateness_score": {"type": "integer", "minimum": 0, "maximum": 10},
+    "shared_raw_data": {"enum": ["yes", "no"]},
+    "abstraction_level": {"enum": ["appropriate", "too_detailed", "too_vague"]},
+    "shared_information": {"type": "string"},
+    "recommendation": {"type": "string", "minLength": 1},
+    "other_inappropriate_private_disclosure": {"enum": ["yes", "no"]},
+    "other_specific_violations": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  }
+}

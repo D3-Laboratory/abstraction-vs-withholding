@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["unnecessary_information", "action", "released_message"],
+  "properties": {
+    "unnecessary_information": {"type": "array", "items": {"type": "string"}},
+    "action": {"enum": ["PASS_THROUGH", "TRANSFORM_AND_RELEASE"]},
+    "released_message": {"type": ["string", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"action": {"const": "PASS_THROUGH"}}},
+      "then": {"properties": {"released_message": {"type": "null"}}}
+    },
+    {
+      "if": {"properties": {"action": {"const": "TRANSFORM_AND_RELEASE"}}},
+      "then": {"properties": {"released_message": {"type": "string", "minLength": 1}}}
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+\begin{table*}[!t]
+\caption{Outcomes by defense configuration}
+\label{tab:outcomes}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccrrrrrcc@{}}
+\toprule
+\multirow{2}{*}{Configuration} & \multicolumn{3}{c}{GPT-Luna (\%)} & GLM (\%) & \multicolumn{4}{c}{GPT-Luna withheld (\%)} & \multirow{2}{*}{Total} & \multicolumn{2}{c}{Benchmark's judge} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-5}\cmidrule(lr){6-9}\cmidrule(l){11-12}
+ & Leak. & Abstr. & Withh. & Withh. & Ref. & Def. & Ign. & Crs. & & $\mathrm{ASR}_{\mathrm{B}}$ (\%) & Withh./succ. \\
+\midrule
+No defense & 86.8 & 6.0 & 7.1 & 7.7 & 53.8 & 0.0 & 0.0 & 46.2 & 13 & 84.1 & 12/29 \\
+Privacy prompt & 84.1 & 5.5 & 10.4 & 12.2 & 21.1 & 10.5 & 26.3 & 42.1 & 19 & 80.2 & 14/36 \\
+Contextual guidance & 78.6 & 7.7 & 13.7 & 14.3 & 44.0 & 8.0 & 20.0 & 28.0 & 25 & 73.6 & 24/48 \\
+Generic feedback & 56.6 & 19.8 & 23.6 & 25.4 & 39.5 & 25.6 & 11.6 & 23.3 & 43 & 47.8 & 42/95 \\
+Contextual feedback & 61.5 & 15.4 & 23.1 & 20.9 & 35.7 & 9.5 & 23.8 & 31.0 & 42 & 45.1 & 41/100 \\
+Generic rewrite & 57.1 & 13.7 & 29.1 & 27.2 & 11.3 & 20.8 & 24.5 & 43.4 & 53 & 46.2 & 51/98 \\
+Contextual rewrite & 50.0 & 21.4 & 28.6 & 26.0 & 19.2 & 13.5 & 19.2 & 48.1 & 52 & 34.1 & 51/120 \\
+Privacy + contextual rew. & 46.7 & 18.1 & 35.2 & 33.7 & 21.9 & 15.6 & 20.3 & 42.2 & 64 & 29.7 & 64/128 \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\parbox{0.8\textwidth}{\raggedright\scriptsize\textit{Note.} Leak./Abstr./Withh. and $\mathrm{ASR}_{\mathrm{B}}$: percent of 182 cases. $\mathrm{ASR}_{\mathrm{B}}$: attack success rate from the benchmark's judge. Ref./Def./Ign./Crs.: refused, deferred, ignored, too coarse, as percent of withheld cases; Total: number of withheld cases. Withh./succ.: among cases the benchmark's judge does not count as attack successes, those GPT-Luna labels withheld. GLM n is 182 except for privacy prompt, generic feedback, contextual rewrite, and privacy + contextual rew. (181) and generic rewrite (180).}
+\end{table*}

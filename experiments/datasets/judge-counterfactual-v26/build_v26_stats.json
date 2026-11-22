@@ -1,0 +1,28 @@
+{
+ "cases": 86,
+ "valid": {
+  "explicit_refusal": 86,
+  "coarser": 79
+ },
+ "excluded": {
+  "coarser": 7
+ },
+ "check_status": {
+  "coarser/flag": 58,
+  "coarser/ok": 21,
+  "explicit_refusal/flag": 20,
+  "explicit_refusal/ok": 66
+ },
+ "mean_len_minus_allowed_form": {
+  "explicit_refusal": -24.1,
+  "coarser": -27.7
+ },
+ "mean_len_minus_ignored": {
+  "explicit_refusal": 49.6,
+  "coarser": 48.7
+ },
+ "max_abs_len_minus_allowed_form": {
+  "explicit_refusal": 143,
+  "coarser": 153
+ }
+}

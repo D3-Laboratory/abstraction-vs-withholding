@@ -1,0 +1,24 @@
+\begin{table}[!t]
+\caption{Outcomes for identifiers and other items}
+\label{tab:identifiers}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+ & \multicolumn{3}{c}{GPT-Luna} & GLM \\
+\cmidrule(lr){2-4}
+ & Leak. & Abstr. & Withh. & Withh. \\
+\midrule
+\multicolumn{5}{@{}l}{\emph{No defense}} \\
+\quad Identifiers ($n=30$) & 93.3 & 0.0 & 6.7 & 6.7 \\
+\quad Other items ($n=152$) & 85.5 & 7.2 & 7.2 & 7.9 \\
+\multicolumn{5}{@{}l}{\emph{Contextual rewrite}} \\
+\quad Identifiers ($n=30$) & 16.7 & 20.0 & 63.3 & 60.0 \\
+\quad Other items ($n=152$) & 56.6 & 21.7 & 21.7 & 19.2 \\
+\multicolumn{5}{@{}l}{\emph{Privacy + contextual rew.}} \\
+\quad Identifiers ($n=30$) & 6.7 & 13.3 & 80.0 & 80.0 \\
+\quad Other items ($n=152$) & 54.6 & 19.1 & 26.3 & 24.5 \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Percent. Identifiers: identifiers and quasi-identifiers (name, age, address, location, government ID). Other items: all remaining related-and-useful items. GLM n for other items is 151 under contextual rewrite and privacy + contextual rew.}
+\end{table}

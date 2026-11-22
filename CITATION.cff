@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "abstraction-vs-withholding: code and data for 'Distinguishing Abstraction from Withholding in LLM Agent Privacy Evaluation'"
+repository-code: "https://github.com/D3-Laboratory/abstraction-vs-withholding"
+license: MIT
+authors:
+  - family-names: Yang
+    given-names: Yi-Kai
+    affiliation: National Sun Yat-Sen University
+  - family-names: Huang
+    given-names: Pei-Cing
+    affiliation: National Sun Yat-Sen University
+  - family-names: Chen
+    given-names: Ci-Siang
+    affiliation: National Sun Yat-Sen University
+  - family-names: Ku
+    given-names: Chan-Tung
+    affiliation: National Sun Yat-Sen University
+  - family-names: Kang
+    given-names: Yihuang
+    affiliation: National Sun Yat-Sen University
+preferred-citation:
+  type: conference-paper
+  title: "Distinguishing Abstraction from Withholding in LLM Agent Privacy Evaluation"
+  authors:
+    - family-names: Yang
+      given-names: Yi-Kai
+    - family-names: Huang
+      given-names: Pei-Cing
+    - family-names: Chen
+      given-names: Ci-Siang
+    - family-names: Ku
+      given-names: Chan-Tung
+    - family-names: Kang
+      given-names: Yihuang
+  collection-title: "Proceedings of the 2026 IEEE International Conference on Big Data (BigData) Workshops"
+  conference:
+    name: "Fourth Workshop on Large Language and Foundation Models (WLLFM 2026), IEEE International Conference on Big Data (BigData 2026)"
+  publisher:
+    name: IEEE
+  status: in-press
+  year: 2026

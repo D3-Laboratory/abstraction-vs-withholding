@@ -1,0 +1,18 @@
+\begin{table}[!t]
+\caption{Cost diagnostic}
+\label{tab:cost}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\multirow{2}{*}{Branch} & Final plan & Reference & Item & ConVerse & \multirow{2}{*}{Compl. $\uparrow$} \\
+ & contains $\uparrow$ & offered $\uparrow$ & subst. $\downarrow$ & rating ($n$) $\uparrow$ & \\
+\midrule
+Raw value & 15/27 & 17/27 & -- & 8.46 (27) & 27/27 \\
+Allowed form & 12/27 & 15/27 & 15 & 8.28 (27) & 27/27 \\
+Coarser & 6/27 & 13/27 & 24 & 7.96 (27) & 27/27 \\
+Refusal & 3/27 & 8/27 & 27 & 7.89 (26) & 27/27 \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} $\uparrow$ higher is better; $\downarrow$ lower is better. 27 conversations per branch (9 cases, 3 seeds). Final plan contains: the final plan includes the reference option. Reference offered: the service agent offers the reference option. Coarser: a true statement coarser than the allowed form. Item subst.: conversations in which the service agent states assumptions in place of the requested item (not applicable when the raw value is shared). Compl.: conversations completed.}
+\end{table}

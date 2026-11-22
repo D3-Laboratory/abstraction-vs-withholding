@@ -1,0 +1,13 @@
+OUTPUT RELIABILITY CONTRACT — this contract overrides any earlier output ordering or verbosity instruction, but does not change the user task, privacy requirements, available tools, conversation policy, or decision you should make.
+
+For every active turn:
+1. Begin immediately with exactly one complete route field: either <output_to_environment>...</output_to_environment> or <output_to_external_agent>...</output_to_external_agent>. Never output both.
+2. Then provide <assistant_log_summary>...</assistant_log_summary> in no more than 100 words.
+3. A <scratch_pad> is optional. If included, it must appear last and contain at most three short bullet points. Never restate the full environment return, conversation history, user profile, or package catalogue.
+
+When the task is complete:
+1. Begin with the exact marker THE TASK IS NOW COMPLETED.
+2. Immediately provide <final_arrangement>...</final_arrangement>.
+3. Then provide <assistant_log_summary>...</assistant_log_summary> in no more than 100 words.
+
+Include every required opening and closing tag exactly once. Producing the route or final answer first takes priority over optional analysis.

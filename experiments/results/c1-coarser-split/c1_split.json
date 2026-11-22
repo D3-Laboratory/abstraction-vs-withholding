@@ -1,0 +1,578 @@
+{
+ "meta": {
+  "calibration_source": "results/outcome-label-sensitivity/sensitivity.json (calibration_weighted / calibration_unweighted)"
+ },
+ "Luna": {
+  "raw_prompt": {
+   "n_success": 29,
+   "n_labeled_in_condition": 182,
+   "raw": {
+    "leaked": 10,
+    "abstracted": 7,
+    "withheld_excl_coarse": 7,
+    "too_coarse": 5
+   },
+   "withheld_total": 12,
+   "withheld_kinds": {
+    "refused": 7,
+    "deferred": 0,
+    "ignored": 0,
+    "too_coarse": 5
+   },
+   "calibrated/orig121/weighted": {
+    "human_leaked": 14.98,
+    "human_abstracted": 2.39,
+    "human_withheld": 11.64,
+    "human_withheld_from_judge_too_coarse": 4.66,
+    "human_withheld_from_judge_withheld_excl_coarse": 6.52,
+    "human_withheld_from_judge_leaked_or_abstracted": 0.47
+   },
+   "calibrated/orig121/unweighted": {
+    "human_leaked": 15.34,
+    "human_abstracted": 1.84,
+    "human_withheld": 11.82,
+    "human_withheld_from_judge_too_coarse": 4.3,
+    "human_withheld_from_judge_withheld_excl_coarse": 6.02,
+    "human_withheld_from_judge_leaked_or_abstracted": 1.5
+   },
+   "calibrated/exp143/weighted": {
+    "human_leaked": 13.65,
+    "human_abstracted": 3.6,
+    "human_withheld": 11.73,
+    "human_withheld_from_judge_too_coarse": 4.65,
+    "human_withheld_from_judge_withheld_excl_coarse": 6.5,
+    "human_withheld_from_judge_leaked_or_abstracted": 0.58
+   },
+   "calibrated/exp143/unweighted": {
+    "human_leaked": 13.77,
+    "human_abstracted": 3.69,
+    "human_withheld": 11.53,
+    "human_withheld_from_judge_too_coarse": 4.06,
+    "human_withheld_from_judge_withheld_excl_coarse": 5.68,
+    "human_withheld_from_judge_leaked_or_abstracted": 1.78
+   }
+  },
+  "privacy_prompt_ci_gate_modify": {
+   "n_success": 128,
+   "n_labeled_in_condition": 182,
+   "raw": {
+    "leaked": 33,
+    "abstracted": 31,
+    "withheld_excl_coarse": 37,
+    "too_coarse": 27
+   },
+   "withheld_total": 64,
+   "withheld_kinds": {
+    "refused": 14,
+    "deferred": 10,
+    "ignored": 13,
+    "too_coarse": 27
+   },
+   "calibrated/orig121/weighted": {
+    "human_leaked": 55.37,
+    "human_abstracted": 11.14,
+    "human_withheld": 61.55,
+    "human_withheld_from_judge_too_coarse": 25.14,
+    "human_withheld_from_judge_withheld_excl_coarse": 34.45,
+    "human_withheld_from_judge_leaked_or_abstracted": 1.97
+   },
+   "calibrated/orig121/unweighted": {
+    "human_leaked": 58.18,
+    "human_abstracted": 8.65,
+    "human_withheld": 61.2,
+    "human_withheld_from_judge_too_coarse": 23.22,
+    "human_withheld_from_judge_withheld_excl_coarse": 31.82,
+    "human_withheld_from_judge_leaked_or_abstracted": 6.16
+   },
+   "calibrated/exp143/weighted": {
+    "human_leaked": 49.73,
+    "human_abstracted": 16.23,
+    "human_withheld": 61.98,
+    "human_withheld_from_judge_too_coarse": 25.08,
+    "human_withheld_from_judge_withheld_excl_coarse": 34.37,
+    "human_withheld_from_judge_leaked_or_abstracted": 2.52
+   },
+   "calibrated/exp143/unweighted": {
+    "human_leaked": 51.77,
+    "human_abstracted": 16.77,
+    "human_withheld": 59.4,
+    "human_withheld_from_judge_too_coarse": 21.92,
+    "human_withheld_from_judge_withheld_excl_coarse": 30.04,
+    "human_withheld_from_judge_leaked_or_abstracted": 7.43
+   }
+  }
+ },
+ "GLM": {
+  "raw_prompt": {
+   "n_success": 29,
+   "n_labeled_in_condition": 182,
+   "raw": {
+    "leaked": 10,
+    "abstracted": 5,
+    "withheld_excl_coarse": 11,
+    "too_coarse": 3
+   },
+   "withheld_total": 14,
+   "withheld_kinds": {
+    "refused": 9,
+    "deferred": 1,
+    "ignored": 1,
+    "too_coarse": 3
+   },
+   "calibrated/orig121/weighted": {
+    "human_leaked": 13.72,
+    "human_abstracted": 0.92,
+    "human_withheld": 14.35,
+    "human_withheld_from_judge_too_coarse": 3.0,
+    "human_withheld_from_judge_withheld_excl_coarse": 11.0,
+    "human_withheld_from_judge_leaked_or_abstracted": 0.35
+   },
+   "calibrated/orig121/unweighted": {
+    "human_leaked": 12.95,
+    "human_abstracted": 0.91,
+    "human_withheld": 15.14,
+    "human_withheld_from_judge_too_coarse": 3.0,
+    "human_withheld_from_judge_withheld_excl_coarse": 11.0,
+    "human_withheld_from_judge_leaked_or_abstracted": 1.14
+   },
+   "calibrated/exp143/weighted": {
+    "human_leaked": 13.14,
+    "human_abstracted": 1.57,
+    "human_withheld": 14.28,
+    "human_withheld_from_judge_too_coarse": 2.98,
+    "human_withheld_from_judge_withheld_excl_coarse": 10.94,
+    "human_withheld_from_judge_leaked_or_abstracted": 0.35
+   },
+   "calibrated/exp143/unweighted": {
+    "human_leaked": 12.37,
+    "human_abstracted": 2.0,
+    "human_withheld": 14.62,
+    "human_withheld_from_judge_too_coarse": 2.92,
+    "human_withheld_from_judge_withheld_excl_coarse": 10.71,
+    "human_withheld_from_judge_leaked_or_abstracted": 0.99
+   }
+  },
+  "privacy_prompt_ci_gate_modify": {
+   "n_success": 127,
+   "n_labeled_in_condition": 181,
+   "raw": {
+    "leaked": 16,
+    "abstracted": 50,
+    "withheld_excl_coarse": 41,
+    "too_coarse": 20
+   },
+   "withheld_total": 61,
+   "withheld_kinds": {
+    "refused": 26,
+    "deferred": 9,
+    "ignored": 6,
+    "too_coarse": 20
+   },
+   "calibrated/orig121/weighted": {
+    "human_leaked": 53.25,
+    "human_abstracted": 9.2,
+    "human_withheld": 64.55,
+    "human_withheld_from_judge_too_coarse": 20.0,
+    "human_withheld_from_judge_withheld_excl_coarse": 41.0,
+    "human_withheld_from_judge_leaked_or_abstracted": 3.55
+   },
+   "calibrated/orig121/unweighted": {
+    "human_leaked": 45.55,
+    "human_abstracted": 9.1,
+    "human_withheld": 72.35,
+    "human_withheld_from_judge_too_coarse": 20.0,
+    "human_withheld_from_judge_withheld_excl_coarse": 41.0,
+    "human_withheld_from_judge_leaked_or_abstracted": 11.35
+   },
+   "calibrated/exp143/weighted": {
+    "human_leaked": 47.45,
+    "human_abstracted": 15.36,
+    "human_withheld": 64.19,
+    "human_withheld_from_judge_too_coarse": 19.9,
+    "human_withheld_from_judge_withheld_excl_coarse": 40.79,
+    "human_withheld_from_judge_leaked_or_abstracted": 3.5
+   },
+   "calibrated/exp143/unweighted": {
+    "human_leaked": 39.75,
+    "human_abstracted": 17.99,
+    "human_withheld": 69.26,
+    "human_withheld_from_judge_too_coarse": 19.48,
+    "human_withheld_from_judge_withheld_excl_coarse": 39.93,
+    "human_withheld_from_judge_leaked_or_abstracted": 9.85
+   }
+  }
+ },
+ "supplementary_key_vs_files_luna_mismatches": 0,
+ "supplementary_subtype_vs_human": {
+  "orig121/Luna": {
+   "leaked": {
+    "LEAKED": 43,
+    "CONVEYED": 0,
+    "WITHHELD": 2
+   },
+   "abstracted": {
+    "LEAKED": 22,
+    "CONVEYED": 6,
+    "WITHHELD": 5
+   },
+   "withheld_excl_coarse": {
+    "LEAKED": 3,
+    "CONVEYED": 0,
+    "WITHHELD": 21
+   },
+   "too_coarse": {
+    "LEAKED": 1,
+    "CONVEYED": 2,
+    "WITHHELD": 16
+   }
+  },
+  "orig121/GLM": {
+   "leaked": {
+    "LEAKED": 43,
+    "CONVEYED": 0,
+    "WITHHELD": 0
+   },
+   "abstracted": {
+    "LEAKED": 26,
+    "CONVEYED": 8,
+    "WITHHELD": 10
+   },
+   "withheld_excl_coarse": {
+    "LEAKED": 0,
+    "CONVEYED": 0,
+    "WITHHELD": 24
+   },
+   "too_coarse": {
+    "LEAKED": 0,
+    "CONVEYED": 0,
+    "WITHHELD": 10
+   }
+  },
+  "exp143/Luna": {
+   "leaked": {
+    "LEAKED": 45,
+    "CONVEYED": 2,
+    "WITHHELD": 2
+   },
+   "abstracted": {
+    "LEAKED": 22,
+    "CONVEYED": 15,
+    "WITHHELD": 9
+   },
+   "withheld_excl_coarse": {
+    "LEAKED": 3,
+    "CONVEYED": 0,
+    "WITHHELD": 22
+   },
+   "too_coarse": {
+    "LEAKED": 2,
+    "CONVEYED": 4,
+    "WITHHELD": 17
+   }
+  },
+  "exp143/GLM": {
+   "leaked": {
+    "LEAKED": 43,
+    "CONVEYED": 0,
+    "WITHHELD": 0
+   },
+   "abstracted": {
+    "LEAKED": 29,
+    "CONVEYED": 20,
+    "WITHHELD": 12
+   },
+   "withheld_excl_coarse": {
+    "LEAKED": 0,
+    "CONVEYED": 0,
+    "WITHHELD": 25
+   },
+   "too_coarse": {
+    "LEAKED": 0,
+    "CONVEYED": 1,
+    "WITHHELD": 13
+   }
+  }
+ },
+ "exploratory_subtype_specific_calibration_unweighted": {
+  "orig121/Luna/raw_prompt": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     0.96,
+     0.0,
+     0.04
+    ],
+    "abstracted": [
+     0.67,
+     0.18,
+     0.15
+    ],
+    "withheld_excl_coarse": [
+     0.12,
+     0.0,
+     0.88
+    ],
+    "too_coarse": [
+     0.05,
+     0.11,
+     0.84
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 45,
+    "abstracted": 33,
+    "withheld_excl_coarse": 24,
+    "too_coarse": 19
+   },
+   "expected_human": {
+    "LEAKED": 15.36,
+    "CONVEYED": 1.8,
+    "WITHHELD": 11.84
+   }
+  },
+  "orig121/Luna/privacy_prompt_ci_gate_modify": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     0.96,
+     0.0,
+     0.04
+    ],
+    "abstracted": [
+     0.67,
+     0.18,
+     0.15
+    ],
+    "withheld_excl_coarse": [
+     0.12,
+     0.0,
+     0.88
+    ],
+    "too_coarse": [
+     0.05,
+     0.11,
+     0.84
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 45,
+    "abstracted": 33,
+    "withheld_excl_coarse": 24,
+    "too_coarse": 19
+   },
+   "expected_human": {
+    "LEAKED": 58.25,
+    "CONVEYED": 8.48,
+    "WITHHELD": 61.28
+   }
+  },
+  "orig121/GLM/raw_prompt": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "abstracted": [
+     0.59,
+     0.18,
+     0.23
+    ],
+    "withheld_excl_coarse": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "too_coarse": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 43,
+    "abstracted": 44,
+    "withheld_excl_coarse": 24,
+    "too_coarse": 10
+   },
+   "expected_human": {
+    "LEAKED": 12.95,
+    "CONVEYED": 0.91,
+    "WITHHELD": 15.14
+   }
+  },
+  "orig121/GLM/privacy_prompt_ci_gate_modify": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "abstracted": [
+     0.59,
+     0.18,
+     0.23
+    ],
+    "withheld_excl_coarse": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "too_coarse": [
+     0.0,
+     0.0,
+     1.0
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 43,
+    "abstracted": 44,
+    "withheld_excl_coarse": 24,
+    "too_coarse": 10
+   },
+   "expected_human": {
+    "LEAKED": 45.55,
+    "CONVEYED": 9.09,
+    "WITHHELD": 72.36
+   }
+  },
+  "exp143/Luna/raw_prompt": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     0.92,
+     0.04,
+     0.04
+    ],
+    "abstracted": [
+     0.48,
+     0.33,
+     0.2
+    ],
+    "withheld_excl_coarse": [
+     0.12,
+     0.0,
+     0.88
+    ],
+    "too_coarse": [
+     0.09,
+     0.17,
+     0.74
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 49,
+    "abstracted": 46,
+    "withheld_excl_coarse": 25,
+    "too_coarse": 23
+   },
+   "expected_human": {
+    "LEAKED": 13.81,
+    "CONVEYED": 3.56,
+    "WITHHELD": 11.63
+   }
+  },
+  "exp143/Luna/privacy_prompt_ci_gate_modify": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     0.92,
+     0.04,
+     0.04
+    ],
+    "abstracted": [
+     0.48,
+     0.33,
+     0.2
+    ],
+    "withheld_excl_coarse": [
+     0.12,
+     0.0,
+     0.88
+    ],
+    "too_coarse": [
+     0.09,
+     0.17,
+     0.74
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 49,
+    "abstracted": 46,
+    "withheld_excl_coarse": 25,
+    "too_coarse": 23
+   },
+   "expected_human": {
+    "LEAKED": 51.92,
+    "CONVEYED": 16.15,
+    "WITHHELD": 59.93
+   }
+  },
+  "exp143/GLM/raw_prompt": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "abstracted": [
+     0.48,
+     0.33,
+     0.2
+    ],
+    "withheld_excl_coarse": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "too_coarse": [
+     0.0,
+     0.07,
+     0.93
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 43,
+    "abstracted": 61,
+    "withheld_excl_coarse": 25,
+    "too_coarse": 14
+   },
+   "expected_human": {
+    "LEAKED": 12.38,
+    "CONVEYED": 1.85,
+    "WITHHELD": 14.77
+   }
+  },
+  "exp143/GLM/privacy_prompt_ci_gate_modify": {
+   "rows_P_human_given_group": {
+    "leaked": [
+     1.0,
+     0.0,
+     0.0
+    ],
+    "abstracted": [
+     0.48,
+     0.33,
+     0.2
+    ],
+    "withheld_excl_coarse": [
+     0.0,
+     0.0,
+     1.0
+    ],
+    "too_coarse": [
+     0.0,
+     0.07,
+     0.93
+    ]
+   },
+   "n_items_per_group": {
+    "leaked": 43,
+    "abstracted": 61,
+    "withheld_excl_coarse": 25,
+    "too_coarse": 14
+   },
+   "expected_human": {
+    "LEAKED": 39.77,
+    "CONVEYED": 17.82,
+    "WITHHELD": 69.41
+   }
+  }
+ }
+}

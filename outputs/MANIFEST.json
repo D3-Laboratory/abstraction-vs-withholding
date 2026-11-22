@@ -1,0 +1,1545 @@
+{
+ "format": "gzip JSONL; one line per record: {\"path\": original relative path, \"data\": sanitized record}",
+ "dropped_keys": [
+  "api_key",
+  "apikey",
+  "authorization",
+  "credential_alias",
+  "credentials",
+  "headers",
+  "key_name",
+  "ollama_env_file",
+  "ollama_key_concurrency_limits",
+  "ollama_key_name",
+  "ollama_key_pool",
+  "openrouter_env_file",
+  "openrouter_key_name",
+  "request_headers",
+  "user_agent",
+  "x-api-key"
+ ],
+ "packs": [
+  {
+   "name": "main-runs/main_raw_prompt",
+   "group": "main",
+   "condition": "raw_prompt",
+   "description": "main runs, raw_prompt: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_raw_prompt.jsonl.gz",
+     "records": 571,
+     "bytes": 10337479,
+     "sha256": "14ea42820124ba8116ca7945c28b7e0edb5444a8a5e036d639009e085e7ad800"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-formal-v20-ex-259/episodes",
+    "experiments/results/ci-gate-full-pilot-v20-240/episodes",
+    "experiments/results/ci-gate-v22-backfill-72/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_privacy_prompt",
+   "group": "main",
+   "condition": "privacy_prompt",
+   "description": "main runs, privacy_prompt: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_privacy_prompt.jsonl.gz",
+     "records": 571,
+     "bytes": 10232200,
+     "sha256": "33e209dcba3b508c73643e419d13b517ebdf1987b4afd76cc8157b97b79d8ce7"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-formal-v20-ex-259/episodes",
+    "experiments/results/ci-gate-full-pilot-v20-240/episodes",
+    "experiments/results/ci-gate-v22-backfill-72/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_ci_feedback_bare_v22",
+   "group": "main",
+   "condition": "ci_feedback_bare_v22",
+   "description": "main runs, ci_feedback_bare_v22: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_ci_feedback_bare_v22.jsonl.gz",
+     "records": 571,
+     "bytes": 11533117,
+     "sha256": "2ff71f059957436cbc5828b07246c3af2003e64e9a41a97d581427003e4f103b"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-v22-bare-571/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_generic_feedback_v22",
+   "group": "main",
+   "condition": "generic_feedback_v22",
+   "description": "main runs, generic_feedback_v22: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_generic_feedback_v22.jsonl.gz",
+     "records": 571,
+     "bytes": 12174209,
+     "sha256": "ce3cc85287d209d2bfc3b9a9d41c3f16b804004f7f078abf2d2cf8feef0d73b7"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-v22-feedback-571/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_ci_feedback_v22",
+   "group": "main",
+   "condition": "ci_feedback_v22",
+   "description": "main runs, ci_feedback_v22: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_ci_feedback_v22.jsonl.gz",
+     "records": 571,
+     "bytes": 12136718,
+     "sha256": "9bd94a74c4c2e97e793b96369ad6d02dd2d13e87bbc479467a5b9477d766f50d"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-v22-feedback-571/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_generic_gate_modify",
+   "group": "main",
+   "condition": "generic_gate_modify",
+   "description": "main runs, generic_gate_modify: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_generic_gate_modify.jsonl.gz",
+     "records": 571,
+     "bytes": 11245736,
+     "sha256": "578d38de6f662c222f0d76651c873ae87042d0193fdd6f45c3c8c25d64541f10"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-formal-v20-ex-259/episodes",
+    "experiments/results/ci-gate-full-pilot-v20-240/episodes",
+    "experiments/results/ci-gate-v22-backfill-72/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_ci_gate_modify",
+   "group": "main",
+   "condition": "ci_gate_modify",
+   "description": "main runs, ci_gate_modify: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_ci_gate_modify.jsonl.gz",
+     "records": 571,
+     "bytes": 11331921,
+     "sha256": "fe919bcd9f6c874c0862672ea0e35bddbd378b944192d950cb04b6f3ce8bc57d"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-formal-v20-ex-259/episodes",
+    "experiments/results/ci-gate-full-pilot-v20-240/episodes",
+    "experiments/results/ci-gate-v22-backfill-72/episodes"
+   ]
+  },
+  {
+   "name": "main-runs/main_privacy_prompt_ci_gate_modify",
+   "group": "main",
+   "condition": "privacy_prompt_ci_gate_modify",
+   "description": "main runs, privacy_prompt_ci_gate_modify: full conversations, benchmark judge and task metrics (571 cases)",
+   "records": 571,
+   "files": [
+    {
+     "file": "outputs/main-runs/main_privacy_prompt_ci_gate_modify.jsonl.gz",
+     "records": 571,
+     "bytes": 10977208,
+     "sha256": "9ce39db7859986177a28d147c43d26d9d9afbe9f71bc4ed46cb4fefb004528ac"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/ci-gate-formal-v20-ex-259/episodes",
+    "experiments/results/ci-gate-full-pilot-v20-240/episodes",
+    "experiments/results/ci-gate-v22-backfill-72/episodes"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_raw_prompt",
+   "group": "outcome",
+   "condition": "raw_prompt",
+   "description": "three-outcome judge (GPT-5.6 Luna), raw_prompt",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_raw_prompt.jsonl.gz",
+     "records": 182,
+     "bytes": 58018,
+     "sha256": "be9b1fe7557cbd91a0ef03a498c63763b3fff3c398551a2902fef0b8ebce7e8e"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_privacy_prompt",
+   "group": "outcome",
+   "condition": "privacy_prompt",
+   "description": "three-outcome judge (GPT-5.6 Luna), privacy_prompt",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_privacy_prompt.jsonl.gz",
+     "records": 182,
+     "bytes": 59556,
+     "sha256": "8d6af3a87b01a1ca5178e052b3da9188c108fc7580febce8b5799a64184a106e"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_ci_feedback_bare_v22",
+   "group": "outcome",
+   "condition": "ci_feedback_bare_v22",
+   "description": "three-outcome judge (GPT-5.6 Luna), ci_feedback_bare_v22",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_ci_feedback_bare_v22.jsonl.gz",
+     "records": 182,
+     "bytes": 59352,
+     "sha256": "ce9f9d22cde5cdfc95f8490d1f3e87fa9c7b1783b8e09470d963663c512631fc"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_generic_feedback_v22",
+   "group": "outcome",
+   "condition": "generic_feedback_v22",
+   "description": "three-outcome judge (GPT-5.6 Luna), generic_feedback_v22",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_generic_feedback_v22.jsonl.gz",
+     "records": 182,
+     "bytes": 59340,
+     "sha256": "3f6787ef15e1f3ce6d014df4871db99f2370abba22159c35c3f2b9e0526b5398"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_ci_feedback_v22",
+   "group": "outcome",
+   "condition": "ci_feedback_v22",
+   "description": "three-outcome judge (GPT-5.6 Luna), ci_feedback_v22",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_ci_feedback_v22.jsonl.gz",
+     "records": 182,
+     "bytes": 58843,
+     "sha256": "5c888bd0c03526a64cead04f7a2366337e02775a605a62a2ad2fcb9ff84a0e1c"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_generic_gate_modify",
+   "group": "outcome",
+   "condition": "generic_gate_modify",
+   "description": "three-outcome judge (GPT-5.6 Luna), generic_gate_modify",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_generic_gate_modify.jsonl.gz",
+     "records": 182,
+     "bytes": 58891,
+     "sha256": "cacc525660a7f8b7ed729c5bf241295121858244496584245466e0148d4191d9"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_ci_gate_modify",
+   "group": "outcome",
+   "condition": "ci_gate_modify",
+   "description": "three-outcome judge (GPT-5.6 Luna), ci_gate_modify",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_ci_gate_modify.jsonl.gz",
+     "records": 182,
+     "bytes": 58748,
+     "sha256": "b5a7991865f2ebb3bc14b2cd3a42ca0a2e41a73a8010c857ef67e543d51be132"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/luna_privacy_prompt_ci_gate_modify",
+   "group": "outcome",
+   "condition": "privacy_prompt_ci_gate_modify",
+   "description": "three-outcome judge (GPT-5.6 Luna), privacy_prompt_ci_gate_modify",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/luna_privacy_prompt_ci_gate_modify.jsonl.gz",
+     "records": 182,
+     "bytes": 59195,
+     "sha256": "1827ce14758612d4975bfc363945fbedda7181c3f84ba9f20c418088af4561a1"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23-luna/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_raw_prompt",
+   "group": "outcome",
+   "condition": "raw_prompt",
+   "description": "three-outcome judge (GLM-5.3-Flash), raw_prompt",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_raw_prompt.jsonl.gz",
+     "records": 182,
+     "bytes": 61998,
+     "sha256": "fae4e3c87032eeb3260e1fdb8c913a143c5c45508925930347261ab679c189ed"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_privacy_prompt",
+   "group": "outcome",
+   "condition": "privacy_prompt",
+   "description": "three-outcome judge (GLM-5.3-Flash), privacy_prompt",
+   "records": 181,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_privacy_prompt.jsonl.gz",
+     "records": 181,
+     "bytes": 61602,
+     "sha256": "40b4896a22d0a7eeb60de7f3916f8cad2ad5ee248d19cbb2de34a5764b0a60c2"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_ci_feedback_bare_v22",
+   "group": "outcome",
+   "condition": "ci_feedback_bare_v22",
+   "description": "three-outcome judge (GLM-5.3-Flash), ci_feedback_bare_v22",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_ci_feedback_bare_v22.jsonl.gz",
+     "records": 182,
+     "bytes": 63215,
+     "sha256": "45bba7c09e16f5fbbc934b65bd31ce48424da461ebe142bd0d022af182b0d10a"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_generic_feedback_v22",
+   "group": "outcome",
+   "condition": "generic_feedback_v22",
+   "description": "three-outcome judge (GLM-5.3-Flash), generic_feedback_v22",
+   "records": 181,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_generic_feedback_v22.jsonl.gz",
+     "records": 181,
+     "bytes": 66187,
+     "sha256": "da93b781a408f3f5d32172b6e97e0e3c44853f152792f353ac15026520f81607"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_ci_feedback_v22",
+   "group": "outcome",
+   "condition": "ci_feedback_v22",
+   "description": "three-outcome judge (GLM-5.3-Flash), ci_feedback_v22",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_ci_feedback_v22.jsonl.gz",
+     "records": 182,
+     "bytes": 66743,
+     "sha256": "600cfae277992688ec4fb170e9e3ce97c16ac09fa2cc1625554341794e5e9114"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_generic_gate_modify",
+   "group": "outcome",
+   "condition": "generic_gate_modify",
+   "description": "three-outcome judge (GLM-5.3-Flash), generic_gate_modify",
+   "records": 180,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_generic_gate_modify.jsonl.gz",
+     "records": 180,
+     "bytes": 65719,
+     "sha256": "889bbcf101623f5823fcdec304290addc9d3739be462cb32e5c0d2074731c4d3"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_ci_gate_modify",
+   "group": "outcome",
+   "condition": "ci_gate_modify",
+   "description": "three-outcome judge (GLM-5.3-Flash), ci_gate_modify",
+   "records": 181,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_ci_gate_modify.jsonl.gz",
+     "records": 181,
+     "bytes": 66802,
+     "sha256": "316a9247d5a83558fd6c54829242710dc3d3a530068139424ae56bc10272c6f3"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "outcome-judge/glm_privacy_prompt_ci_gate_modify",
+   "group": "outcome",
+   "condition": "privacy_prompt_ci_gate_modify",
+   "description": "three-outcome judge (GLM-5.3-Flash), privacy_prompt_ci_gate_modify",
+   "records": 181,
+   "files": [
+    {
+     "file": "outputs/outcome-judge/glm_privacy_prompt_ci_gate_modify.jsonl.gz",
+     "records": 181,
+     "bytes": 65995,
+     "sha256": "63a179e9fb4803d2c625bb5c8d19787117aed632eccd902bd4110377b7a911a9"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/target-disclosure-outcome-v23/judgments"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v23/R-orig-nothink",
+   "group": "over-redaction-replay-v23",
+   "condition": "R-orig-nothink",
+   "description": "over-redaction-replay-v23: redactor replay records, R-orig-nothink",
+   "records": 1429,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v23/R-orig-nothink.jsonl.gz",
+     "records": 1429,
+     "bytes": 808346,
+     "sha256": "705f584000de8acca8469ce84830df1c568714b82993f0dc977b0d09f64c0c9b"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v23/R-orig-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v23/judged-luna-nothink_R-orig-nothink",
+   "group": "over-redaction-replay-v23",
+   "condition": "R-orig-nothink",
+   "description": "over-redaction-replay-v23: judged-luna-nothink judgments, R-orig-nothink",
+   "records": 181,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v23/judged-luna-nothink_R-orig-nothink.jsonl.gz",
+     "records": 181,
+     "bytes": 57699,
+     "sha256": "49eff81340ffaddc40ffb548abadb68bbb6454c75c20cef6659f4c12ffa654ba"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v23/judged-luna-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v23/judged-glm-nothink_R-orig-nothink",
+   "group": "over-redaction-replay-v23",
+   "condition": "R-orig-nothink",
+   "description": "over-redaction-replay-v23: judged-glm-nothink judgments, R-orig-nothink",
+   "records": 180,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v23/judged-glm-nothink_R-orig-nothink.jsonl.gz",
+     "records": 180,
+     "bytes": 63939,
+     "sha256": "0eda0e6c720f7a642f489cf39af28112bceab10a55723e739d03ea9d41c945ea"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v23/judged-glm-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v23/R-abs-nothink",
+   "group": "over-redaction-replay-v23",
+   "condition": "R-abs-nothink",
+   "description": "over-redaction-replay-v23: redactor replay records, R-abs-nothink",
+   "records": 1429,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v23/R-abs-nothink.jsonl.gz",
+     "records": 1429,
+     "bytes": 817574,
+     "sha256": "ce56d3365195ff6a9ab046e4217f840de87c3d1e01a8cc66036cbf72a1c120f0"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v23/R-abs-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v23/judged-luna-nothink_R-abs-nothink",
+   "group": "over-redaction-replay-v23",
+   "condition": "R-abs-nothink",
+   "description": "over-redaction-replay-v23: judged-luna-nothink judgments, R-abs-nothink",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v23/judged-luna-nothink_R-abs-nothink.jsonl.gz",
+     "records": 182,
+     "bytes": 57756,
+     "sha256": "9f12d80205ffbc3e727a3e40430264b2959e67e19299a8826c7980957ea70409"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v23/judged-luna-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v23/judged-glm-nothink_R-abs-nothink",
+   "group": "over-redaction-replay-v23",
+   "condition": "R-abs-nothink",
+   "description": "over-redaction-replay-v23: judged-glm-nothink judgments, R-abs-nothink",
+   "records": 179,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v23/judged-glm-nothink_R-abs-nothink.jsonl.gz",
+     "records": 179,
+     "bytes": 63669,
+     "sha256": "826cb6335dfd2111491a57edaf34f0bd27c77a7430e89ffc64f3d561f1e6a99e"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v23/judged-glm-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/R-orig-nothink",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-orig-nothink",
+   "description": "over-redaction-replay-v24: redactor replay records, R-orig-nothink",
+   "records": 1429,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/R-orig-nothink.jsonl.gz",
+     "records": 1429,
+     "bytes": 767716,
+     "sha256": "5c991bf49ddc94adacd4cb09296f6c7fbe328ea6813aecc1fb372c2986c73096"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/R-orig-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/judged-glm_R-orig-nothink",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-orig-nothink",
+   "description": "over-redaction-replay-v24: judged-glm judgments, R-orig-nothink",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/judged-glm_R-orig-nothink.jsonl.gz",
+     "records": 182,
+     "bytes": 65750,
+     "sha256": "ced0103e611e0079ed7ab773c2dfe981f3956dbde23da1aee7ceab7d0264fd24"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/judged-glm"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/R-abs-nothink",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-abs-nothink",
+   "description": "over-redaction-replay-v24: redactor replay records, R-abs-nothink",
+   "records": 1429,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/R-abs-nothink.jsonl.gz",
+     "records": 1429,
+     "bytes": 778357,
+     "sha256": "efb366b5b81ec18c939aab14926c70fcc8a0002d9eccf6ca30ff419c269ad02a"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/R-abs-nothink"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/judged-glm_R-abs-nothink",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-abs-nothink",
+   "description": "over-redaction-replay-v24: judged-glm judgments, R-abs-nothink",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/judged-glm_R-abs-nothink.jsonl.gz",
+     "records": 182,
+     "bytes": 64814,
+     "sha256": "fa37d4d430fe30295e4aa06e1a7bf6202ff228b778e3a83b3ed6a625b1d5fccf"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/judged-glm"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/R-orig-think",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-orig-think",
+   "description": "over-redaction-replay-v24: redactor replay records, R-orig-think",
+   "records": 1429,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/R-orig-think.jsonl.gz",
+     "records": 1429,
+     "bytes": 784750,
+     "sha256": "d62774e05aafeb17baa906758af4a07563077a5c6dd4529c8ba7975b3a080631"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/R-orig-think"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/judged-glm_R-orig-think",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-orig-think",
+   "description": "over-redaction-replay-v24: judged-glm judgments, R-orig-think",
+   "records": 180,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/judged-glm_R-orig-think.jsonl.gz",
+     "records": 180,
+     "bytes": 62765,
+     "sha256": "57a288bc13c9ecebd6aa6d98d42a2d6147298cdbd9130e1bcc11827a844d68b3"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/judged-glm"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/R-abs-think",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-abs-think",
+   "description": "over-redaction-replay-v24: redactor replay records, R-abs-think",
+   "records": 1429,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/R-abs-think.jsonl.gz",
+     "records": 1429,
+     "bytes": 784210,
+     "sha256": "fbe834955de5d4f5cc74ec07d56622ba3ebb185ad6f24a5b0c020d8b6d637e2d"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/R-abs-think"
+   ]
+  },
+  {
+   "name": "over-redaction-replay-v24/judged-glm_R-abs-think",
+   "group": "over-redaction-replay-v24",
+   "condition": "R-abs-think",
+   "description": "over-redaction-replay-v24: judged-glm judgments, R-abs-think",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-replay-v24/judged-glm_R-abs-think.jsonl.gz",
+     "records": 182,
+     "bytes": 64738,
+     "sha256": "c54d35deaa7443d491f82eae6b837dd0125274d66a60827c0d37d079e51eb49e"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-replay-v24/judged-glm"
+   ]
+  },
+  {
+   "name": "over-redaction-live-v24/orig",
+   "group": "over-redaction-live-v24",
+   "condition": "orig",
+   "description": "multi-turn runs (DeepSeek V4.1 Flash), orig: full conversations",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-live-v24/orig.jsonl.gz",
+     "records": 182,
+     "bytes": 3182933,
+     "sha256": "2d3c1ecad843d3aeacdc5a299e7a05decc1d7a9420c54b7bb5b3ec9009d3e283"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-live-v24/orig"
+   ]
+  },
+  {
+   "name": "over-redaction-live-v24/judged-glm_orig",
+   "group": "over-redaction-live-v24",
+   "condition": "orig",
+   "description": "multi-turn runs, GLM-5.3-Flash three-outcome judgments, orig",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-live-v24/judged-glm_orig.jsonl.gz",
+     "records": 182,
+     "bytes": 65145,
+     "sha256": "92ac8ee830eaaad698119d32fccdc91ac56e0da8c62d165118eae119af2f052d"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-live-v24/judged-glm"
+   ]
+  },
+  {
+   "name": "over-redaction-live-v24/absfirst",
+   "group": "over-redaction-live-v24",
+   "condition": "absfirst",
+   "description": "multi-turn runs (DeepSeek V4.1 Flash), absfirst: full conversations",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-live-v24/absfirst.jsonl.gz",
+     "records": 182,
+     "bytes": 3268957,
+     "sha256": "12154104e256a1a50c73c521b6e7c88874be51bc19fb7b8db4d8f5a5c3a1ce52"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-live-v24/absfirst"
+   ]
+  },
+  {
+   "name": "over-redaction-live-v24/judged-glm_absfirst",
+   "group": "over-redaction-live-v24",
+   "condition": "absfirst",
+   "description": "multi-turn runs, GLM-5.3-Flash three-outcome judgments, absfirst",
+   "records": 182,
+   "files": [
+    {
+     "file": "outputs/over-redaction-live-v24/judged-glm_absfirst.jsonl.gz",
+     "records": 182,
+     "bytes": 66966,
+     "sha256": "f6b32086715380c28a8a6e0c19b7f4686447b74fd39dcbf598fa36c3d71b6cf9"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/over-redaction-live-v24/judged-glm"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/deepseek-v4.1-flash_converse",
+   "group": "judge-counterfactual-v25",
+   "condition": "deepseek-v4.1-flash/converse",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): deepseek-v4.1-flash, converse prompt",
+   "records": 618,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/deepseek-v4.1-flash_converse.jsonl.gz",
+     "records": 618,
+     "bytes": 442120,
+     "sha256": "039a40ab701f5c11b9de696eea6e790320c48d36875927526f97a678995abc72"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/deepseek-v4.1-flash_privacyalign",
+   "group": "judge-counterfactual-v25",
+   "condition": "deepseek-v4.1-flash/privacyalign",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): deepseek-v4.1-flash, privacyalign prompt",
+   "records": 618,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/deepseek-v4.1-flash_privacyalign.jsonl.gz",
+     "records": 618,
+     "bytes": 84157,
+     "sha256": "8456947a8421a44b4e726b2c1e679d49f609bcbe8a2b2a6a01fafbeb417adab2"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/deepseek-v4.1-flash_privacylens_leak",
+   "group": "judge-counterfactual-v25",
+   "condition": "deepseek-v4.1-flash/privacylens_leak",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): deepseek-v4.1-flash, privacylens_leak prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/deepseek-v4.1-flash_privacylens_leak.jsonl.gz",
+     "records": 516,
+     "bytes": 36051,
+     "sha256": "8e1bd58ab8b4b7f712ca7050893afac39de05a871cca97a5854009877046b364"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/gpt-oss-120b_converse",
+   "group": "judge-counterfactual-v25",
+   "condition": "gpt-oss:120b/converse",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): gpt-oss:120b, converse prompt",
+   "records": 618,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/gpt-oss-120b_converse.jsonl.gz",
+     "records": 618,
+     "bytes": 345005,
+     "sha256": "80ab55492104327354b64d4d6dcfe7eea8483a7ca163c92375e9f97e6099f54f"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/gpt-oss-120b_privacyalign",
+   "group": "judge-counterfactual-v25",
+   "condition": "gpt-oss:120b/privacyalign",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): gpt-oss:120b, privacyalign prompt",
+   "records": 618,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/gpt-oss-120b_privacyalign.jsonl.gz",
+     "records": 618,
+     "bytes": 78478,
+     "sha256": "bea8adcfa65ed39e0316419b86291922201d750fe4d0065f4e750c13cbcec4f3"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/gpt-oss-120b_privacylens_leak",
+   "group": "judge-counterfactual-v25",
+   "condition": "gpt-oss:120b/privacylens_leak",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): gpt-oss:120b, privacylens_leak prompt",
+   "records": 557,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/gpt-oss-120b_privacylens_leak.jsonl.gz",
+     "records": 557,
+     "bytes": 100633,
+     "sha256": "d6a1babe7a3386eb56e1f8b9b0e6c8fdc57c293d83c2f0713fbe438fdabfeb86"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/glm-5.3-flash_converse",
+   "group": "judge-counterfactual-v25",
+   "condition": "glm-5.3-flash/converse",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): glm-5.3-flash, converse prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/glm-5.3-flash_converse.jsonl.gz",
+     "records": 516,
+     "bytes": 513124,
+     "sha256": "20aa437e19101eb479c4e7f68e0568bb2710fcc0905efecf7304dc2698a1aab0"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/glm-5.3-flash_privacyalign",
+   "group": "judge-counterfactual-v25",
+   "condition": "glm-5.3-flash/privacyalign",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): glm-5.3-flash, privacyalign prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/glm-5.3-flash_privacyalign.jsonl.gz",
+     "records": 516,
+     "bytes": 141131,
+     "sha256": "2a4730448c8711863cf64655bf45d69adf2daae7ed9a27a6d911fa939c910c36"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/glm-5.3-flash_privacylens_leak",
+   "group": "judge-counterfactual-v25",
+   "condition": "glm-5.3-flash/privacylens_leak",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): glm-5.3-flash, privacylens_leak prompt",
+   "records": 515,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/glm-5.3-flash_privacylens_leak.jsonl.gz",
+     "records": 515,
+     "bytes": 144910,
+     "sha256": "1a040f4fabbb06dd281bddd12399a8e3c5cbe2b161c17d0999748e9eeb9c3f44"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/luna_converse",
+   "group": "judge-counterfactual-v25",
+   "condition": "luna/converse",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): luna, converse prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/luna_converse.jsonl.gz",
+     "records": 516,
+     "bytes": 287744,
+     "sha256": "ba2640a359be75ce5f91c1893d939694f0e13a671f56ab9de9db52f65ef5a844"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/luna_privacyalign",
+   "group": "judge-counterfactual-v25",
+   "condition": "luna/privacyalign",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): luna, privacyalign prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/luna_privacyalign.jsonl.gz",
+     "records": 516,
+     "bytes": 96376,
+     "sha256": "9d077b627d88e96cd3de848ec6210883b5d58bf3754f9122155235bd4ff75be0"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/luna_privacylens_leak",
+   "group": "judge-counterfactual-v25",
+   "condition": "luna/privacylens_leak",
+   "description": "judge test v25 (earlier run: leaked, allowed form, removed): luna, privacylens_leak prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/luna_privacylens_leak.jsonl.gz",
+     "records": 516,
+     "bytes": 50922,
+     "sha256": "461b298668253ee334a73874e3bd8e4c232a356adcb1482cbcd932e8e14c0f53"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/deepseek-v4.1-flash_converse",
+   "group": "judge-counterfactual-v26",
+   "condition": "deepseek-v4.1-flash/converse",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): deepseek-v4.1-flash, converse prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/deepseek-v4.1-flash_converse.jsonl.gz",
+     "records": 330,
+     "bytes": 223540,
+     "sha256": "0b0f554180004b58696135c2ba466c5aedd46fe39eab5bed98de68f7f06c8ad5"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/deepseek-v4.1-flash_privacyalign",
+   "group": "judge-counterfactual-v26",
+   "condition": "deepseek-v4.1-flash/privacyalign",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): deepseek-v4.1-flash, privacyalign prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/deepseek-v4.1-flash_privacyalign.jsonl.gz",
+     "records": 330,
+     "bytes": 47137,
+     "sha256": "51bae72ea206a6b218eac03444089eb09307c69712beed2a5e04d55f2968e270"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/deepseek-v4.1-flash_privacylens_leak",
+   "group": "judge-counterfactual-v26",
+   "condition": "deepseek-v4.1-flash/privacylens_leak",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): deepseek-v4.1-flash, privacylens_leak prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/deepseek-v4.1-flash_privacylens_leak.jsonl.gz",
+     "records": 330,
+     "bytes": 28249,
+     "sha256": "f4c001b09777dac41f03897923492c75a07cc5d63f91b1a245292e05e6a88efc"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/gpt-oss-120b_converse",
+   "group": "judge-counterfactual-v26",
+   "condition": "gpt-oss:120b/converse",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): gpt-oss:120b, converse prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/gpt-oss-120b_converse.jsonl.gz",
+     "records": 330,
+     "bytes": 184506,
+     "sha256": "1dda86f962caa11248269fec43b65aa2c4bafc347a14795c9f52494d9e50d27f"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/gpt-oss-120b_privacyalign",
+   "group": "judge-counterfactual-v26",
+   "condition": "gpt-oss:120b/privacyalign",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): gpt-oss:120b, privacyalign prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/gpt-oss-120b_privacyalign.jsonl.gz",
+     "records": 330,
+     "bytes": 42297,
+     "sha256": "1dba6589886322854a53ddc1bc6c3e3ce103a5e71871104d9fb8d9e29dd3250c"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/gpt-oss-120b_privacylens_leak",
+   "group": "judge-counterfactual-v26",
+   "condition": "gpt-oss:120b/privacylens_leak",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): gpt-oss:120b, privacylens_leak prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/gpt-oss-120b_privacylens_leak.jsonl.gz",
+     "records": 330,
+     "bytes": 61353,
+     "sha256": "431e9a1a90c32a7269c37070592ec384a5f1b33aaf9bc54ffc02322aeb6443e7"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/glm-5.3-flash_converse",
+   "group": "judge-counterfactual-v26",
+   "condition": "glm-5.3-flash/converse",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): glm-5.3-flash, converse prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/glm-5.3-flash_converse.jsonl.gz",
+     "records": 330,
+     "bytes": 369487,
+     "sha256": "bdbceecd425462063a2b72a2ff172fb56a92f049a7e6c2d07568a7fc6340dd97"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/glm-5.3-flash_privacyalign",
+   "group": "judge-counterfactual-v26",
+   "condition": "glm-5.3-flash/privacyalign",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): glm-5.3-flash, privacyalign prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/glm-5.3-flash_privacyalign.jsonl.gz",
+     "records": 330,
+     "bytes": 109833,
+     "sha256": "1b6e121995c58e6596583a2dbfe923879bc5624a96c0f60b6820310316031782"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/glm-5.3-flash_privacylens_leak",
+   "group": "judge-counterfactual-v26",
+   "condition": "glm-5.3-flash/privacylens_leak",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): glm-5.3-flash, privacylens_leak prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/glm-5.3-flash_privacylens_leak.jsonl.gz",
+     "records": 330,
+     "bytes": 115634,
+     "sha256": "af7869553f89a33cb047be4f04636fbe75436214e0d2770c60fc419cfe509281"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/luna_converse",
+   "group": "judge-counterfactual-v26",
+   "condition": "luna/converse",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): luna, converse prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/luna_converse.jsonl.gz",
+     "records": 330,
+     "bytes": 189483,
+     "sha256": "0f3eb69aa19fa2e96bd187d65b6743762ce3c08c33d9e45ba3c4f76f4e69eef6"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/luna_privacyalign",
+   "group": "judge-counterfactual-v26",
+   "condition": "luna/privacyalign",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): luna, privacyalign prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/luna_privacyalign.jsonl.gz",
+     "records": 330,
+     "bytes": 63174,
+     "sha256": "c87d79c2c75475b74b846aa0c1fa072869b7d2fb9d708b6c39fee517d94258a6"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26/luna_privacylens_leak",
+   "group": "judge-counterfactual-v26",
+   "condition": "luna/privacylens_leak",
+   "description": "judge test v26 (explicit refusal, coarser; same day as the rerun): luna, privacylens_leak prompt",
+   "records": 330,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26/luna_privacylens_leak.jsonl.gz",
+     "records": 330,
+     "bytes": 33295,
+     "sha256": "9ed631b48463a2aa30cd304b2a0724f96075ecf3163a5d8f85c39da18a33496c"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash_converse",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "deepseek-v4.1-flash/converse",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: deepseek-v4.1-flash, converse prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash_converse.jsonl.gz",
+     "records": 516,
+     "bytes": 333524,
+     "sha256": "2bcc4cf2f235d6a3cbfee71d3023673ffc7be0aaef8d95ff7cbfaef715dece97"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash_privacyalign",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "deepseek-v4.1-flash/privacyalign",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: deepseek-v4.1-flash, privacyalign prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash_privacyalign.jsonl.gz",
+     "records": 516,
+     "bytes": 71318,
+     "sha256": "0a942865127253ecaa18e9b59e6b1f150595a0b1dad8ddbc0bc18b92631bd867"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash_privacylens_leak",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "deepseek-v4.1-flash/privacylens_leak",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: deepseek-v4.1-flash, privacylens_leak prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash_privacylens_leak.jsonl.gz",
+     "records": 516,
+     "bytes": 38715,
+     "sha256": "19dd86acf732939cd281badc0bf55bcd29feeda309f0b7416753b7831940ea53"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/deepseek-v4.1-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/gpt-oss-120b_converse",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "gpt-oss:120b/converse",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: gpt-oss:120b, converse prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/gpt-oss-120b_converse.jsonl.gz",
+     "records": 516,
+     "bytes": 274666,
+     "sha256": "b025ba71153eec15e4961817200351f452f5b0047cb6916c92373bc659a7969e"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/gpt-oss-120b_privacyalign",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "gpt-oss:120b/privacyalign",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: gpt-oss:120b, privacyalign prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/gpt-oss-120b_privacyalign.jsonl.gz",
+     "records": 516,
+     "bytes": 63475,
+     "sha256": "5fe8a81105026609e501e515cbb12e0ac7b6e731004035afda5491122c0aee67"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/gpt-oss-120b_privacylens_leak",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "gpt-oss:120b/privacylens_leak",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: gpt-oss:120b, privacylens_leak prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/gpt-oss-120b_privacylens_leak.jsonl.gz",
+     "records": 516,
+     "bytes": 90955,
+     "sha256": "b44b6aff14a1a30f6a8259d667a56c05fc02e4dc1c77120bf4eba28253932dad"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/gpt-oss:120b"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash_converse",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "glm-5.3-flash/converse",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: glm-5.3-flash, converse prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash_converse.jsonl.gz",
+     "records": 516,
+     "bytes": 557901,
+     "sha256": "1c2b17e7f105ddd0fb4febef5c65ecb21e77bd2568644f6dc32cf7698dd78b8d"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash_privacyalign",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "glm-5.3-flash/privacyalign",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: glm-5.3-flash, privacyalign prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash_privacyalign.jsonl.gz",
+     "records": 516,
+     "bytes": 164486,
+     "sha256": "1c884fc18495990f0f9b7946b78487ca10a23f87662c3b047431eb033abc5cee"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash_privacylens_leak",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "glm-5.3-flash/privacylens_leak",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: glm-5.3-flash, privacylens_leak prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash_privacylens_leak.jsonl.gz",
+     "records": 516,
+     "bytes": 171967,
+     "sha256": "29543612cddab60b0afac977a0a99f51b175fbe094bcedfbfb51a22f8e3766c2"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/glm-5.3-flash"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/luna_converse",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "luna/converse",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: luna, converse prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/luna_converse.jsonl.gz",
+     "records": 516,
+     "bytes": 288849,
+     "sha256": "2e1a9174d6066353879a67cc0fc0eb08077d5a5ec26699076fcb7e2e7d4be852"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/luna_privacyalign",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "luna/privacyalign",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: luna, privacyalign prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/luna_privacyalign.jsonl.gz",
+     "records": 516,
+     "bytes": 96002,
+     "sha256": "e74d3bbf6db57d1fe681b7c1bc36e68fb7aff1fe69a9ec4c58b04aa434621bb1"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v26-baseline-rerun/luna_privacylens_leak",
+   "group": "judge-counterfactual-v26-baseline-rerun",
+   "condition": "luna/privacylens_leak",
+   "description": "judge test v26 same-day rerun of leaked, allowed form, removed: luna, privacylens_leak prompt",
+   "records": 516,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v26-baseline-rerun/luna_privacylens_leak.jsonl.gz",
+     "records": 516,
+     "bytes": 51108,
+     "sha256": "d03d1a34772e1d9449c7efc5ad8d1f533dade1f72833099c197efc2470173e58"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v26-baseline-rerun/luna"
+   ]
+  },
+  {
+   "name": "judge-test/judge-counterfactual-v25/_failed",
+   "group": "judge-counterfactual-v25",
+   "condition": "_failed",
+   "description": "judge test v25: responses that failed to parse (kept for the counts of analyze_judge_counterfactual_sameday.py); not used for any rate",
+   "records": 635,
+   "files": [
+    {
+     "file": "outputs/judge-test/judge-counterfactual-v25/_failed.jsonl.gz",
+     "records": 635,
+     "bytes": 59035,
+     "sha256": "467bf35cc26d83bf5e9b2530bbcb30d9e84828c0898d328005758be986d876a6"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/judge-counterfactual-v25/_failed"
+   ]
+  },
+  {
+   "name": "cost-v27/episodes_raw",
+   "group": "cost-v27",
+   "condition": "raw",
+   "description": "withholding-cost diagnostic v27, raw branch: full conversations and task metrics",
+   "records": 30,
+   "files": [
+    {
+     "file": "outputs/cost-v27/episodes_raw.jsonl.gz",
+     "records": 30,
+     "bytes": 385949,
+     "sha256": "f6b98c96b80af125dca6d5d9294fb4aabd1bddeef6cb81a8c7380f5192f97d2a"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/withholding-cost-pilot-v27/episodes"
+   ]
+  },
+  {
+   "name": "cost-v27/episodes_allowed",
+   "group": "cost-v27",
+   "condition": "allowed",
+   "description": "withholding-cost diagnostic v27, allowed branch: full conversations and task metrics",
+   "records": 30,
+   "files": [
+    {
+     "file": "outputs/cost-v27/episodes_allowed.jsonl.gz",
+     "records": 30,
+     "bytes": 379127,
+     "sha256": "4ae466eeee317122d4b25c146c6b93a5d46a8e1953e6de4c3316074575ae6f7a"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/withholding-cost-pilot-v27/episodes"
+   ]
+  },
+  {
+   "name": "cost-v27/episodes_coarser",
+   "group": "cost-v27",
+   "condition": "coarser",
+   "description": "withholding-cost diagnostic v27, coarser branch: full conversations and task metrics",
+   "records": 27,
+   "files": [
+    {
+     "file": "outputs/cost-v27/episodes_coarser.jsonl.gz",
+     "records": 27,
+     "bytes": 358339,
+     "sha256": "1d667097d0b27b81a0d84ba831e44093d1bfcb429b8222eeb450c261011a303f"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/withholding-cost-pilot-v27/episodes"
+   ]
+  },
+  {
+   "name": "cost-v27/episodes_refuse",
+   "group": "cost-v27",
+   "condition": "refuse",
+   "description": "withholding-cost diagnostic v27, refuse branch: full conversations and task metrics",
+   "records": 30,
+   "files": [
+    {
+     "file": "outputs/cost-v27/episodes_refuse.jsonl.gz",
+     "records": 30,
+     "bytes": 379845,
+     "sha256": "0866a874a79627f22ff28b1248c201770f863698b9feee00df8fa6da43e474e3"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/withholding-cost-pilot-v27/episodes"
+   ]
+  },
+  {
+   "name": "cost-v27/prefixes",
+   "group": "cost-v27",
+   "condition": "prefix",
+   "description": "withholding-cost diagnostic v27: shared conversation prefixes",
+   "records": 30,
+   "files": [
+    {
+     "file": "outputs/cost-v27/prefixes.jsonl.gz",
+     "records": 30,
+     "bytes": 129655,
+     "sha256": "5c734bcecc762cf054086b5e81abb072327efbfd2646c15d1a253d4935fa0463"
+    }
+   ],
+   "source_dirs": [
+    "experiments/results/withholding-cost-pilot-v27/prefixes"
+   ]
+  }
+ ]
+}

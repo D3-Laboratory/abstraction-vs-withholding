@@ -1,0 +1,286 @@
+
+== all8
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                        1456  4.91   92%  2.72   99%  2.30  11.6  19.3k  0.953  0.951  7.79  8.18  0.83  0.83
+LEAKED                      949  4.90   91%  2.75   99%  2.16  11.6  20.1k  0.955  0.953  7.80  8.17  0.79  0.80
+CONVEYED                    196  4.95   96%  3.13   98%  2.41  12.1  19.3k  0.929  0.927  7.71  8.30  0.88  0.88
+WITHHELD                    311  4.92   93%  2.41   99%  2.68  11.3  16.8k  0.961  0.958  7.83  8.15  0.92  0.91
+WITHHELD/refused             84  4.88   89%  2.20   98%  2.39  10.8  16.5k  0.964  0.964  7.71  8.00  0.90  0.89
+WITHHELD/deferred            47  5.00  100%  2.38  100%  2.47  10.7  18.0k  0.979  0.974  8.03  8.20  0.94  0.94
+WITHHELD/ignored             61  4.92   93%  1.51  100%  2.66  10.6  13.6k  0.984  0.974  8.12  8.26  0.90  0.90
+WITHHELD/too_coarse         119  4.92   92%  3.02   98%  2.97  12.3  18.2k  0.941  0.939  7.69  8.17  0.93  0.92
+WITHHELD/excl_too_coarse    192  4.92   93%  2.03   99%  2.49  10.7  16.0k  0.974  0.970  7.92  8.13  0.91  0.91
+
+== raw_prompt
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.86   87%  2.03   99%  1.98  11.0  18.6k  0.973  0.973  7.92  8.15  0.82  0.82
+LEAKED                      158  4.85   87%  2.02   99%  1.95  11.0  18.8k  0.975  0.975  7.96  8.17  0.80  0.80
+CONVEYED                     11  5.00  100%  1.36   91%  1.91   9.3  16.3k  1.000  1.000  8.27  8.27  0.91  0.91
+WITHHELD                     13  4.85   85%  2.77  100%  2.46  12.5  18.0k  0.923  0.923  7.22  7.82  1.00  1.00
+WITHHELD/refused              7  4.86   86%  3.57  100%  2.14  13.6  20.9k  0.857  0.857  6.49  7.57  1.00  1.00
+WITHHELD/deferred             0
+WITHHELD/ignored              0
+WITHHELD/too_coarse           6  4.83   83%  1.83  100%  2.83  11.2  14.7k  1.000  1.000  8.07  8.07  1.00  1.00
+WITHHELD/excl_too_coarse      7  4.86   86%  3.57  100%  2.14  13.6  20.9k  0.857  0.857  6.49  7.57  1.00  1.00
+
+== privacy_prompt
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.90   91%  2.46   99%  2.05  11.4  19.2k  0.962  0.960  7.82  8.13  0.83  0.83
+LEAKED                      153  4.90   90%  2.37   99%  1.97  11.2  19.3k  0.961  0.959  7.76  8.08  0.81  0.81
+CONVEYED                     10  4.90   90%  2.90  100%  2.60  12.6  17.8k  1.000  1.000  8.26  8.26  1.00  1.00
+WITHHELD                     19  4.95   95%  2.95  100%  2.37  12.4  19.2k  0.947  0.940  8.03  8.48  0.89  0.89
+WITHHELD/refused              4  5.00  100%  2.50  100%  2.50  10.2  17.8k  1.000  1.000  7.97  7.97  1.00  1.00
+WITHHELD/deferred             2  5.00  100%  2.00  100%  4.00   9.0  18.6k  1.000  1.000  8.73  8.73  1.00  1.00
+WITHHELD/ignored              5  5.00  100%  1.00  100%  1.80  10.4  14.2k  1.000  0.971  8.58  8.58  0.80  0.80
+WITHHELD/too_coarse           8  4.88   88%  4.62  100%  2.25  15.6  23.3k  0.875  0.875  7.55  8.63  0.88  0.88
+WITHHELD/excl_too_coarse     11  5.00  100%  1.73  100%  2.45  10.1  16.3k  1.000  0.987  8.39  8.39  0.91  0.91
+
+== ci_feedback_bare_v22
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.86   87%  2.41   98%  1.91  10.9  18.7k  0.951  0.949  7.89  8.30  0.86  0.85
+LEAKED                      143  4.87   88%  2.31   99%  1.85  10.9  18.8k  0.958  0.956  7.96  8.31  0.85  0.85
+CONVEYED                     14  4.93   93%  3.14   93%  1.93  12.2  20.8k  0.857  0.857  7.19  8.39  0.86  0.86
+WITHHELD                     25  4.76   76%  2.60   96%  2.20  10.7  17.5k  0.960  0.960  7.92  8.25  0.92  0.88
+WITHHELD/refused             11  4.73   73%  1.36   91%  2.27   9.5  14.0k  1.000  1.000  8.05  8.05  0.91  0.82
+WITHHELD/deferred             2  5.00  100%  2.50  100%  1.00  11.0  19.0k  1.000  1.000  8.25  8.25  1.00  1.00
+WITHHELD/ignored              5  4.80   80%  1.40  100%  2.40   9.0  11.5k  1.000  1.000  8.35  8.35  1.00  1.00
+WITHHELD/too_coarse           7  4.71   71%  5.43  100%  2.29  13.9  26.7k  0.857  0.857  7.32  8.54  0.86  0.86
+WITHHELD/excl_too_coarse     18  4.78   78%  1.50   94%  2.17   9.5  13.8k  1.000  1.000  8.16  8.16  0.94  0.89
+
+== generic_feedback_v22
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.95   95%  2.97  100%  2.34  12.1  20.0k  0.945  0.943  7.77  8.22  0.80  0.81
+LEAKED                      103  4.94   94%  3.11  100%  2.25  12.3  21.2k  0.961  0.961  7.83  8.15  0.76  0.76
+CONVEYED                     36  4.94   94%  4.14  100%  2.67  13.1  21.1k  0.861  0.856  7.22  8.38  0.83  0.83
+WITHHELD                     43  4.95   95%  1.65  100%  2.28  10.7  16.0k  0.977  0.972  8.06  8.26  0.88  0.91
+WITHHELD/refused             17  5.00  100%  0.88  100%  2.06   9.8  13.8k  1.000  1.000  8.01  8.01  0.76  0.82
+WITHHELD/deferred            11  5.00  100%  1.27  100%  2.00   9.6  16.3k  1.000  0.982  8.14  8.14  1.00  1.00
+WITHHELD/ignored              5  5.00  100%  0.80  100%  2.00   9.6  12.9k  1.000  1.000  8.46  8.46  1.00  1.00
+WITHHELD/too_coarse          10  4.80   80%  3.80  100%  3.10  13.8  20.9k  0.900  0.900  7.87  8.75  0.90  0.90
+WITHHELD/excl_too_coarse     33  5.00  100%  1.00  100%  2.03   9.7  14.5k  1.000  0.994  8.12  8.12  0.88  0.91
+
+== ci_feedback_v22
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.92   92%  3.48   99%  2.61  12.3  21.3k  0.923  0.922  7.52  8.15  0.82  0.84
+LEAKED                      112  4.93   94%  4.05   99%  2.44  12.7  23.3k  0.911  0.909  7.46  8.19  0.79  0.80
+CONVEYED                     28  4.93   93%  1.86  100%  2.54  11.0  16.8k  0.964  0.964  7.97  8.26  0.96  0.96
+WITHHELD                     42  4.88   88%  3.02  100%  3.12  12.1  18.7k  0.929  0.929  7.40  7.97  0.83  0.83
+WITHHELD/refused             15  4.93   93%  1.93  100%  2.53  10.3  16.7k  1.000  1.000  8.00  8.00  0.80  0.80
+WITHHELD/deferred             4  5.00  100%  6.00  100%  3.00  13.8  25.2k  0.750  0.750  5.50  7.33  0.75  0.75
+WITHHELD/ignored             10  4.80   80%  2.10  100%  2.50  14.1  15.8k  0.900  0.900  7.19  7.99  0.80  0.80
+WITHHELD/too_coarse          13  4.85   85%  4.08  100%  4.31  12.0  21.3k  0.923  0.923  7.45  8.07  0.92  0.92
+WITHHELD/excl_too_coarse     29  4.90   90%  2.55  100%  2.59  12.1  17.6k  0.931  0.931  7.38  7.92  0.79  0.79
+
+== generic_gate_modify
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.92   92%  2.46   99%  2.42  11.3  18.4k  0.956  0.953  7.87  8.23  0.82  0.82
+LEAKED                      104  4.88   88%  2.48   99%  2.28  11.4  19.4k  0.962  0.962  7.99  8.31  0.76  0.76
+CONVEYED                     25  5.00  100%  3.84  100%  2.68  12.7  21.1k  0.920  0.920  7.45  8.10  0.84  0.84
+WITHHELD                     53  4.94   96%  1.77   98%  2.57  10.5  15.2k  0.962  0.951  7.82  8.12  0.94  0.92
+WITHHELD/refused              6  4.83   83%  0.83  100%  2.83   7.8  12.5k  1.000  1.000  8.37  8.37  1.00  1.00
+WITHHELD/deferred            11  5.00  100%  1.82  100%  1.73  10.0  17.2k  1.000  1.000  8.02  8.02  0.91  0.91
+WITHHELD/ignored             13  4.85   92%  1.15  100%  2.62   9.3  12.8k  1.000  0.967  8.35  8.35  1.00  1.00
+WITHHELD/too_coarse          23  5.00  100%  2.35   96%  2.87  12.2  16.2k  0.913  0.906  7.27  7.96  0.91  0.87
+WITHHELD/excl_too_coarse     30  4.90   93%  1.33  100%  2.33   9.3  14.3k  1.000  0.986  8.23  8.23  0.97  0.97
+
+== ci_gate_modify
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.95   97%  2.90   99%  2.64  11.8  19.1k  0.967  0.965  7.84  8.11  0.84  0.84
+LEAKED                       91  4.96   97%  2.81  100%  2.63  11.6  20.1k  0.967  0.965  7.67  7.93  0.75  0.75
+CONVEYED                     39  4.92   95%  3.00   97%  1.95  11.7  19.0k  0.949  0.949  7.88  8.30  0.87  0.90
+WITHHELD                     52  4.96   98%  2.96   98%  3.19  12.0  17.3k  0.981  0.978  8.11  8.26  0.96  0.94
+WITHHELD/refused             10  4.80   90%  4.00  100%  4.00  12.7  19.5k  0.900  0.900  7.15  7.95  1.00  1.00
+WITHHELD/deferred             7  5.00  100%  4.14  100%  2.86  13.3  21.1k  1.000  1.000  8.55  8.55  0.86  0.86
+WITHHELD/ignored             10  5.00  100%  1.80  100%  2.90  10.6  13.5k  1.000  1.000  8.50  8.50  1.00  1.00
+WITHHELD/too_coarse          25  5.00  100%  2.68   96%  3.08  12.0  17.0k  1.000  0.994  8.20  8.20  0.96  0.92
+WITHHELD/excl_too_coarse     27  4.93   96%  3.22  100%  3.30  12.1  17.7k  0.963  0.963  8.02  8.32  0.96  0.96
+
+== privacy_prompt_ci_gate_modify
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         182  4.96   97%  3.09   98%  2.48  12.2  18.9k  0.945  0.941  7.73  8.18  0.86  0.85
+LEAKED                       85  4.96   98%  3.61   98%  2.28  12.9  21.1k  0.929  0.924  7.63  8.21  0.80  0.80
+CONVEYED                     33  5.00  100%  3.36  100%  2.67  12.8  19.4k  0.939  0.933  7.90  8.41  0.85  0.85
+WITHHELD                     64  4.94   94%  2.27   98%  2.64  10.9  15.8k  0.969  0.969  7.78  8.03  0.94  0.92
+WITHHELD/refused             14  4.86   86%  3.29   93%  1.50  12.1  18.8k  0.929  0.929  7.42  7.99  1.00  0.93
+WITHHELD/deferred            10  5.00  100%  1.60  100%  3.30   9.8  15.4k  1.000  1.000  8.37  8.37  1.00  1.00
+WITHHELD/ignored             13  5.00  100%  1.69  100%  3.31  10.4  13.7k  1.000  1.000  7.91  7.91  0.77  0.77
+WITHHELD/too_coarse          27  4.93   93%  2.26  100%  2.67  11.0  15.5k  0.963  0.963  7.68  7.97  0.96  0.96
+WITHHELD/excl_too_coarse     37  4.95   95%  2.27   97%  2.62  10.9  16.1k  0.973  0.973  7.85  8.07  0.92  0.89
+
+== gated5
+group                         n   atk  hit5  comp  req% reask turns  chars   done    cov   rat  ratC 1st3p p<=rq
+ALL                         910  4.94   95%  2.98   99%  2.50  11.9  19.5k  0.947  0.945  7.74  8.18  0.83  0.83
+LEAKED                      495  4.93   94%  3.22   99%  2.37  12.2  21.1k  0.945  0.944  7.72  8.16  0.77  0.77
+CONVEYED                    161  4.96   96%  3.26   99%  2.47  12.3  19.5k  0.925  0.923  7.68  8.30  0.87  0.88
+WITHHELD                    254  4.94   94%  2.33   99%  2.76  11.2  16.5k  0.965  0.961  7.84  8.13  0.92  0.91
+WITHHELD/refused             62  4.90   92%  2.18   98%  2.44  10.7  16.4k  0.968  0.968  7.77  8.03  0.89  0.89
+WITHHELD/deferred            43  5.00  100%  2.40  100%  2.47  10.7  17.9k  0.977  0.972  7.98  8.17  0.93  0.93
+WITHHELD/ignored             51  4.92   94%  1.57  100%  2.76  10.8  13.8k  0.980  0.972  8.05  8.21  0.90  0.90
+WITHHELD/too_coarse          98  4.94   94%  2.79   98%  3.08  11.9  17.4k  0.949  0.946  7.70  8.12  0.94  0.92
+WITHHELD/excl_too_coarse    156  4.94   95%  2.04   99%  2.55  10.8  16.0k  0.974  0.970  7.92  8.13  0.90  0.90
+
+== withheld_kind counts (Luna | GLM): withheld refused/deferred/ignored/too_coarse
+raw_prompt                       Luna  13:   7   0   0   6 | GLM  14:   9   1   1   3 (n=182)
+privacy_prompt                   Luna  19:   4   2   5   8 | GLM  22:  10   3   1   6 (n=181)
+ci_feedback_bare_v22             Luna  25:  11   2   5   7 | GLM  26:  13   2   3   8 (n=182)
+generic_feedback_v22             Luna  43:  17  11   5  10 | GLM  46:  26   8   2  10 (n=181)
+ci_feedback_v22                  Luna  42:  15   4  10  13 | GLM  38:  18   4   4  12 (n=182)
+generic_gate_modify              Luna  53:   6  11  13  23 | GLM  49:  11  12   7  19 (n=180)
+ci_gate_modify                   Luna  52:  10   7  10  25 | GLM  47:  12   9   7  19 (n=181)
+privacy_prompt_ci_gate_modify    Luna  64:  14  10  13  27 | GLM  61:  26   9   6  20 (n=181)
+feedback3                        Luna 110:  43  17  20  30 | GLM 110:  57  14   9  30 (n=545)
+rewrite3                         Luna 169:  30  28  36  75 | GLM 157:  49  30  20  58 (n=542)
+all8                             Luna 311:  84  47  61 119 | GLM 303: 125  48  31  97 (n=1450)
+
+== within-case paired differences (mean of per-case differences; case bootstrap 95% CI)
+all8 W-A               cases= 59 (eps 138/123) | completed +0.093 [+0.025,+0.169] | coverage +0.090 [+0.023,+0.167] | rating +0.653 [+0.047,+1.348] | turns -1.664 [-3.033,-0.361] | reasks -0.057 [-0.377,+0.298] | chars -1774 [-4243,+416]
+all8 W-L               cases=102 (eps 294/406) | completed +0.018 [-0.010,+0.052] | coverage +0.017 [-0.011,+0.052] | rating +0.160 [-0.108,+0.453] | turns -0.284 [-1.042,+0.381] | reasks +0.418 [+0.135,+0.710] | chars -988 [-2468,+276]
+all8 A-L               cases= 90 (eps 189/394) | completed -0.016 [-0.065,+0.032] | coverage -0.017 [-0.068,+0.031] | rating -0.090 [-0.504,+0.320] | turns +0.300 [-0.655,+1.259] | reasks +0.277 [+0.020,+0.524] | chars -642 [-2605,+1287]
+all8 Wcoarse-A         cases= 35 (eps 53/73) | completed +0.081 [-0.029,+0.205] | coverage +0.081 [-0.029,+0.205] | rating +0.711 [-0.190,+1.700] | turns -2.014 [-4.079,-0.114] | reasks +0.605 [-0.326,+2.063] | chars -1387 [-4822,+2258]
+all8 WexclCoarse-A     cases= 39 (eps 85/79) | completed +0.094 [+0.017,+0.192] | coverage +0.087 [+0.005,+0.184] | rating +0.631 [-0.104,+1.447] | turns -1.328 [-3.150,+0.239] | reasks -0.256 [-0.665,+0.130] | chars -1761 [-4959,+923]
+gated5 W-A             cases= 51 (eps 93/90) | completed +0.078 [+0.000,+0.167] | coverage +0.076 [+0.000,+0.165] | rating +0.398 [-0.251,+1.141] | turns -1.520 [-3.080,-0.137] | reasks +0.015 [-0.397,+0.485] | chars -2170 [-5324,+638]
+gated5 W-L             cases= 77 (eps 165/156) | completed +0.016 [-0.038,+0.075] | coverage +0.016 [-0.037,+0.076] | rating +0.013 [-0.484,+0.506] | turns -1.098 [-2.232,+0.014] | reasks +0.237 [-0.122,+0.633] | chars -2126 [-4425,-75]
+gated5 A-L             cases= 73 (eps 130/176) | completed -0.017 [-0.103,+0.063] | coverage -0.017 [-0.102,+0.063] | rating -0.096 [-0.787,+0.591] | turns -0.346 [-1.984,+1.291] | reasks +0.180 [-0.110,+0.489] | chars -1586 [-4687,+1641]
+gated5 Wcoarse-A       cases= 31 (eps 41/50) | completed +0.108 [-0.032,+0.258] | coverage +0.108 [-0.032,+0.258] | rating +0.864 [-0.297,+2.160] | turns -2.331 [-4.906,+0.175] | reasks +0.737 [-0.307,+2.398] | chars -2421 [-7736,+2967]
+gated5 WexclCoarse-A   cases= 32 (eps 52/57) | completed +0.042 [+0.000,+0.115] | coverage +0.035 [-0.012,+0.108] | rating +0.085 [-0.391,+0.689] | turns -0.628 [-1.891,+0.458] | reasks -0.260 [-0.703,+0.187] | chars -1242 [-3588,+884]
+
+== pooled W-A difference, case bootstrap (paper Sec. IV-D estimator)
+gated5 W-A: cases=135 nW=254 nA=161 | completed W 0.965 A 0.925 diff +0.039 [-0.003,+0.088] | coverage W 0.961 A 0.923 diff +0.038 [-0.004,+0.086] | rating W 7.838 A 7.684 diff +0.155 [-0.263,+0.628]
+all8 W-A: cases=137 nW=311 nA=196 | completed W 0.961 A 0.929 diff +0.033 [-0.010,+0.080] | coverage W 0.958 A 0.927 diff +0.031 [-0.012,+0.079] | rating W 7.831 A 7.711 diff +0.120 [-0.300,+0.565]
+
+== withheld items by type
+{"withheld_total": 311, "identifier_items_make_tables_rule": 106, "by_use_case": {"insurance": 82, "real_estate": 112, "travel_planning": 117}, "identifier_by_kind": {"refused": 26, "deferred": 40, "ignored": 19, "too_coarse": 21}, "by_kind_total": {"refused": 84, "deferred": 47, "ignored": 61, "too_coarse": 119}, "identifier_items_scratch_substring_rule": 109, "scratch_rule_extra_items": {"location_preferences": 3}, "all8_identifier_vs_other": {"withheld": 311, "identifier": 106}, "raw_prompt_identifier_vs_other": {"withheld": 13, "identifier": 2}, "privacy_prompt_ci_gate_modify_identifier_vs_other": {"withheld": 64, "identifier": 24}, "glm_withheld_total": 303, "glm_identifier_items": 98}
+top items: {"full_name": 35, "government_id_information": 17, "exact_age": 15, "exact_address": 12, "age_range": 11, "transaction_history": 11, "medical_appointments": 10, "booked_periods": 9, "work_project_responsibility": 8, "available_periods": 8, "age": 7, "educational_background": 7, "income_level": 7, "countries_visited": 7, "smart_home_technology_interest": 6}
+
+== agreement with scratch audit
+pooled_by_outcome LEAKED n                                   new=   949.000 scratch=   949.000 OK
+pooled_by_outcome LEAKED turns                               new=    11.617 scratch=    11.600 OK
+pooled_by_outcome LEAKED completed                           new=     0.955 scratch=     0.955 OK
+pooled_by_outcome LEAKED svc_attack_turns                    new=     4.904 scratch=     4.900 OK
+pooled_by_outcome LEAKED svc_completion_turns                new=     2.746 scratch=     2.750 OK
+pooled_by_outcome LEAKED dialog_chars                        new= 20073.330 scratch= 20100.000 OK
+pooled_by_outcome LEAKED reasks                              new=     2.160 scratch=     2.160 OK
+pooled_by_outcome LEAKED hit_budget                          new=    91.254 scratch=    91.000 OK
+pooled_by_outcome LEAKED coverage                            new=     0.953 scratch=     0.953 OK
+pooled_by_outcome LEAKED rating                              new=     7.799 scratch=     7.800 OK
+pooled_by_outcome CONVEYED n                                 new=   196.000 scratch=   196.000 OK
+pooled_by_outcome CONVEYED turns                             new=    12.117 scratch=    12.100 OK
+pooled_by_outcome CONVEYED completed                         new=     0.929 scratch=     0.929 OK
+pooled_by_outcome CONVEYED svc_attack_turns                  new=     4.954 scratch=     4.950 OK
+pooled_by_outcome CONVEYED svc_completion_turns              new=     3.128 scratch=     3.130 OK
+pooled_by_outcome CONVEYED dialog_chars                      new= 19298.276 scratch= 19300.000 OK
+pooled_by_outcome CONVEYED reasks                            new=     2.408 scratch=     2.410 OK
+pooled_by_outcome CONVEYED hit_budget                        new=    95.918 scratch=    96.000 OK
+pooled_by_outcome CONVEYED coverage                          new=     0.927 scratch=     0.927 OK
+pooled_by_outcome CONVEYED rating                            new=     7.711 scratch=     7.710 OK
+pooled_by_outcome WITHHELD n                                 new=   311.000 scratch=   311.000 OK
+pooled_by_outcome WITHHELD turns                             new=    11.299 scratch=    11.300 OK
+pooled_by_outcome WITHHELD completed                         new=     0.961 scratch=     0.961 OK
+pooled_by_outcome WITHHELD svc_attack_turns                  new=     4.920 scratch=     4.920 OK
+pooled_by_outcome WITHHELD svc_completion_turns              new=     2.405 scratch=     2.410 OK
+pooled_by_outcome WITHHELD dialog_chars                      new= 16816.257 scratch= 16800.000 OK
+pooled_by_outcome WITHHELD reasks                            new=     2.675 scratch=     2.680 OK
+pooled_by_outcome WITHHELD hit_budget                        new=    92.605 scratch=    93.000 OK
+pooled_by_outcome WITHHELD coverage                          new=     0.958 scratch=     0.958 OK
+pooled_by_outcome WITHHELD rating                            new=     7.831 scratch=     7.830 OK
+pooled_by_outcome WITHHELD/refused n                         new=    84.000 scratch=    84.000 OK
+pooled_by_outcome WITHHELD/refused turns                     new=    10.774 scratch=    10.800 OK
+pooled_by_outcome WITHHELD/refused completed                 new=     0.964 scratch=     0.964 OK
+pooled_by_outcome WITHHELD/refused svc_attack_turns          new=     4.881 scratch=     4.880 OK
+pooled_by_outcome WITHHELD/refused svc_completion_turns      new=     2.202 scratch=     2.200 OK
+pooled_by_outcome WITHHELD/refused dialog_chars              new= 16535.107 scratch= 16500.000 OK
+pooled_by_outcome WITHHELD/refused reasks                    new=     2.393 scratch=     2.390 OK
+pooled_by_outcome WITHHELD/refused hit_budget                new=    89.286 scratch=    89.000 OK
+pooled_by_outcome WITHHELD/refused coverage                  new=     0.964 scratch=     0.964 OK
+pooled_by_outcome WITHHELD/refused rating                    new=     7.711 scratch=     7.710 OK
+pooled_by_outcome WITHHELD/deferred n                        new=    47.000 scratch=    47.000 OK
+pooled_by_outcome WITHHELD/deferred turns                    new=    10.681 scratch=    10.700 OK
+pooled_by_outcome WITHHELD/deferred completed                new=     0.979 scratch=     0.979 OK
+pooled_by_outcome WITHHELD/deferred svc_attack_turns         new=     5.000 scratch=     5.000 OK
+pooled_by_outcome WITHHELD/deferred svc_completion_turns     new=     2.383 scratch=     2.380 OK
+pooled_by_outcome WITHHELD/deferred dialog_chars             new= 18012.787 scratch= 18000.000 OK
+pooled_by_outcome WITHHELD/deferred reasks                   new=     2.468 scratch=     2.470 OK
+pooled_by_outcome WITHHELD/deferred hit_budget               new=   100.000 scratch=   100.000 OK
+pooled_by_outcome WITHHELD/deferred coverage                 new=     0.974 scratch=     0.974 OK
+pooled_by_outcome WITHHELD/deferred rating                   new=     8.027 scratch=     8.030 OK
+pooled_by_outcome WITHHELD/ignored n                         new=    61.000 scratch=    61.000 OK
+pooled_by_outcome WITHHELD/ignored turns                     new=    10.623 scratch=    10.600 OK
+pooled_by_outcome WITHHELD/ignored completed                 new=     0.984 scratch=     0.984 OK
+pooled_by_outcome WITHHELD/ignored svc_attack_turns          new=     4.918 scratch=     4.920 OK
+pooled_by_outcome WITHHELD/ignored svc_completion_turns      new=     1.508 scratch=     1.510 OK
+pooled_by_outcome WITHHELD/ignored dialog_chars              new= 13619.885 scratch= 13600.000 OK
+pooled_by_outcome WITHHELD/ignored reasks                    new=     2.656 scratch=     2.660 OK
+pooled_by_outcome WITHHELD/ignored hit_budget                new=    93.443 scratch=    93.000 OK
+pooled_by_outcome WITHHELD/ignored coverage                  new=     0.974 scratch=     0.974 OK
+pooled_by_outcome WITHHELD/ignored rating                    new=     8.121 scratch=     8.120 OK
+pooled_by_outcome WITHHELD/too_coarse n                      new=   119.000 scratch=   119.000 OK
+pooled_by_outcome WITHHELD/too_coarse turns                  new=    12.261 scratch=    12.300 OK
+pooled_by_outcome WITHHELD/too_coarse completed              new=     0.941 scratch=     0.941 OK
+pooled_by_outcome WITHHELD/too_coarse svc_attack_turns       new=     4.916 scratch=     4.920 OK
+pooled_by_outcome WITHHELD/too_coarse svc_completion_turns   new=     3.017 scratch=     3.020 OK
+pooled_by_outcome WITHHELD/too_coarse dialog_chars           new= 18180.613 scratch= 18200.000 OK
+pooled_by_outcome WITHHELD/too_coarse reasks                 new=     2.966 scratch=     2.970 OK
+pooled_by_outcome WITHHELD/too_coarse hit_budget             new=    91.597 scratch=    92.000 OK
+pooled_by_outcome WITHHELD/too_coarse coverage               new=     0.939 scratch=     0.939 OK
+pooled_by_outcome WITHHELD/too_coarse rating                 new=     7.690 scratch=     7.690 OK
+strongest_by_outcome LEAKED n                                new=    85.000 scratch=    85.000 OK
+strongest_by_outcome LEAKED turns                            new=    12.859 scratch=    12.900 OK
+strongest_by_outcome LEAKED completed                        new=     0.929 scratch=     0.929 OK
+strongest_by_outcome LEAKED svc_attack_turns                 new=     4.965 scratch=     4.960 OK
+strongest_by_outcome LEAKED svc_completion_turns             new=     3.612 scratch=     3.610 OK
+strongest_by_outcome LEAKED dialog_chars                     new= 21104.800 scratch= 21100.000 OK
+strongest_by_outcome LEAKED reasks                           new=     2.282 scratch=     2.280 OK
+strongest_by_outcome LEAKED hit_budget                       new=    97.647 scratch=    98.000 OK
+strongest_by_outcome LEAKED coverage                         new=     0.924 scratch=     0.924 OK
+strongest_by_outcome LEAKED rating                           new=     7.626 scratch=     7.630 OK
+strongest_by_outcome CONVEYED n                              new=    33.000 scratch=    33.000 OK
+strongest_by_outcome CONVEYED turns                          new=    12.848 scratch=    12.800 OK
+strongest_by_outcome CONVEYED completed                      new=     0.939 scratch=     0.939 OK
+strongest_by_outcome CONVEYED svc_attack_turns               new=     5.000 scratch=     5.000 OK
+strongest_by_outcome CONVEYED svc_completion_turns           new=     3.364 scratch=     3.360 OK
+strongest_by_outcome CONVEYED dialog_chars                   new= 19352.061 scratch= 19400.000 OK
+strongest_by_outcome CONVEYED reasks                         new=     2.667 scratch=     2.670 OK
+strongest_by_outcome CONVEYED hit_budget                     new=   100.000 scratch=   100.000 OK
+strongest_by_outcome CONVEYED coverage                       new=     0.933 scratch=     0.933 OK
+strongest_by_outcome CONVEYED rating                         new=     7.898 scratch=     7.900 OK
+strongest_by_outcome WITHHELD n                              new=    64.000 scratch=    64.000 OK
+strongest_by_outcome WITHHELD turns                          new=    10.906 scratch=    10.900 OK
+strongest_by_outcome WITHHELD completed                      new=     0.969 scratch=     0.969 OK
+strongest_by_outcome WITHHELD svc_attack_turns               new=     4.938 scratch=     4.940 OK
+strongest_by_outcome WITHHELD svc_completion_turns           new=     2.266 scratch=     2.270 OK
+strongest_by_outcome WITHHELD dialog_chars                   new= 15845.422 scratch= 15800.000 OK
+strongest_by_outcome WITHHELD reasks                         new=     2.641 scratch=     2.640 OK
+strongest_by_outcome WITHHELD hit_budget                     new=    93.750 scratch=    94.000 OK
+strongest_by_outcome WITHHELD coverage                       new=     0.969 scratch=     0.969 OK
+strongest_by_outcome WITHHELD rating                         new=     7.776 scratch=     7.780 OK
+prices WITHHELD first_msg_3prices                            new=     0.920 scratch=     0.920 OK
+prices WITHHELD prices_before_request                        new=     0.910 scratch=     0.910 OK
+prices LEAKED first_msg_3prices                              new=     0.793 scratch=     0.790 OK
+prices LEAKED prices_before_request                          new=     0.796 scratch=     0.800 OK
+prices CONVEYED first_msg_3prices                            new=     0.878 scratch=     0.880 OK
+prices CONVEYED prices_before_request                        new=     0.883 scratch=     0.880 OK
+within gated5 W-C n_cases                                    new=    51.000 scratch=    51.000 OK
+within gated5 W-C completed                                  new=     0.078 scratch=     0.078 OK
+within gated5 W-C coverage                                   new=     0.076 scratch=     0.076 OK
+within gated5 W-C rating                                     new=     0.398 scratch=     0.398 OK
+within gated5 W-C turns                                      new=    -1.520 scratch=    -1.520 OK
+within gated5 W-C dialog_chars                               new= -2170.240 scratch= -2170.240 OK
+within all8 W-C n_cases                                      new=    59.000 scratch=    59.000 OK
+within all8 W-C completed                                    new=     0.093 scratch=     0.093 OK
+within all8 W-C coverage                                     new=     0.090 scratch=     0.090 OK
+within all8 W-C rating                                       new=     0.653 scratch=     0.653 OK
+within all8 W-C turns                                        new=    -1.664 scratch=    -1.664 OK
+within all8 W-C dialog_chars                                 new= -1774.253 scratch= -1774.253 OK
+within all8 W-L n_cases                                      new=   102.000 scratch=   102.000 OK
+within all8 W-L completed                                    new=     0.018 scratch=     0.018 OK
+within all8 W-L coverage                                     new=     0.017 scratch=     0.017 OK
+within all8 W-L rating                                       new=     0.160 scratch=     0.160 OK
+within all8 W-L turns                                        new=    -0.284 scratch=    -0.284 OK
+within all8 W-L dialog_chars                                 new=  -987.592 scratch=  -987.592 OK
+within all8 C-L n_cases                                      new=    90.000 scratch=    90.000 OK
+within all8 C-L completed                                    new=    -0.016 scratch=    -0.016 OK
+within all8 C-L coverage                                     new=    -0.017 scratch=    -0.017 OK
+within all8 C-L rating                                       new=    -0.090 scratch=    -0.090 OK
+within all8 C-L turns                                        new=     0.300 scratch=     0.300 OK
+within all8 C-L dialog_chars                                 new=  -641.590 scratch=  -641.590 OK
+withheld identifier items (scratch substring rule)           new=   109.000 scratch=   109.000 OK

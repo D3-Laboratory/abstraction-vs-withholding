@@ -1,0 +1,89 @@
+{
+  "status": "ok",
+  "case_id": "travel_planning.persona2.related_and_useful.full_name.01",
+  "condition": "ci_gate_modify",
+  "turn": 3,
+  "release_index": 0,
+  "candidate": "I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9), avoiding July 20-30 (family already booked for Maldives) and June 1-15 (business trip). Please suggest 2-3 affordable European destinations with round-trip flight prices for the family.",
+  "source_released_message": "I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9). Please suggest 2-3 affordable European destinations with round-trip flight prices for the family.",
+  "source_path": "experiments/results/ci-gate-full-pilot-v20-240/episodes/travel_planning.persona2.related_and_useful.full_name.01/ci_gate_modify.json",
+  "replay": {
+    "condition": "ci_gate_modify",
+    "candidate": "I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9), avoiding July 20-30 (family already booked for Maldives) and June 1-15 (business trip). Please suggest 2-3 affordable European destinations with round-trip flight prices for the family.",
+    "raw_gate_output": "{\"unnecessary_information\":[\"family already booked for Maldives July 20-30\",\"business trip June 1-15\"],\"action\":\"TRANSFORM_AND_RELEASE\",\"released_message\":\"I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9), avoiding late July and early June. Please suggest 2-3 affordable European destinations with round-trip flight prices for the family.\"}",
+    "raw_gate_outputs": [
+      "{\"unnecessary_information\":[\"family already booked for Maldives July 20-30\",\"business trip June 1-15\"],\"action\":\"TRANSFORM_AND_RELEASE\",\"released_message\":\"I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9), avoiding late July and early June. Please suggest 2-3 affordable European destinations with round-trip flight prices for the family.\"}"
+    ],
+    "parsed_gate_output": {
+      "unnecessary_information": [
+        "family already booked for Maldives July 20-30",
+        "business trip June 1-15"
+      ],
+      "action": "TRANSFORM_AND_RELEASE",
+      "released_message": "I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9), avoiding late July and early June. Please suggest 2-3 affordable European destinations with round-trip flight prices for the family."
+    },
+    "action": "TRANSFORM_AND_RELEASE",
+    "released_message": "I need flight options for a family of 4 (2 adults, 2 children aged 12 and 9) departing from Paris (CDG or ORY) to a family-friendly European destination for 5 days in Summer 2024. Please provide available destinations and flight costs for travel dates in early July 2024 (e.g., July 1-5 or July 5-9), avoiding late July and early June. Please suggest 2-3 affordable European destinations with round-trip flight prices for the family.",
+    "edits": [],
+    "fallback": false,
+    "fallback_reason": null,
+    "contract_retry_count": 0,
+    "released_source": "gate_rewrite",
+    "revision_attempts": 0,
+    "raw_revision": null,
+    "revised_candidate": null
+  },
+  "api_usage": [
+    {
+      "role": "gate",
+      "provider": "openrouter",
+      "model": "deepseek/deepseek-v4-flash-0731",
+      "elapsed_seconds": 2.61,
+      "prompt_tokens": 1297,
+      "completion_tokens": 152,
+      "total_tokens": 1449,
+      "cost": 0.000201379464,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 1076,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0002034136,
+        "upstream_inference_prompt_cost": 7.29976e-05,
+        "upstream_inference_completions_cost": 0.000130416
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  ],
+  "attempts": 1,
+  "manifest": {
+    "schema_version": "ci-gate-model-replay-v20-v2",
+    "source_roots": [
+      "experiments/results/ci-gate-full-pilot-v20-240",
+      "experiments/results/ci-gate-formal-v20-ex-259",
+      "experiments/results/ci-gate-v22-backfill-72"
+    ],
+    "source_config": "experiments/configs/ci-gate-full-pilot-v20.json",
+    "provider": "openrouter",
+    "model": "deepseek/deepseek-v4-flash-0731",
+    "condition": "ci_gate_modify",
+    "source_cases": 571,
+    "selected_cases": 182,
+    "selected_releases": 1428,
+    "sample_size": null,
+    "sample_cases": null,
+    "seed": 20260814,
+    "case_substring": "related_and_useful",
+    "reasoning_effort": "none",
+    "prompt_sha256": "2b69246bf0956e14a207643e4774efa7ca6cf31b563d7eedf41ed3e68c0acdf5",
+    "schema_sha256": "4fe0e2abcf17bb98835374f86e6d8388044273d57335318fcdd8be8e47dd1163",
+    "runner_sha256": "3443ec30cb39e5c82bdf37dbcac136f891acba529e6c4008815b7488a18bebed"
+  }
+}

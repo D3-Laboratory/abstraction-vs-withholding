@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\caption{Defense configurations}
+\label{tab:configurations}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Configuration & Redactor & Redaction & Instruction & Priv. \\
+\midrule
+No defense & -- & -- & -- & no \\
+Privacy prompt & -- & -- & -- & yes \\
+Contextual guidance & yes & feedback & contextual, no list & no \\
+Generic feedback & yes & feedback & generic & no \\
+Contextual feedback & yes & feedback & contextual & no \\
+Generic rewrite & yes & rewrite & generic & no \\
+Contextual rewrite & yes & rewrite & contextual & no \\
+Privacy + contextual rew. & yes & rewrite & contextual & yes \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Contextual: contextual-integrity instruction. Priv.: privacy prompt.}
+\end{table}

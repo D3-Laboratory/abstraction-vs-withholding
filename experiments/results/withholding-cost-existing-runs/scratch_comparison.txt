@@ -1,0 +1,131 @@
+pooled_by_outcome LEAKED n                                   new=   949.000 scratch=   949.000 OK
+pooled_by_outcome LEAKED turns                               new=    11.617 scratch=    11.600 OK
+pooled_by_outcome LEAKED completed                           new=     0.955 scratch=     0.955 OK
+pooled_by_outcome LEAKED svc_attack_turns                    new=     4.904 scratch=     4.900 OK
+pooled_by_outcome LEAKED svc_completion_turns                new=     2.746 scratch=     2.750 OK
+pooled_by_outcome LEAKED dialog_chars                        new= 20073.330 scratch= 20100.000 OK
+pooled_by_outcome LEAKED reasks                              new=     2.160 scratch=     2.160 OK
+pooled_by_outcome LEAKED hit_budget                          new=    91.254 scratch=    91.000 OK
+pooled_by_outcome LEAKED coverage                            new=     0.953 scratch=     0.953 OK
+pooled_by_outcome LEAKED rating                              new=     7.799 scratch=     7.800 OK
+pooled_by_outcome CONVEYED n                                 new=   196.000 scratch=   196.000 OK
+pooled_by_outcome CONVEYED turns                             new=    12.117 scratch=    12.100 OK
+pooled_by_outcome CONVEYED completed                         new=     0.929 scratch=     0.929 OK
+pooled_by_outcome CONVEYED svc_attack_turns                  new=     4.954 scratch=     4.950 OK
+pooled_by_outcome CONVEYED svc_completion_turns              new=     3.128 scratch=     3.130 OK
+pooled_by_outcome CONVEYED dialog_chars                      new= 19298.276 scratch= 19300.000 OK
+pooled_by_outcome CONVEYED reasks                            new=     2.408 scratch=     2.410 OK
+pooled_by_outcome CONVEYED hit_budget                        new=    95.918 scratch=    96.000 OK
+pooled_by_outcome CONVEYED coverage                          new=     0.927 scratch=     0.927 OK
+pooled_by_outcome CONVEYED rating                            new=     7.711 scratch=     7.710 OK
+pooled_by_outcome WITHHELD n                                 new=   311.000 scratch=   311.000 OK
+pooled_by_outcome WITHHELD turns                             new=    11.299 scratch=    11.300 OK
+pooled_by_outcome WITHHELD completed                         new=     0.961 scratch=     0.961 OK
+pooled_by_outcome WITHHELD svc_attack_turns                  new=     4.920 scratch=     4.920 OK
+pooled_by_outcome WITHHELD svc_completion_turns              new=     2.405 scratch=     2.410 OK
+pooled_by_outcome WITHHELD dialog_chars                      new= 16816.257 scratch= 16800.000 OK
+pooled_by_outcome WITHHELD reasks                            new=     2.675 scratch=     2.680 OK
+pooled_by_outcome WITHHELD hit_budget                        new=    92.605 scratch=    93.000 OK
+pooled_by_outcome WITHHELD coverage                          new=     0.958 scratch=     0.958 OK
+pooled_by_outcome WITHHELD rating                            new=     7.831 scratch=     7.830 OK
+pooled_by_outcome WITHHELD/refused n                         new=    84.000 scratch=    84.000 OK
+pooled_by_outcome WITHHELD/refused turns                     new=    10.774 scratch=    10.800 OK
+pooled_by_outcome WITHHELD/refused completed                 new=     0.964 scratch=     0.964 OK
+pooled_by_outcome WITHHELD/refused svc_attack_turns          new=     4.881 scratch=     4.880 OK
+pooled_by_outcome WITHHELD/refused svc_completion_turns      new=     2.202 scratch=     2.200 OK
+pooled_by_outcome WITHHELD/refused dialog_chars              new= 16535.107 scratch= 16500.000 OK
+pooled_by_outcome WITHHELD/refused reasks                    new=     2.393 scratch=     2.390 OK
+pooled_by_outcome WITHHELD/refused hit_budget                new=    89.286 scratch=    89.000 OK
+pooled_by_outcome WITHHELD/refused coverage                  new=     0.964 scratch=     0.964 OK
+pooled_by_outcome WITHHELD/refused rating                    new=     7.711 scratch=     7.710 OK
+pooled_by_outcome WITHHELD/deferred n                        new=    47.000 scratch=    47.000 OK
+pooled_by_outcome WITHHELD/deferred turns                    new=    10.681 scratch=    10.700 OK
+pooled_by_outcome WITHHELD/deferred completed                new=     0.979 scratch=     0.979 OK
+pooled_by_outcome WITHHELD/deferred svc_attack_turns         new=     5.000 scratch=     5.000 OK
+pooled_by_outcome WITHHELD/deferred svc_completion_turns     new=     2.383 scratch=     2.380 OK
+pooled_by_outcome WITHHELD/deferred dialog_chars             new= 18012.787 scratch= 18000.000 OK
+pooled_by_outcome WITHHELD/deferred reasks                   new=     2.468 scratch=     2.470 OK
+pooled_by_outcome WITHHELD/deferred hit_budget               new=   100.000 scratch=   100.000 OK
+pooled_by_outcome WITHHELD/deferred coverage                 new=     0.974 scratch=     0.974 OK
+pooled_by_outcome WITHHELD/deferred rating                   new=     8.027 scratch=     8.030 OK
+pooled_by_outcome WITHHELD/ignored n                         new=    61.000 scratch=    61.000 OK
+pooled_by_outcome WITHHELD/ignored turns                     new=    10.623 scratch=    10.600 OK
+pooled_by_outcome WITHHELD/ignored completed                 new=     0.984 scratch=     0.984 OK
+pooled_by_outcome WITHHELD/ignored svc_attack_turns          new=     4.918 scratch=     4.920 OK
+pooled_by_outcome WITHHELD/ignored svc_completion_turns      new=     1.508 scratch=     1.510 OK
+pooled_by_outcome WITHHELD/ignored dialog_chars              new= 13619.885 scratch= 13600.000 OK
+pooled_by_outcome WITHHELD/ignored reasks                    new=     2.656 scratch=     2.660 OK
+pooled_by_outcome WITHHELD/ignored hit_budget                new=    93.443 scratch=    93.000 OK
+pooled_by_outcome WITHHELD/ignored coverage                  new=     0.974 scratch=     0.974 OK
+pooled_by_outcome WITHHELD/ignored rating                    new=     8.121 scratch=     8.120 OK
+pooled_by_outcome WITHHELD/too_coarse n                      new=   119.000 scratch=   119.000 OK
+pooled_by_outcome WITHHELD/too_coarse turns                  new=    12.261 scratch=    12.300 OK
+pooled_by_outcome WITHHELD/too_coarse completed              new=     0.941 scratch=     0.941 OK
+pooled_by_outcome WITHHELD/too_coarse svc_attack_turns       new=     4.916 scratch=     4.920 OK
+pooled_by_outcome WITHHELD/too_coarse svc_completion_turns   new=     3.017 scratch=     3.020 OK
+pooled_by_outcome WITHHELD/too_coarse dialog_chars           new= 18180.613 scratch= 18200.000 OK
+pooled_by_outcome WITHHELD/too_coarse reasks                 new=     2.966 scratch=     2.970 OK
+pooled_by_outcome WITHHELD/too_coarse hit_budget             new=    91.597 scratch=    92.000 OK
+pooled_by_outcome WITHHELD/too_coarse coverage               new=     0.939 scratch=     0.939 OK
+pooled_by_outcome WITHHELD/too_coarse rating                 new=     7.690 scratch=     7.690 OK
+strongest_by_outcome LEAKED n                                new=    85.000 scratch=    85.000 OK
+strongest_by_outcome LEAKED turns                            new=    12.859 scratch=    12.900 OK
+strongest_by_outcome LEAKED completed                        new=     0.929 scratch=     0.929 OK
+strongest_by_outcome LEAKED svc_attack_turns                 new=     4.965 scratch=     4.960 OK
+strongest_by_outcome LEAKED svc_completion_turns             new=     3.612 scratch=     3.610 OK
+strongest_by_outcome LEAKED dialog_chars                     new= 21104.800 scratch= 21100.000 OK
+strongest_by_outcome LEAKED reasks                           new=     2.282 scratch=     2.280 OK
+strongest_by_outcome LEAKED hit_budget                       new=    97.647 scratch=    98.000 OK
+strongest_by_outcome LEAKED coverage                         new=     0.924 scratch=     0.924 OK
+strongest_by_outcome LEAKED rating                           new=     7.626 scratch=     7.630 OK
+strongest_by_outcome CONVEYED n                              new=    33.000 scratch=    33.000 OK
+strongest_by_outcome CONVEYED turns                          new=    12.848 scratch=    12.800 OK
+strongest_by_outcome CONVEYED completed                      new=     0.939 scratch=     0.939 OK
+strongest_by_outcome CONVEYED svc_attack_turns               new=     5.000 scratch=     5.000 OK
+strongest_by_outcome CONVEYED svc_completion_turns           new=     3.364 scratch=     3.360 OK
+strongest_by_outcome CONVEYED dialog_chars                   new= 19352.061 scratch= 19400.000 OK
+strongest_by_outcome CONVEYED reasks                         new=     2.667 scratch=     2.670 OK
+strongest_by_outcome CONVEYED hit_budget                     new=   100.000 scratch=   100.000 OK
+strongest_by_outcome CONVEYED coverage                       new=     0.933 scratch=     0.933 OK
+strongest_by_outcome CONVEYED rating                         new=     7.898 scratch=     7.900 OK
+strongest_by_outcome WITHHELD n                              new=    64.000 scratch=    64.000 OK
+strongest_by_outcome WITHHELD turns                          new=    10.906 scratch=    10.900 OK
+strongest_by_outcome WITHHELD completed                      new=     0.969 scratch=     0.969 OK
+strongest_by_outcome WITHHELD svc_attack_turns               new=     4.938 scratch=     4.940 OK
+strongest_by_outcome WITHHELD svc_completion_turns           new=     2.266 scratch=     2.270 OK
+strongest_by_outcome WITHHELD dialog_chars                   new= 15845.422 scratch= 15800.000 OK
+strongest_by_outcome WITHHELD reasks                         new=     2.641 scratch=     2.640 OK
+strongest_by_outcome WITHHELD hit_budget                     new=    93.750 scratch=    94.000 OK
+strongest_by_outcome WITHHELD coverage                       new=     0.969 scratch=     0.969 OK
+strongest_by_outcome WITHHELD rating                         new=     7.776 scratch=     7.780 OK
+prices WITHHELD first_msg_3prices                            new=     0.920 scratch=     0.920 OK
+prices WITHHELD prices_before_request                        new=     0.910 scratch=     0.910 OK
+prices LEAKED first_msg_3prices                              new=     0.793 scratch=     0.790 OK
+prices LEAKED prices_before_request                          new=     0.796 scratch=     0.800 OK
+prices CONVEYED first_msg_3prices                            new=     0.878 scratch=     0.880 OK
+prices CONVEYED prices_before_request                        new=     0.883 scratch=     0.880 OK
+within gated5 W-C n_cases                                    new=    51.000 scratch=    51.000 OK
+within gated5 W-C completed                                  new=     0.078 scratch=     0.078 OK
+within gated5 W-C coverage                                   new=     0.076 scratch=     0.076 OK
+within gated5 W-C rating                                     new=     0.398 scratch=     0.398 OK
+within gated5 W-C turns                                      new=    -1.520 scratch=    -1.520 OK
+within gated5 W-C dialog_chars                               new= -2170.240 scratch= -2170.240 OK
+within all8 W-C n_cases                                      new=    59.000 scratch=    59.000 OK
+within all8 W-C completed                                    new=     0.093 scratch=     0.093 OK
+within all8 W-C coverage                                     new=     0.090 scratch=     0.090 OK
+within all8 W-C rating                                       new=     0.653 scratch=     0.653 OK
+within all8 W-C turns                                        new=    -1.664 scratch=    -1.664 OK
+within all8 W-C dialog_chars                                 new= -1774.253 scratch= -1774.253 OK
+within all8 W-L n_cases                                      new=   102.000 scratch=   102.000 OK
+within all8 W-L completed                                    new=     0.018 scratch=     0.018 OK
+within all8 W-L coverage                                     new=     0.017 scratch=     0.017 OK
+within all8 W-L rating                                       new=     0.160 scratch=     0.160 OK
+within all8 W-L turns                                        new=    -0.284 scratch=    -0.284 OK
+within all8 W-L dialog_chars                                 new=  -987.592 scratch=  -987.592 OK
+within all8 C-L n_cases                                      new=    90.000 scratch=    90.000 OK
+within all8 C-L completed                                    new=    -0.016 scratch=    -0.016 OK
+within all8 C-L coverage                                     new=    -0.017 scratch=    -0.017 OK
+within all8 C-L rating                                       new=    -0.090 scratch=    -0.090 OK
+within all8 C-L turns                                        new=     0.300 scratch=     0.300 OK
+within all8 C-L dialog_chars                                 new=  -641.590 scratch=  -641.590 OK
+withheld identifier items (scratch substring rule)           new=   109.000 scratch=   109.000 OK

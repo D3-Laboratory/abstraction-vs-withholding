@@ -1,0 +1,96 @@
+
+=== consensus orig121, judge Luna (n items=121) ===
+confusion (rows judge L/C/W, cols human L/C/W): raw [[43, 0, 2], [22, 6, 5], [4, 2, 37]]
+calibration P(human|judge), weighted: {"WITHHELD": [0.02, 0.05, 0.931], "CONVEYED": [0.69, 0.256, 0.054], "LEAKED": [0.991, 0.0, 0.009]}
+calibration P(human|judge), unweighted: {"WITHHELD": [0.093, 0.047, 0.86], "CONVEYED": [0.667, 0.182, 0.152], "LEAKED": [0.956, 0.0, 0.044]}
+config                                obs L/A/W |      corr(w) L/A/W |    corr(fam) L/A/W | W|succ obs->corr
+No defense                    86.8/ 6.0/ 7.1  |  90.3/ 1.9/ 7.8  |  87.2/ 1.7/11.1  | 12/29 -> 11.6/29
+Privacy prompt                84.1/ 5.5/10.4  |  87.3/ 1.9/10.8  |  84.7/ 1.6/13.7  | 14/36 -> 13.7/36
+Contextual guidance           78.6/ 7.7/13.7  |  83.4/ 2.6/13.9  |  84.3/ 2.2/13.5  | 24/48 -> 23.1/48
+Generic feedback              56.6/19.8/23.6  |  70.2/ 6.2/23.6  |  71.2/ 5.7/23.1  | 42/95 -> 41.0/95
+Contextual feedback           61.5/15.4/23.1  |  72.0/ 5.1/22.9  |  73.0/ 4.4/22.6  | 41/100 -> 39.9/100
+Generic rewrite               57.1/13.7/29.1  |  66.7/ 5.0/28.4  |  67.6/ 5.7/26.7  | 51/98 -> 48.9/98
+Contextual rewrite            50.0/21.4/28.6  |  64.9/ 6.9/28.2  |  66.3/ 7.3/26.4  | 51/120 -> 49.7/120
+Privacy + contextual rew.     46.7/18.1/35.2  |  59.5/ 6.4/34.1  |  60.5/ 7.2/32.3  | 64/128 -> 61.6/128
+  CI strong_withheld                  observed [28.6, 42.3]  corrected [27.8, 40.7]
+  CI strong_withheld_among_succ       observed [41.9, 58.9]  corrected [40.4, 56.6]
+  CI nodef_withheld_among_succ        observed [23.5, 60.0]  corrected [23.9, 56.9]
+  CI max_abstracted                   observed [17.6, 28.0]  corrected [3.3, 11.9]
+  CI strong_abstracted                observed [12.6, 23.6]  corrected [3.0, 10.6]
+  CI strong_leaked                    observed [40.1, 53.8]  corrected [52.3, 66.5]
+  CI strong_minus_nodef_withheld      observed [21.4, 34.6]  corrected [20.1, 32.9]
+  CI strong_minus_nodef_abstracted    observed [6.0, 18.1]  corrected [2.0, 7.8]
+  bound conveyed_to_leaked: strongest W=35.2 L=64.8 W|succ strong=64/128 nodef=12/29
+  bound conveyed_to_withheld: strongest W=53.3 L=46.7 W|succ strong=95/128 nodef=19/29
+
+=== consensus orig121, judge GLM (n items=121) ===
+confusion (rows judge L/C/W, cols human L/C/W): raw [[43, 0, 0], [26, 8, 10], [0, 0, 34]]
+calibration P(human|judge), weighted: {"WITHHELD": [0.0, 0.0, 1.0], "CONVEYED": [0.745, 0.184, 0.071], "LEAKED": [1.0, 0.0, 0.0]}
+calibration P(human|judge), unweighted: {"WITHHELD": [0.0, 0.0, 1.0], "CONVEYED": [0.591, 0.182, 0.227], "LEAKED": [1.0, 0.0, 0.0]}
+config                                obs L/A/W |      corr(w) L/A/W |    corr(fam) L/A/W | W|succ obs->corr
+No defense                    85.2/ 7.1/ 7.7  |  90.5/ 1.3/ 8.2  |  89.1/ 1.5/ 9.3  | 14/29 -> 14.3/29
+Privacy prompt                77.9/ 9.9/12.2  |  85.3/ 1.8/12.9  |  83.4/ 2.1/14.5  | 19/36 -> 19.9/36
+Contextual guidance           72.0/13.7/14.3  |  82.2/ 2.5/15.2  |  82.6/ 2.1/15.3  | 24/48 -> 25.2/48
+Generic feedback              47.5/27.1/25.4  |  67.7/ 5.0/27.3  |  68.4/ 4.2/27.4  | 43/94 -> 45.9/94
+Contextual feedback           45.0/34.1/20.9  |  70.5/ 6.3/23.3  |  71.4/ 5.3/23.4  | 37/100 -> 40.7/100
+Generic rewrite               45.6/27.2/27.2  |  65.8/ 5.0/29.1  |  66.1/ 5.5/28.4  | 49/97 -> 51.5/97
+Contextual rewrite            39.8/34.2/26.0  |  65.3/ 6.3/28.4  |  65.6/ 7.0/27.4  | 47/119 -> 50.7/119
+Privacy + contextual rew.     35.9/30.4/33.7  |  58.6/ 5.6/35.9  |  58.8/ 6.2/35.0  | 61/127 -> 64.5/127
+  CI strong_withheld                  observed [27.1, 40.7]  corrected [29.4, 42.5]
+  CI strong_withheld_among_succ       observed [39.7, 56.5]  corrected [42.6, 58.9]
+  CI nodef_withheld_among_succ        observed [29.6, 68.0]  corrected [31.0, 69.1]
+  CI max_abstracted                   observed [30.4, 42.3]  corrected [2.8, 10.9]
+  CI strong_abstracted                observed [24.2, 37.0]  corrected [2.3, 9.5]
+  CI strong_leaked                    observed [29.1, 43.0]  corrected [51.6, 65.7]
+  CI strong_minus_nodef_withheld      observed [19.4, 33.1]  corrected [21.1, 34.7]
+  CI strong_minus_nodef_abstracted    observed [16.5, 30.4]  corrected [1.7, 7.7]
+  bound conveyed_to_leaked: strongest W=33.7 L=66.3 W|succ strong=61/127 nodef=14/29
+  bound conveyed_to_withheld: strongest W=64.1 L=35.9 W|succ strong=111/127 nodef=19/29
+
+=== consensus exp143, judge Luna (n items=143) ===
+confusion (rows judge L/C/W, cols human L/C/W): raw [[45, 2, 2], [22, 15, 9], [5, 4, 39]]
+calibration P(human|judge), weighted: {"WITHHELD": [0.03, 0.041, 0.929], "CONVEYED": [0.499, 0.425, 0.075], "LEAKED": [0.98, 0.013, 0.006]}
+calibration P(human|judge), unweighted: {"WITHHELD": [0.104, 0.083, 0.812], "CONVEYED": [0.478, 0.326, 0.196], "LEAKED": [0.918, 0.041, 0.041]}
+config                                obs L/A/W |      corr(w) L/A/W |    corr(fam) L/A/W | W|succ obs->corr
+No defense                    86.8/ 6.0/ 7.1  |  88.3/ 4.0/ 7.7  |  86.3/ 3.1/10.6  | 12/29 -> 11.7/29
+Privacy prompt                84.1/ 5.5/10.4  |  85.5/ 3.9/10.7  |  83.9/ 3.0/13.1  | 14/36 -> 13.8/36
+Contextual guidance           78.6/ 7.7/13.7  |  81.3/ 4.9/13.8  |  82.1/ 4.1/13.8  | 24/48 -> 23.3/48
+Generic feedback              56.6/19.8/23.6  |  66.1/10.1/23.8  |  65.4/10.7/23.9  | 42/95 -> 41.6/95
+Contextual feedback           61.5/15.4/23.1  |  68.7/ 8.3/23.0  |  68.5/ 8.3/23.2  | 41/100 -> 40.3/100
+Generic rewrite               57.1/13.7/29.1  |  63.7/ 7.8/28.5  |  64.5/ 8.8/26.7  | 51/98 -> 49.3/98
+Contextual rewrite            50.0/21.4/28.6  |  60.6/10.9/28.5  |  62.4/11.3/26.4  | 51/120 -> 50.2/120
+Privacy + contextual rew.     46.7/18.1/35.2  |  55.9/ 9.8/34.3  |  57.2/10.4/32.3  | 64/128 -> 62.0/128
+  CI strong_withheld                  observed [28.0, 42.3]  corrected [27.8, 40.9]
+  CI strong_withheld_among_succ       observed [41.4, 58.3]  corrected [40.6, 56.3]
+  CI nodef_withheld_among_succ        observed [23.5, 60.0]  corrected [24.1, 57.2]
+  CI max_abstracted                   observed [18.1, 28.0]  corrected [7.3, 15.8]
+  CI strong_abstracted                observed [12.6, 24.2]  corrected [6.1, 14.0]
+  CI strong_leaked                    observed [39.0, 53.8]  corrected [48.6, 62.9]
+  CI strong_minus_nodef_withheld      observed [20.9, 34.6]  corrected [20.4, 32.9]
+  CI strong_minus_nodef_abstracted    observed [6.0, 18.1]  corrected [2.7, 9.3]
+  bound conveyed_to_leaked: strongest W=35.2 L=64.8 W|succ strong=64/128 nodef=12/29
+  bound conveyed_to_withheld: strongest W=53.3 L=46.7 W|succ strong=95/128 nodef=19/29
+
+=== consensus exp143, judge GLM (n items=143) ===
+confusion (rows judge L/C/W, cols human L/C/W): raw [[43, 0, 0], [29, 20, 12], [0, 1, 38]]
+calibration P(human|judge), weighted: {"CONVEYED": [0.629, 0.301, 0.07], "WITHHELD": [0.0, 0.005, 0.995], "LEAKED": [1.0, 0.0, 0.0]}
+calibration P(human|judge), unweighted: {"CONVEYED": [0.475, 0.328, 0.197], "WITHHELD": [0.0, 0.026, 0.974], "LEAKED": [1.0, 0.0, 0.0]}
+config                                obs L/A/W |      corr(w) L/A/W |    corr(fam) L/A/W | W|succ obs->corr
+No defense                    85.2/ 7.1/ 7.7  |  89.7/ 2.2/ 8.2  |  88.3/ 2.5/ 9.2  | 14/29 -> 14.3/29
+Privacy prompt                77.9/ 9.9/12.2  |  84.2/ 3.1/12.8  |  82.3/ 3.5/14.2  | 19/36 -> 19.8/36
+Contextual guidance           72.0/13.7/14.3  |  80.6/ 4.2/15.2  |  80.9/ 4.0/15.1  | 24/48 -> 25.1/48
+Generic feedback              47.5/27.1/25.4  |  64.5/ 8.3/27.2  |  65.1/ 7.9/27.0  | 43/94 -> 45.6/94
+Contextual feedback           45.0/34.1/20.9  |  66.5/10.4/23.1  |  67.2/ 9.8/23.0  | 37/100 -> 40.5/100
+Generic rewrite               45.6/27.2/27.2  |  62.7/ 8.3/29.0  |  63.2/ 8.5/28.4  | 49/97 -> 51.2/97
+Contextual rewrite            39.8/34.2/26.0  |  61.3/10.5/28.2  |  62.0/10.7/27.4  | 47/119 -> 50.4/119
+Privacy + contextual rew.     35.9/30.4/33.7  |  55.0/ 9.3/35.6  |  55.6/ 9.4/35.0  | 61/127 -> 64.2/127
+  CI strong_withheld                  observed [27.5, 40.9]  corrected [29.4, 42.5]
+  CI strong_withheld_among_succ       observed [39.7, 56.7]  corrected [42.6, 58.8]
+  CI nodef_withheld_among_succ        observed [30.3, 67.9]  corrected [31.8, 68.1]
+  CI max_abstracted                   observed [30.2, 42.0]  corrected [6.8, 15.8]
+  CI strong_abstracted                observed [23.8, 36.8]  corrected [5.6, 13.4]
+  CI strong_leaked                    observed [29.1, 42.9]  corrected [48.4, 61.8]
+  CI strong_minus_nodef_withheld      observed [19.2, 33.2]  corrected [20.8, 34.5]
+  CI strong_minus_nodef_abstracted    observed [16.5, 30.2]  corrected [3.9, 10.8]
+  bound conveyed_to_leaked: strongest W=33.7 L=66.3 W|succ strong=61/127 nodef=14/29
+  bound conveyed_to_withheld: strongest W=64.1 L=35.9 W|succ strong=111/127 nodef=19/29

@@ -1,0 +1,26 @@
+\begin{table}[!t]
+\caption{Effect of the generalize-first instruction and the thinking mode}
+\label{tab:instruction}
+\centering\footnotesize
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & Leaked & Abstracted & Withheld \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Replay, DeepSeek V4 redactor, GPT-Luna judge} ($n=181$)} \\
+\quad Original runs & 50.3 & 21.5 & 28.2 \\
+\quad Original instruction & 51.9 & 21.0 & 27.1 \\
+\quad Generalize first & 58.0 & 21.5 & 20.4 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\emph{Replay, DeepSeek V4.1 redactor, GLM judge} ($n=180$)} \\
+\quad Original instruction & 35.6 & 35.6 & 28.9 \\
+\quad Generalize first & 38.9 & 36.7 & 24.4 \\
+\quad Original, thinking on & 36.7 & 32.2 & 31.1 \\
+\quad Generalize first, thinking on & 44.4 & 30.6 & 25.0 \\
+\addlinespace
+\multicolumn{4}{@{}l}{\emph{Multi-turn, DeepSeek V4.1 redactor, GLM judge} ($n=182$)} \\
+\quad Original instruction & 28.0 & 28.0 & 44.0 \\
+\quad Generalize first & 31.3 & 31.9 & 36.8 \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Percent. Arms in a block share the same cases.}
+\end{table}

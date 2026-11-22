@@ -1,0 +1,14 @@
+Redactor per-item actions in the 182 related-and-useful cases (main runs)
+configuration                 conv calls w/ items  remove general. no action remove % mean per conv %
+No defense                     182              0       0        0         0       --              --
+Privacy prompt                 182              0       0        0         0       --              --
+Contextual guidance            182            407    1242      188         0     86.9            89.2
+Generic feedback               182            418    1287       82         0     94.0            94.7
+Contextual feedback            182            459    1311      174         0     88.3            89.3
+Generic rewrite                182            793       0        0      2545       --              --
+Contextual rewrite             182            948       0        0      2980       --              --
+Privacy + contextual rew.      182            835       0        0      2586       --              --
+
+generic + contextual feedback (the redactor returns the flagged items to the assistant): 88.3-94.0% remove
+all configurations whose redactor logs an action (adds contextual guidance): 86.9-94.0% remove
+rewrite redactors (v20 schema) log flagged items without an action; no share.

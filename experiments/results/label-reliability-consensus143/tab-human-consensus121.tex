@@ -1,0 +1,20 @@
+\begin{table}[!t]
+\caption{Agreement with human annotation}
+\label{tab:human}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & & \multicolumn{2}{c}{$\kappa$} & \multicolumn{2}{c}{Withheld} \\
+\cmidrule(lr){3-4}\cmidrule(l){5-6}
+Comparison & $n$ & 3-way & Withh. & Prec. & Rec. \\
+\midrule
+Annotator 1 vs.\ annotator 2 & 149 & 0.68 & 0.86 & -- & -- \\
+\midrule
+GPT-Luna vs.\ consensus & 121 & 0.55 & 0.77 & 0.86 & 0.84 \\
+GLM vs.\ consensus & 121 & 0.56 & 0.81 & 1.00 & 0.77 \\
+Benchmark's judge vs.\ consensus & 121 & 0.24 & 0.03 & 1.00 & 0.02 \\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Cohen's $\kappa$. Prec./Rec.: withheld label against the consensus.}
+\end{table}

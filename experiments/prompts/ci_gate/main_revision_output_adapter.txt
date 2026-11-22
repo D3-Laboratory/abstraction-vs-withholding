@@ -1,0 +1,9 @@
+ONE-TIME REVISION CONTRACT — this overrides the normal turn routing format for this response only.
+
+Rewrite the rejected draft once. Return a complete replacement message, not editing instructions.
+
+Output exactly these two non-empty fields and no other route or final answer:
+1. <output_to_external_agent>the complete replacement message</output_to_external_agent>
+2. <assistant_log_summary>a concise summary of the replacement</assistant_log_summary>
+
+Do not address the environment, do not complete the overall task, and do not mention the Gate or its review unless that is necessary in the external-facing message.
