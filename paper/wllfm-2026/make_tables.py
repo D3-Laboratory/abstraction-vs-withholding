@@ -10,7 +10,7 @@ Sources (all under experiments/):
   results/over-redaction-replay-v24/judged-glm     replay with a deepseek-v4.1-flash redactor, thinking off/on
   results/over-redaction-live-v24/judged-glm       new multi-turn runs, deepseek-v4.1-flash
 v5 (camera-ready) sources, added 2026-11-15:
-  results/label-reliability-consensus143/numbers.json   Table II and the IV-B statistics
+  results/label-reliability-consensus143/numbers.json   Table II and the IV-C statistics
   results/judge-counterfactual-v26-baseline-rerun/  same-day judge test: leaked, allowed_form, ignored (= removed)
   results/judge-counterfactual-v26/                 explicit_refusal, coarser (Fig. 2, judge_sameday)
   results/judge-counterfactual-v25/                 the v4 judge test (kept as judge_v25 / table_judges)
@@ -172,7 +172,7 @@ write("tab-outcomes.tex", r"""\begin{table*}[!t]
 """ + "\n".join(rows) + r"""
 \bottomrule
 \end{tabular}
-\par\vspace{2pt}\parbox{0.8\textwidth}{\raggedright\scriptsize\textit{Note.} Leak./Abstr./Withh. and $\mathrm{ASR}_{\mathrm{B}}$: percent of 182 cases. $\mathrm{ASR}_{\mathrm{B}}$: attack success rate from the benchmark's judge. Ref./Def./Ign./Crs.: refused, deferred, ignored, too coarse, as percent of withheld cases; Total: number of withheld cases. Withh./succ.: among cases the benchmark's judge does not count as attack successes, those GPT-Luna labels withheld. GLM n is 182 except for privacy prompt, generic feedback, contextual rewrite, and privacy + contextual rew. (181) and generic rewrite (180).}
+\par\vspace{2pt}\parbox{0.8\textwidth}{\raggedright\scriptsize\textit{Note.} Leak./Abstr./Withh. and $\mathrm{ASR}_{\mathrm{B}}$: percent of 182 cases. $\mathrm{ASR}_{\mathrm{B}}$: our stricter rule, not the official ConVerse rate. Ref./Def./Ign./Crs.: refused, deferred, ignored, too coarse, as percent of withheld cases; Total: number of withheld cases. Withh./succ.: among cases that are not attack successes under $\mathrm{ASR}_{\mathrm{B}}$, those GPT-Luna labels withheld. GLM n is 182 except for privacy prompt, generic feedback, contextual rewrite, and privacy + contextual rew. (181) and generic rewrite (180).}
 \end{table*}
 """)
 
@@ -227,8 +227,7 @@ numbers["labels"] = {
             "Q2, benchmark-judge levels and the ASR_B disagreement items are copied from that file.",
     "source": str(LREL.relative_to(ROOT)), "printed_in_tab_human": TAB_CONSENSUS,
     "recomputed": by_consensus} | {k: v for k, v in lrel.items() if k != "tab_human_121_identical_to_paper_float"}
-_note143 = (" Consensus: label shared by both annotators, or by two of three annotators after a third annotator "
-            "labeled the 28 disagreements (6 three-way splits left out).")
+_note143 = ""
 write("tab-human.tex", r"""\begin{table}[!t]
 \caption{Agreement with human annotation}
 \label{tab:human}
@@ -243,7 +242,7 @@ Comparison & $n$ & 3-way & Withh. & Prec. & Rec. \\
 """ + "\n".join(tab_rows[TAB_CONSENSUS]) + r"""
 \bottomrule
 \end{tabular}
-\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Cohen's $\kappa$. Prec./Rec.: withheld label against the consensus.""" + (_note143 if TAB_CONSENSUS == "143" else "") + r"""}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Cohen's $\kappa$. Prec./Rec.: withheld label against the human consensus.""" + (_note143 if TAB_CONSENSUS == "143" else "") + r"""}
 \end{table}
 """)
 
@@ -358,7 +357,7 @@ write("tab-identifiers.tex", r"""\begin{table}[!t]
 """ + "\n".join(rows) + r"""
 \bottomrule
 \end{tabular}
-\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Percent. Identifiers: identifiers and quasi-identifiers (name, age, address, location, government ID). Other items: all remaining related-and-useful items. GLM n for other items is 151 under contextual rewrite and privacy + contextual rew.}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} Percent. Identifiers: identifiers and quasi-identifiers. GLM n for other items is 151 under contextual rewrite and privacy + contextual rew.}
 \end{table}
 """)
 
@@ -751,7 +750,7 @@ _n_new = ", ".join(f"{JT_LABEL[v].lower()}: {len(JT_NEW_ITEMS[v])}" for v in JT_
 write("fig-judges.tex", r"""\begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig-judges.pdf}
-\caption{Benchmark judges on five versions of the same message. Favorable: labeled appropriate (ConVerse) or not flagged as leaking (PrivacyAlign, PrivacyLens); the measures differ across judges and are compared only within a judge. Each version has """ + str(len(CF_ITEMS)) + r""" cases""" + (f" ({_n_new})" if _n_new else "") + (r""", with """ + str(sum(v["expected"] - v["ok"] for v in _miss.values())) + r""" missing calls""" if _miss else "") + r""". $^\dagger$Released prompt.}
+\caption{Favorable response rate of benchmark judges on five versions of the same message""" + (r""", with """ + str(sum(v["expected"] - v["ok"] for v in _miss.values())) + r""" missing calls""" if _miss else "") + r""". $^\dagger$Released prompt.}
 \label{fig:judges}
 \end{figure}
 """)
@@ -809,7 +808,7 @@ write("tab-cost.tex", r"""\begin{table}[!t]
 """ + "\n".join(rows) + r"""
 \bottomrule
 \end{tabular}
-\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} $\uparrow$ higher is better; $\downarrow$ lower is better. """ + f"{tc['raw']['episodes']}" + r""" conversations per branch (9 cases, 3 seeds). Final plan contains: the final plan includes the reference option. Reference offered: the service agent offers the reference option. Coarser: a true statement coarser than the allowed form. Item subst.: conversations in which the service agent states assumptions in place of the requested item (not applicable when the raw value is shared). Compl.: conversations completed.}
+\par\vspace{2pt}\parbox{\columnwidth}{\scriptsize\textit{Note.} $\uparrow$ higher is better; $\downarrow$ lower is better. Item subst.: the service agent assumes a value in place of the item (not applicable after the raw value). Compl.: completed.}
 \end{table}
 """)
 

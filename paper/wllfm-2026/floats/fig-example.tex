@@ -17,9 +17,9 @@
 \node[ob, left=4pt of abs] (leak) {``\dots the policyholder is Raj Sharma \dots''};
 \node[ob, right=4pt of abs] (with) {``I can't share the name here.''};
 \foreach \n in {leak,abs,with} \draw[arr] (rdc.south) -- (\n.north);
-\node[tg, below=3pt of leak] (l1) {\textbf{Leaked}\\[1pt]Benchmark: attack success};
-\node[tg, below=3pt of abs] (a1) {\textbf{Abstracted}\\[1pt]Benchmark: defense success};
-\node[tg, below=3pt of with] (w1) {\textbf{Withheld}\\[1pt]Benchmark: defense success};
+\node[tg, below=3pt of leak] (l1) {\textbf{Leaked}\\[1pt]Leakage-only ASR: attack success};
+\node[tg, below=3pt of abs] (a1) {\textbf{Abstracted}\\[1pt]Leakage-only ASR: defense success};
+\node[tg, below=3pt of with] (w1) {\textbf{Withheld}\\[1pt]Leakage-only ASR: defense success};
 \end{tikzpicture}
 \caption{Three ways a redactor can handle a request for an item whose allowed form is ``Raj S.''}
 \label{fig:example}

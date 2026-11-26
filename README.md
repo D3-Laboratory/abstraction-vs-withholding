@@ -14,18 +14,18 @@ Repository: https://github.com/D3-Laboratory/abstraction-vs-withholding
 ## Key findings (numbers as reported in the paper)
 
 - Without a defense, the assistant leaks the requested item in 86.8% of the 182 related-and-useful ConVerse cases
-  and withholds it in 7.1%. Under the strongest defense (privacy prompt + contextual rewrite redaction),
-  withholding reaches 35.2% (95% CI 28.6–42.3%) and abstraction rises from 6.0% to 18.1% (Table III).
-- Of the 128 cases the benchmark counts as successful defenses under the strongest defense, 64 are withheld.
-  After correcting for labeling errors (Section III-D; the correction rests on assumptions stated in the paper),
+  and withholds it in 7.1%. Under the configuration with the lowest ASR_B (the paper's stricter version of the benchmark's
+  attack success rate; privacy prompt + contextual rewrite redaction), withholding reaches 35.2% (95% CI 28.6–42.3%) and abstraction rises from 6.0% to 18.1% (Table III).
+- Of the 128 cases the benchmark counts as successful defenses under the lowest-ASR_B configuration, 64 are withheld.
+  After correcting for labeling errors (Section IV-B; the correction rests on assumptions stated in the paper),
   about 62 of the 128 remain withheld and corrected abstraction is 9.8%.
 - In an exploratory grouping, identifiers and quasi-identifiers are withheld in 80.0% of cases under the
-  strongest defense, against 26.3% for other items (Fisher's exact test, p < .001) (Table IV).
+  lowest-ASR_B configuration, against 26.3% for other items (Fisher's exact test, p < .001) (Table IV).
 - A generalize-first instruction lowers withholding from 27.1% to 20.4% and raises leakage from 51.9% to 58.0%,
   but abstraction does not rise (21.0% to 21.5%); none of the 18 paired tests is significant after Holm's
   correction (Table V).
 - Judge test (86 controlled messages, four scoring models, Fig. 2): with its released prompt, PrivacyLens's judge
-  gives a favorable response to only 31% to 42% of allowed-form messages, against 83% to 94% for the removed
+  gives a favorable response to 31% to 42% of allowed-form messages, against 83% to 94% for the removed
   version, and prefers an explicit refusal to the allowed form under all four models (29 to 59 points).
   ConVerse's abstraction judge, whose prompt includes the allowed form, favors allowed-form messages over removed
   ones, significantly under three of the four models.
@@ -45,31 +45,31 @@ The paper is the authoritative source for these numbers, their tests and their l
 | `tools/unpack_outputs.py` | expands `outputs/*.jsonl.gz` into the per-record JSON tree the scripts read | — |
 | `outputs/` | gzip JSONL packs of all conversations and judge outputs; `MANIFEST.json`, `USAGE.json`, `examples/` | — |
 | `experiments/scripts/` | runners, judges and analyses (table below) | III, IV |
-| `experiments/prompts/ci_gate/` | assistant, redactor, service-agent adapters and judge prompts | III-B, III-C |
-| `experiments/prompts/judge_counterfactual_v25/` | the three released judge prompts as run in the judge test (`SOURCES.md`) | III-F, IV-G |
-| `experiments/prompts/withholding_cost/` | prompts of the cost diagnostic | III-G, IV-H |
+| `experiments/prompts/ci_gate/` | assistant, redactor, service-agent adapters and judge prompts | III (Defenses, Three Outcomes) |
+| `experiments/prompts/judge_counterfactual_v25/` | the three released judge prompts as run in the judge test (`SOURCES.md`) | III (Testing Benchmark Judges), IV-H |
+| `experiments/prompts/withholding_cost/` | prompts of the cost diagnostic | III (Measuring the Cost of Withholding), IV-I |
 | `experiments/configs/` | run configurations and JSON schemas | IV-A |
-| `experiments/datasets/judge-counterfactual-v25/`, `-v26/` | the 86 edited judge-test cases (five message versions) and exclusions | III-F, IV-G |
+| `experiments/datasets/judge-counterfactual-v25/`, `-v26/` | the 86 edited judge-test cases (five message versions) and exclusions | III (Testing Benchmark Judges), IV-H |
 | `experiments/data/processed/converse-ci-gate/` | the ConVerse case split (611 cases, 571 executable) | IV-A |
 | `experiments/results/<analysis>/` | small analysis outputs (aggregates) used in the text | IV |
-| `experiments/withholding-cost-pilot/` | design notes of the cost diagnostic | III-G |
-| `experiments/third_party/converse/` | minimal subset of ConVerse (MIT), see `THIRD_PARTY_NOTICES.md` | III-A |
+| `experiments/withholding-cost-pilot/` | design notes of the cost diagnostic | III (Measuring the Cost of Withholding) |
+| `experiments/third_party/converse/` | minimal subset of ConVerse (MIT), see `THIRD_PARTY_NOTICES.md` | IV-A |
 
 Mapping of paper elements to files:
 
 | Paper element | Computed by | Inputs |
 |---|---|---|
 | Table I (defense configurations) | `make_tables.py` | — |
-| Table II (agreement with human annotation), IV-B | `make_tables.py` (reads the aggregate statistics) | `experiments/results/label-reliability-consensus143/` |
-| Table III (outcomes), IV-C | `make_tables.py` | `outputs/outcome-judge/*`, `outputs/main-runs/*` (benchmark's judge), `experiments/results/withholding-cost-existing-runs/numbers.json` (consistency check) |
-| IV-C corrected rates | aggregate outputs, copied into `numbers.json` by `make_tables.py` | `experiments/results/outcome-label-sensitivity/`, `c1-coarser-split/` |
-| IV-C to IV-E, Holm's correction over the main-run tests | `holm_main_runs_tests.py` | `outputs/outcome-judge/*`, `outputs/main-runs/*`; output in `experiments/results/holm-main-runs/` |
-| IV-D benchmark judge scores (withheld vs abstracted) | `benchmark_judge_scores_withheld_vs_abstracted.py` | `outputs/outcome-judge/*`, `outputs/main-runs/*`; output in `experiments/results/benchmark-judge-scores/` |
-| IV-D task metrics | `task_metrics_case_bootstrap_v3.py`, `withholding_cost_existing_runs_v23.py`; cases whose allowed form is needed: aggregate output | `experiments/results/task-metrics-case-bootstrap-v3.txt`, `withholding-cost-existing-runs/`, `withholding-cost-necessity-subset/` |
-| Table IV (identifiers), IV-E | `make_tables.py`; withheld kinds in `withholding_cost_existing_runs_v23.py`; redactor actions in `redactor_action_shares.py` | outcome-judge packs, main-run packs; `experiments/results/redactor-action-shares/` |
-| Table V (generalize-first, thinking), IV-F | `make_tables.py`, `generalize_first_transitions_v23.py`; label correction: aggregate output | `outputs/over-redaction-replay-v23/*`, `-v24/*`, `outputs/over-redaction-live-v24/*`, `experiments/results/generalize-first-transitions/`, `table-iv-label-calibration/` |
-| Fig. 2 (judge test), IV-G | `make_tables.py` (same rules as `analyze_judge_counterfactual_sameday.py`), `analyze_judge_counterfactual_v26.py`, `analyze_judge_counterfactual_v26_drift.py` | `outputs/judge-test/*`, `experiments/datasets/judge-counterfactual-v2{5,6}/`, `experiments/results/judge-counterfactual-v26*/analysis*/` |
-| Table VI (cost diagnostic), IV-H | `score_withholding_cost_pilot_v27.py`, `analyze_withholding_cost_v27b_coarser.py`, `make_tables.py` | `outputs/cost-v27/*`, `experiments/results/withholding-cost-pilot-v27/scores_fixed_4var_v2/` |
+| Table II (agreement with human annotation), IV-C | `make_tables.py` (reads the aggregate statistics) | `experiments/results/label-reliability-consensus143/` |
+| Table III (outcomes), IV-D | `make_tables.py` | `outputs/outcome-judge/*`, `outputs/main-runs/*` (benchmark's judge), `experiments/results/withholding-cost-existing-runs/numbers.json` (consistency check) |
+| IV-D corrected rates | aggregate outputs, copied into `numbers.json` by `make_tables.py` | `experiments/results/outcome-label-sensitivity/`, `c1-coarser-split/` |
+| IV-D to IV-F, Holm's correction over the main-run tests | `holm_main_runs_tests.py` | `outputs/outcome-judge/*`, `outputs/main-runs/*`; output in `experiments/results/holm-main-runs/` |
+| IV-E benchmark judge scores (withheld vs abstracted) | `benchmark_judge_scores_withheld_vs_abstracted.py` | `outputs/outcome-judge/*`, `outputs/main-runs/*`; output in `experiments/results/benchmark-judge-scores/` |
+| IV-E task metrics | `task_metrics_case_bootstrap_v3.py`, `withholding_cost_existing_runs_v23.py`; cases whose allowed form is needed: aggregate output | `experiments/results/task-metrics-case-bootstrap-v3.txt`, `withholding-cost-existing-runs/`, `withholding-cost-necessity-subset/` |
+| Table IV (identifiers), IV-F | `make_tables.py`; withheld kinds in `withholding_cost_existing_runs_v23.py`; redactor actions in `redactor_action_shares.py` | outcome-judge packs, main-run packs; `experiments/results/redactor-action-shares/` |
+| Table V (generalize-first, thinking), IV-G | `make_tables.py`, `generalize_first_transitions_v23.py`; label correction: aggregate output | `outputs/over-redaction-replay-v23/*`, `-v24/*`, `outputs/over-redaction-live-v24/*`, `experiments/results/generalize-first-transitions/`, `table-iv-label-calibration/` |
+| Fig. 2 (judge test), IV-H | `make_tables.py` (same rules as `analyze_judge_counterfactual_sameday.py`), `analyze_judge_counterfactual_v26.py`, `analyze_judge_counterfactual_v26_drift.py` | `outputs/judge-test/*`, `experiments/datasets/judge-counterfactual-v2{5,6}/`, `experiments/results/judge-counterfactual-v26*/analysis*/` |
+| Table VI (cost diagnostic), IV-I | `score_withholding_cost_pilot_v27.py`, `analyze_withholding_cost_v27b_coarser.py`, `make_tables.py` | `outputs/cost-v27/*`, `experiments/results/withholding-cost-pilot-v27/scores_fixed_4var_v2/` |
 | Fig. 1 | hand-drawn TikZ (`floats/fig-example.tex`) | — |
 
 | Script (`experiments/scripts/`) | Role |
@@ -95,13 +95,13 @@ Mapping of paper elements to files:
 | `run_withholding_cost_pilot.py` | cost diagnostic runner (shared prefix, injected reply, branches) |
 | `score_withholding_cost_pilot_v27.py` | cost diagnostic scorer (v27-fixed2) |
 | `analyze_withholding_cost_v27b_coarser.py` | cost diagnostic: four-branch paired comparison |
-| `withholding_cost_existing_runs_v23.py` | withheld kinds, task metrics by outcome, ConVerse mechanism (IV-D/E) |
-| `generalize_first_transitions_v23.py` | case transitions under the generalize-first instruction (IV-F) |
-| `task_metrics_case_bootstrap_v3.py` | task metrics of withheld vs abstracted answers (IV-D) |
-| `benchmark_judge_scores_withheld_vs_abstracted.py` | benchmark judge scores of withheld vs abstracted answers, case-resampled CI and within-case Wilcoxon test (IV-D) |
-| `redactor_action_shares.py` | share of flagged items the redactor marks for removal vs generalization (IV-E) |
-| `holm_main_runs_tests.py` | Holm's correction over the tests on the main runs (IV-C to IV-E) |
-| `sample_over_redaction_annotation_v23.py` | draws the stratified annotation sample (III-C) |
+| `withholding_cost_existing_runs_v23.py` | withheld kinds, task metrics by outcome, ConVerse mechanism (IV-E/F) |
+| `generalize_first_transitions_v23.py` | case transitions under the generalize-first instruction (IV-G) |
+| `task_metrics_case_bootstrap_v3.py` | task metrics of withheld vs abstracted answers (IV-E) |
+| `benchmark_judge_scores_withheld_vs_abstracted.py` | benchmark judge scores of withheld vs abstracted answers, case-resampled CI and within-case Wilcoxon test (IV-E) |
+| `redactor_action_shares.py` | share of flagged items the redactor marks for removal vs generalization (IV-F) |
+| `holm_main_runs_tests.py` | Holm's correction over the tests on the main runs (IV-D to IV-F) |
+| `sample_over_redaction_annotation_v23.py` | draws the stratified annotation sample (IV-A) |
 
 ### Version suffixes
 
@@ -376,7 +376,7 @@ adapted from ConVerse, PrivacyAlign and PrivacyLens as documented in `SOURCES.md
   released outputs are the frozen artifacts behind the paper; re-running produces new data, not the same numbers.
 - Results cover one benchmark (ConVerse), one model family for the agents, one run per configuration, and judge
   prompts transferred to ConVerse inputs. The three-outcome labels come from LLM judges whose abstracted label was
-  confirmed by the annotators in about a third of sampled cases (Section IV-B).
+  confirmed by the annotators in about a third of sampled cases (Section IV-C).
 - The conversations are synthetic. They contain fictional personal data from ConVerse's personas and adversarial
   extraction attempts; they are intended for research on privacy evaluation and defenses, not for training models
   to extract personal information.
